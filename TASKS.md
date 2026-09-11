@@ -4,7 +4,7 @@
 
 | 状态 | 任务 | 负责人 | 分支 | 主要文件 | 备注 |
 |---|---|---|---|---|---|
-| 已完成 | 项目级接入 MathModeling-skills | 电脑 A | `dev-pc-a` | `.codex/skills/`, `AGENTS.md`, `docs/math-modeling-skills/` | 已接入 28 个技能并通过文件哈希、元数据和格式检查；重启 Codex 后生效 |
+| 已完成 | 项目级接入 MathModeling-skills | 电脑 A | `dev-pc-a` | `.codex/skills/`, `AGENTS.md`, `docs/math-modeling-skills/` | 已接入 28 个技能并通过文件完整性、元数据和格式检查；重启 Codex 后生效 |
 | 阻塞 | 收集附件 1-5（含数据和结果模板） | — | — | `data/` | 当前仅收到 C 题题面 PDF |
 | 已完成 | 整理主要参考文献与采用边界 | 电脑 A | `dev-pc-a` | `docs/literature-notes.md` | 三篇学位论文已登记，后续补充同行评审文献 |
 | 待认领 | 核对附件字段、时间粒度、缺失值和单位 | — | — | `data/`, `docs/data-dictionary.md` | 数据到齐后立即进行 |

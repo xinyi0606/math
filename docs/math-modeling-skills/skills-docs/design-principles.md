@@ -154,4 +154,3 @@ Users still need to decide:
 - whether a method is appropriate
 - whether a result is meaningful
 - whether a conclusion should be stated strongly or cautiously
-

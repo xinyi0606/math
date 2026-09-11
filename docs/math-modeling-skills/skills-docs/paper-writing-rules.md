@@ -225,4 +225,3 @@ If no artifact supports the claim, do not write it.
 ## **Practical rule**
 
 A weaker claim with evidence is better than a stronger claim without evidence.
-

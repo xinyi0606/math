@@ -408,4 +408,3 @@ Output (summary):
 **Claims to avoid or qualify**:
 - Do not claim "the ranking is universally optimal." — supported only under the given indicator set and weight scheme.
 ```
-

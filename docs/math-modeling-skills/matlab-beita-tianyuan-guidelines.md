@@ -414,4 +414,3 @@ Stop and return to the appropriate upstream skill when:
 Use the simplest MATLAB-compatible implementation that can produce the required outputs and survive review.
 
 For contest work, a clear `.m` script with saved artifacts is usually better than a clever solution that depends on fragile environment-specific features.
-

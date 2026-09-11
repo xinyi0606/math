@@ -203,4 +203,3 @@ A useful figure-table plan should include:
 Use tables when exact values matter.
 
 Use figures when patterns, trends, comparisons, or stability need to be seen.
-

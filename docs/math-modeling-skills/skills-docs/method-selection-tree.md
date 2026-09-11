@@ -763,4 +763,3 @@ A method plan should look like this:
 Choose the simplest method that can produce the required output and survive basic validation.
 
 Then add complexity only where the baseline fails for a clear reason.
-
