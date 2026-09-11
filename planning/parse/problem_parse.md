@@ -1,6 +1,6 @@
 # C题题面结构化解析
 
-> 状态：**CONFIRMED_BY_MODELER / READY FOR CLASSIFICATION**。用户已明确采纳任务 `01a0911f-7aaa-7e12-9f18-850485cbecc4` 的结论作为建模决定；完整冻结记录见 `planning/modeling_conventions.md`。问题分类尚未完成，因此全局 G1 仍未通过。
+> 解析工件状态：**CONFIRMED_BY_MODELER / READY_FOR_CLASSIFICATION**。用户已明确采纳任务 `01a0911f-7aaa-7e12-9f18-850485cbecc4` 的结论作为建模决定；完整冻结记录见 `planning/modeling_conventions.md`。其下游问题分类现已完成，见 `planning/classification/problem_classification.md`，全局G1已通过。
 
 ## 一句话解读
 
@@ -118,6 +118,6 @@ Q1 单日基础口径
 
 ## 当前判断
 
-- 题面、附件和结果模板均已到位，无需外部数据即可进入分类阶段。
-- 题面解析中的人工判断占位符已依据用户明确授权清除，解析可交给 `problem-classifier`。
-- 问题分类仍是新的建模判断，尚未得到用户授权，不能直接跳到方法选择或代码生成。
+- 题面、附件和结果模板均已到位，无需外部数据即可进入候选方法准备阶段。
+- 题面解析中的人工判断占位符已依据用户明确授权清除。
+- Q1已确认为机制—优化混合问题，Q2/Q3确认为预测—优化混合问题，Q4确认为情景分析—优化混合问题；相关文献分析已完成，但最终方法仍未选定。

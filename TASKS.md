@@ -9,7 +9,8 @@
 | 已完成 | 整理主要参考文献与采用边界 | 电脑 A | `dev-pc-a` | `docs/literature-notes.md` | 三篇学位论文已登记，后续补充同行评审文献 |
 | 已完成 | 核对附件字段、时间粒度、缺失值和单位 | 电脑 A | `dev-pc-a` | `data/data_report.md`, `docs/data-dictionary.md` | 基础数据可用；时间标签解释须在建模前冻结 |
 | 已完成 | 解读题面并形成结构化问题解析 | 电脑 A | `dev-pc-a` | `planning/parse/`, `planning/modeling_conventions.md` | 用户已采纳证据任务结论，七项口径、五条机制关系与评价口径已冻结 |
-| 进行中 | 对问题 1-4 进行类型分类 | 电脑 A | `dev-pc-a` | `planning/classification/` | Q2/Q3/Q4框架已确认；待Q1类型及人工理由 |
+| 已完成 | 对问题 1-4 进行类型分类 | 电脑 A | `dev-pc-a` | `planning/classification/` | Q1为机制—优化混合，Q2/Q3为预测—优化混合，Q4为情景分析—优化混合；论证由AI起草并由用户直接采纳 |
+| 已完成 | 归档并分析三篇主要参考文献 | 电脑 A | `dev-pc-a` | `workspace/papers/`, `docs/literature-notes.md` | 已形成逐问方法线索、复用边界与证据缺口；下一步进入候选方法比较 |
 | 待认领 | 建立统一储能状态转移与购电成本模型 | — | — | `docs/model.md`, `src/` | 明确 90% 效率的采用方式 |
 | 待认领 | 完成问题 1 确定性优化与 `result1.xlsx` | — | — | `src/`, `tests/`, `output/` | 同日电价与负荷、光伏预测变化 |
 | 待认领 | 完成问题 2 全年日前优化与 `result2.xlsx` | — | — | `src/`, `tests/`, `output/` | 包含 5 倍电价紧急购电 |

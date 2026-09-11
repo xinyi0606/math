@@ -2,12 +2,12 @@
 
 - 审计日期：2026-09-12
 - 当前状态：NOT_RUN
-- 当前范围：C 题附件归档、题面解析与建模前数据说明
+- 当前范围：C题附件归档、题面解析、问题分类与相关文献分析的增量预检
 - 正式门禁：G6 未执行
 
 ## 结论
 
-当前尚未形成论文正文、冻结结果、最终方法说明与统一符号表，因此无法执行面向最终交付物的正式跨媒介一致性审计，也不能给出 G6 通过结论。题面解析层面的增量预检已经完成，未发现题面、附件说明和解析文件之间的已知事实冲突。
+当前尚未形成论文正文、冻结结果、最终方法说明与统一符号表，因此无法执行面向最终交付物的正式跨媒介一致性审计，也不能给出G6通过结论。题面解析、问题分类与相关文献分析层面的增量预检已经完成，未发现这些规划工件之间的已知事实冲突。
 
 ## 建模前一致性预检
 
@@ -23,16 +23,25 @@
 10. **PASS**：紧急购电 5 倍、减少计划量相关价格 50%、增加购电超出部分 1.5 倍在题面摘要和两份解析文件中一致。
 11. **PASS**：四个指定日期及“Q2、Q3均按表1、表2、表3展示”的要求在 docs/problem-definition.md 和两份解析文件中一致。
 12. **PASS**：problem_parse.json 已通过 JSON 语法校验，包含Q1-Q4四个小问、每问非空评价口径和五条已确认机制关系。
-13. **PASS**：用户的确认原话、来源任务ID与确认日期已记录在 planning/modeling_conventions.md，未将授权扩张到问题分类或方法选择。
+13. **PASS**：用户的确认原话、来源任务ID与确认日期已记录在 planning/modeling_conventions.md；本次用户另行明确授权将AI起草的分类论证作为人工回答，两个授权范围已分开记录。
 14. **PASS**：planning/parse/problem_parse.md 与 problem_parse.json 中已无 `[MODELER INPUT NEEDED]`、`[AI-DRAFT]` 或 `DRAFT_GATE_FAIL` 残留。
 15. **PASS**：效率主口径 `eta_c=eta_d=0.9`、`sqrt(0.9)` 敏感性方案在问题定义、解析和口径记录中一致。
 16. **PASS**：Q2严格非前视、附件3线性插值、调整购电量为调整后总量在问题定义、解析和口径记录中一致。
 17. **PASS**：Q3取消量承担50%违约成本、增加量按1.5倍计费、紧急购电按5倍计费且不重复计费的口径一致。
 18. **PASS**：Q2-Q4跨日连续、不要求每日回到固定值、全年末主约束6000 kWh的口径一致。
-19. **PASS**：用户当前确认的Q2/Q3“预测—优化混合”和Q4“情景分析—优化混合”已逐项记录在 planning/classification/framing_input.md。
-20. **PASS**：TASKS.md 与 planning/progress_dashboard.md 均将问题分类标记为进行中/部分完成，状态一致。
-21. **PASS**：Q1类型及Q2-Q4人工理由均明确标记为尚缺，没有被AI代填。
-22. **PASS**：最终 problem_classification.json 与 problem_classification.md 尚未生成，与G1未通过状态一致。
+19. **PASS**：Q1“机制—优化混合”、Q2/Q3“预测—优化混合”和Q4“情景分析—优化混合”在 framing_input.md、problem_classification.md 与 problem_classification.json 中逐项一致。
+20. **PASS**：Q1在三份分类工件中均明确为“机制主线、优化求解层”，同时保留最低成本策略的输出要求，没有被误写成纯优化或纯机制问题。
+21. **PASS**：Q2在分类工件与题面解析中均遵守严格非前视边界，并将预测误差通过紧急购电传递到决策评价。
+22. **PASS**：Q3在分类工件与题面解析中均包含0时、6时、12时、18时预测更新、滚动调整和非对称结算机制。
+23. **PASS**：Q4在分类工件与题面解析中均表述为保持Q2/Q3其余口径不变、更换波动电价并重新求解，而非新增价格预测任务。
+24. **PASS**：分类JSON通过语法解析，含Q1-Q4四条非空分类与理由，未发现待确认或草稿门禁标记。
+25. **PASS**：用户授权来源在 framing_input.md、problem_classification.md 和 problem_classification.json 中均如实标为“AI起草、用户直接采纳”，没有冒充用户亲笔理由。
+26. **PASS**：TASKS.md、planning/progress_dashboard.md 与 planning/parse/problem_parse.md 均将分类标记为完成、G1通过，状态一致。
+27. **PASS**：三篇原文文件名、作者和年份与 docs/literature-notes.md、workspace/papers/related_paper_analysis.md 的登记一致。
+28. **PASS**：文献分析对Q1-Q4均给出方法线索和不适用边界，且没有把候选方法误标为最终已选方法。
+29. **PASS**：related_paper_analysis.md 中Q2/Q3的文献映射与预测—优化分类一致，Q4的文献映射与情景分析—优化分类一致。
+30. **PASS**：原始PDF被明确保留为本地可核验资料并由.gitignore排除，Git待提交内容仅包含分析工件，不会无意发布三篇大体积原文。
+31. **PASS**：problem_parse.md与problem_parse.json均保留解析工件自身的READY_FOR_CLASSIFICATION状态，同时Markdown注明下游分类已完成；该历史工件状态与进度看板的当前全局G1通过状态不存在语义冲突。
 
 ## 尚不可审计的内容
 
@@ -43,4 +52,4 @@
 
 ## 后续门禁
 
-题面解析的人工作出决定层已完成。问题分类已取得部分人工输入，但仍缺Q1类型及Q2-Q4的人工理由；补齐后再由 `problem-classifier` 生成正式分类工件。待模型结果、图表和论文正文齐备后，重新执行正式 G6 跨媒介一致性审计。
+题面解析、问题分类和相关文献分析均已完成，G1通过；增量检查未发现规划工件漂移。下一步交由 `method-selector` 建立候选方法池并安排轻量可行性验证。待模型结果、图表和论文正文齐备后，必须重新执行正式G6跨媒介一致性审计；当前状态仍为NOT_RUN，不允许据此批准最终装配。

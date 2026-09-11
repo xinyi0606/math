@@ -1,0 +1,89 @@
+{
+  "status": "CONFIRMED_BY_MODELER",
+  "decision_date": "2026-09-12",
+  "decision_provenance": {
+    "source": "current_user_message",
+    "authorship": "AI-drafted rationale directly adopted by the user as the modeler's answer",
+    "scope": "Q1-Q4 problem classification and classification rationale"
+  },
+  "classification_summary": {
+    "overall_pattern": "hybrid",
+    "progression": [
+      "Q1: mechanism construction with optimization as the solution layer",
+      "Q2: day-ahead prediction coupled with optimization",
+      "Q3: rolling prediction updates coupled with re-optimization",
+      "Q4: price-scenario analysis coupled with re-optimization"
+    ],
+    "reason": "The four questions successively add information limitations, rolling forecast updates, and external price scenarios to a common microgrid operating mechanism."
+  },
+  "subquestion_classifications": [
+    {
+      "id": "Q1",
+      "ai_suggested_type": "hybrid",
+      "confidence": "medium",
+      "modeler_chosen_type": "hybrid",
+      "modeler_chosen_framing": "机制—优化混合问题",
+      "primary_emphasis": "mechanism",
+      "secondary_type": "optimization",
+      "framing_rationale": "Q1首先建立功率平衡、储能状态转移、充放电效率及容量与功率边界等运行机制，由这些机制确定可行域；随后才在可行域内求最低购电成本对应的计划。因此Q1不是纯优化问题，而是以机制构建为主线、以优化为策略求解层的混合问题。",
+      "classification_reason": "Its explanatory core is the physical and accounting mechanism, while its requested strategy still requires an optimization objective and feasible solution.",
+      "output_drivers": ["microgrid energy-balance mechanism", "storage state-transition mechanism", "feasible purchase and charge-discharge plan", "minimum purchase cost"],
+      "candidate_method_families": ["energy-conservation and state-transition modeling", "deterministic constrained scheduling", "linear or mixed-integer optimization", "dynamic programming"],
+      "unsuitable_directions": ["treating Q1 as a forecasting problem", "describing only the mechanism without producing an executable plan"],
+      "risks": ["The mechanism-first framing must not omit the cost objective or feasibility verification required by the requested output."]
+    },
+    {
+      "id": "Q2",
+      "ai_suggested_type": "hybrid",
+      "confidence": "high",
+      "modeler_chosen_type": "hybrid",
+      "modeler_chosen_framing": "预测—优化混合问题",
+      "primary_emphasis": "prediction-optimization coupling",
+      "secondary_type": "prediction",
+      "framing_rationale": "Q2要求每天0时在严格非前视条件下制定计划，未来负荷和光伏必须先由历史信息预测，再作为日前购电与储能优化的输入；预测误差还会通过紧急购电改变实际成本。因此预测与优化共同决定结果，Q2属于预测—优化混合问题。",
+      "classification_reason": "The decision cannot be made from realized future data, and forecast errors directly propagate into emergency-purchase cost and operational quality.",
+      "output_drivers": ["day-ahead load and photovoltaic forecasts", "non-anticipative purchase and storage schedule", "emergency-purchase handling", "annual cost and representative-day results"],
+      "candidate_method_families": ["time-series or feature-based forecasting", "forecast-then-optimize scheduling", "stochastic or robust scheduling", "day-ahead rolling execution"],
+      "unsuitable_directions": ["perfect-foresight optimization using realized future values", "forecast evaluation without producing an operating strategy"],
+      "risks": ["Forecast metrics alone may not reflect downstream operating cost.", "Using future actual values would violate the frozen non-anticipativity convention."]
+    },
+    {
+      "id": "Q3",
+      "ai_suggested_type": "hybrid",
+      "confidence": "high",
+      "modeler_chosen_type": "hybrid",
+      "modeler_chosen_framing": "预测—优化混合问题",
+      "primary_emphasis": "rolling prediction-optimization coupling",
+      "secondary_type": "prediction",
+      "framing_rationale": "Q3在0时、6时、12时、18时持续获得更新的光伏预测，每次更新都触发后续计划的滚动重优化，并伴随取消量、增加量和紧急购电的非对称结算。因此它同时研究预测更新和动态决策，属于预测—优化混合问题。",
+      "classification_reason": "Repeated forecast updates and asymmetric adjustment costs make the problem a sequential forecast-decision system rather than a one-shot schedule.",
+      "output_drivers": ["multi-time forecast updates", "rolling schedule revisions", "asymmetric adjustment settlement", "comparison of whether intraday updates are worthwhile"],
+      "candidate_method_families": ["forecast updating and error analysis", "rolling-horizon optimization", "model-predictive-control family", "multi-stage or two-settlement scheduling"],
+      "unsuitable_directions": ["one-shot static optimization with no intraday updates", "judging the method only by forecast accuracy"],
+      "risks": ["Information available at each decision time must be separated strictly.", "Adjustment and emergency costs must not be double-counted."]
+    },
+    {
+      "id": "Q4",
+      "ai_suggested_type": "hybrid",
+      "confidence": "high",
+      "modeler_chosen_type": "hybrid",
+      "modeler_chosen_framing": "情景分析—优化混合问题",
+      "primary_emphasis": "scenario-analysis and optimization coupling",
+      "secondary_type": "simulation",
+      "framing_rationale": "Q4不要求另建价格预测模型，而是将Q2、Q3的运行机制置于题设波动电价情景中重新优化，并比较策略、成本和应急购电变化。其新增核心是外部价格情景对优化结果的影响，因此属于情景分析—优化混合问题。",
+      "classification_reason": "The question holds the operating logic broadly fixed, changes the price environment, re-solves the decisions, and compares scenario-dependent outcomes.",
+      "output_drivers": ["time-varying price scenarios", "re-optimized Q2 and Q3 strategies", "cross-scenario cost comparison", "changes in emergency purchase and storage behavior"],
+      "candidate_method_families": ["scenario analysis", "comparative optimization", "sensitivity analysis", "rolling scheduling under time-varying prices"],
+      "unsuitable_directions": ["training a new price-forecast model without a task requirement", "comparing costs without holding the frozen operating conventions consistent"],
+      "risks": ["Differences attributed to price scenarios must not be confounded by changing other modeling conventions.", "Q2 and Q3 outputs must be regenerated under the new price path rather than mechanically rescaled."]
+    }
+  ],
+  "global_structure": {
+    "is_hybrid": true,
+    "dependency_pattern": ["Q1 supplies the common physical and accounting mechanism.", "Q2 adds non-anticipative day-ahead prediction and optimization.", "Q3 adds intraday forecast updates and rolling re-optimization.", "Q4 reuses Q2 and Q3 under time-varying price scenarios."],
+    "suggested_workflow_order": ["Q1", "Q2", "Q3", "Q4"]
+  },
+  "classification_risks": ["Q1 is deliberately not labeled as a pure optimization problem, but its optimization output requirements remain binding.", "Scenario analysis is encoded as a hybrid framing for Q4 because it is not a standalone standard classifier label.", "These classifications narrow the workflow but do not select a final algorithm or parameter set."],
+  "ambiguities": [],
+  "recommended_next_skill": "related-paper-analyzer"
+}
