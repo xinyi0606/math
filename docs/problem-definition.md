@@ -91,4 +91,4 @@
 
 附件 1-4 和附件 5 的五个结果模板均已归档并完成基础数据审计。正式、可追溯的题面解析见 `planning/parse/problem_parse.md` 和 `planning/parse/problem_parse.json`。
 
-上述口径已由建模者确认，完整证据、公式与敏感性方案见 `planning/modeling_conventions.md`。问题分类与相关文献分析已完成；下一步为候选方法比较，最终方法尚未选择。
+上述口径已由建模者确认，完整证据、公式与敏感性方案见 `planning/modeling_conventions.md`。问题分类与相关文献分析已完成；下一步依次建立统一符号表、全局模型假设和问题依赖图，再进入候选方法比较，最终方法尚未选择。

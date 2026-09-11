@@ -11,6 +11,10 @@
 | 已完成 | 解读题面并形成结构化问题解析 | 电脑 A | `dev-pc-a` | `planning/parse/`, `planning/modeling_conventions.md` | 用户已采纳证据任务结论，七项口径、五条机制关系与评价口径已冻结 |
 | 已完成 | 对问题 1-4 进行类型分类 | 电脑 A | `dev-pc-a` | `planning/classification/` | Q1为机制—优化混合，Q2/Q3为预测—优化混合，Q4为情景分析—优化混合；论证由AI起草并由用户直接采纳 |
 | 已完成 | 归档、分析并发布三篇主要参考文献 | 电脑 A | `dev-pc-a` | `workspace/papers/`, `docs/literature-notes.md` | 用户确认已获发布同意；原文和分析报告均纳入GitHub，下一步进入候选方法比较 |
+| 待认领 | 建立Q1-Q4初版统一符号表 | — | — | `planning/symbol_table.md` | 第一优先；候选方法产生后回填方法特有符号 |
+| 待认领 | 建立全局模型假设初稿 | — | — | `planning/model_assumptions.md` | 第二优先；必要性与违反影响须由建模者确认 |
+| 待认领 | 完善问题依赖图 | — | — | `planning/question_dependency.md` | 第三优先；明确跨问状态、数据和结果复用关系 |
+| 待认领 | 建立Q1-Q4候选方法池并做轻量验证 | — | — | `methods/Q1/`, `methods/Q2/`, `methods/Q3/`, `methods/Q4/` | 第四优先；使用 `method-selector`，每问2-4个候选及基线 |
 | 待认领 | 建立统一储能状态转移与购电成本模型 | — | — | `docs/model.md`, `src/` | 明确 90% 效率的采用方式 |
 | 待认领 | 完成问题 1 确定性优化与 `result1.xlsx` | — | — | `src/`, `tests/`, `output/` | 同日电价与负荷、光伏预测变化 |
 | 待认领 | 完成问题 2 全年日前优化与 `result2.xlsx` | — | — | `src/`, `tests/`, `output/` | 包含 5 倍电价紧急购电 |
