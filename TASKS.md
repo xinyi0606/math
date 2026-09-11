@@ -9,10 +9,10 @@
 | 已完成 | 整理主要参考文献与采用边界 | 电脑 A | `dev-pc-a` | `docs/literature-notes.md` | 三篇学位论文已登记，后续补充同行评审文献 |
 | 已完成 | 核对附件字段、时间粒度、缺失值和单位 | 电脑 A | `dev-pc-a` | `data/data_report.md`, `docs/data-dictionary.md` | 基础数据可用；时间标签解释须在建模前冻结 |
 | 已完成 | 解读题面并形成结构化问题解析 | 电脑 A | `dev-pc-a` | `planning/parse/`, `planning/modeling_conventions.md` | 用户已采纳证据任务结论，七项口径、五条机制关系与评价口径已冻结 |
-| 已完成 | 对问题 1-4 进行类型分类 | 电脑 A | `dev-pc-a` | `planning/classification/` | Q1为机制—优化混合，Q2/Q3为预测—优化混合，Q4为情景分析—优化混合；论证由AI起草并由用户直接采纳 |
+| 待审核 | 对问题 1-4 进行类型分类 | 电脑 A | `dev-pc-a` | `planning/classification/` | 分类标签不变；Q4新增价格预测要求后，修订分类理由待建模者确认 |
 | 已完成 | 归档、分析并发布三篇主要参考文献 | 电脑 A | `dev-pc-a` | `workspace/papers/`, `docs/literature-notes.md` | 用户确认已获发布同意；原文和分析报告均纳入GitHub，下一步进入候选方法比较 |
 | 已完成 | 建立Q1-Q4初版统一符号表 | 电脑 A | `dev-pc-a` | `planning/symbol_table.md` | 已统一题面、冻结口径与用户原符号说明；候选方法产生后须回填方法特有符号 |
-| 待审核 | 建立全局模型假设初稿 | 电脑 A | `dev-pc-a` | `planning/model_assumptions.md` | 已形成26条假设、3项执行边界及验证计划；类型、违反影响与D-A01至D-A03待建模者确认 |
+| 待审核 | 建立全局模型假设初稿 | 电脑 A | `dev-pc-a` | `planning/model_assumptions.md` | D-A01至D-A03选择已确认并写入冻结口径；26条类型/违反影响及正式决策理由待建模者确认 |
 | 待认领 | 完善问题依赖图 | — | — | `planning/question_dependency.md` | 第三优先；明确跨问状态、数据和结果复用关系 |
 | 待认领 | 建立Q1-Q4候选方法池并做轻量验证 | — | — | `methods/Q1/`, `methods/Q2/`, `methods/Q3/`, `methods/Q4/` | 第四优先；使用 `method-selector`，每问2-4个候选及基线 |
 | 待认领 | 建立统一储能状态转移与购电成本模型 | — | — | `docs/model.md`, `src/` | 明确 90% 效率的采用方式 |

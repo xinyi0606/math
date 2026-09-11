@@ -1,10 +1,11 @@
 {
-  "status": "CONFIRMED_BY_MODELER",
+  "status": "Q4_RATIONALE_RECONFIRMATION_REQUIRED",
   "decision_date": "2026-09-12",
   "decision_provenance": {
     "source": "current_user_message",
     "authorship": "AI-drafted rationale directly adopted by the user as the modeler's answer",
-    "scope": "Q1-Q4 problem classification and classification rationale"
+    "scope": "Q1-Q4 classification labels and original rationale",
+    "revision_status": "Q4 revised rationale is an AI draft awaiting modeler confirmation after the modeler added a price-forecast requirement"
   },
   "classification_summary": {
     "overall_pattern": "hybrid",
@@ -12,7 +13,7 @@
       "Q1: mechanism construction with optimization as the solution layer",
       "Q2: day-ahead prediction coupled with optimization",
       "Q3: rolling prediction updates coupled with re-optimization",
-      "Q4: price-scenario analysis coupled with re-optimization"
+      "Q4: non-anticipative price forecasting supports price-scenario analysis and re-optimization"
     ],
     "reason": "The four questions successively add information limitations, rolling forecast updates, and external price scenarios to a common microgrid operating mechanism."
   },
@@ -70,12 +71,13 @@
       "modeler_chosen_framing": "情景分析—优化混合问题",
       "primary_emphasis": "scenario-analysis and optimization coupling",
       "secondary_type": "simulation",
-      "framing_rationale": "Q4不要求另建价格预测模型，而是将Q2、Q3的运行机制置于题设波动电价情景中重新优化，并比较策略、成本和应急购电变化。其新增核心是外部价格情景对优化结果的影响，因此属于情景分析—优化混合问题。",
+      "framing_rationale": "[AI-DRAFT — modeler must confirm: 未来波动电价先由非前视预测形成可实施的价格情景，主要研究输出仍是不同价格环境下Q2/Q3策略、成本和紧急购电的重优化比较，因此保留情景分析—优化混合标签。]",
+      "rationale_revision_reason": "建模者后续明确决定Q4未来波动电价需要预测，原先‘不要求价格预测’的理由已失效；分类标签沿用此前人工决定，修订理由待人工确认。",
       "classification_reason": "The question holds the operating logic broadly fixed, changes the price environment, re-solves the decisions, and compares scenario-dependent outcomes.",
-      "output_drivers": ["time-varying price scenarios", "re-optimized Q2 and Q3 strategies", "cross-scenario cost comparison", "changes in emergency purchase and storage behavior"],
-      "candidate_method_families": ["scenario analysis", "comparative optimization", "sensitivity analysis", "rolling scheduling under time-varying prices"],
-      "unsuitable_directions": ["training a new price-forecast model without a task requirement", "comparing costs without holding the frozen operating conventions consistent"],
-      "risks": ["Differences attributed to price scenarios must not be confounded by changing other modeling conventions.", "Q2 and Q3 outputs must be regenerated under the new price path rather than mechanically rescaled."]
+      "output_drivers": ["non-anticipative future-price forecasts", "time-varying price scenarios", "re-optimized Q2 and Q3 strategies", "cross-scenario cost comparison", "changes in emergency purchase and storage behavior"],
+      "candidate_method_families": ["non-anticipative price forecasting", "scenario analysis", "comparative optimization", "sensitivity analysis", "rolling scheduling under time-varying prices"],
+      "unsuitable_directions": ["using future realized prices directly in the main strategy", "comparing costs without holding the frozen operating conventions consistent"],
+      "risks": ["Future realized prices must not leak into price forecasts.", "Differences attributed to price scenarios must not be confounded by changing other modeling conventions.", "Q2 and Q3 outputs must be regenerated under the predicted price path rather than mechanically rescaled."]
     }
   ],
   "global_structure": {
@@ -84,6 +86,6 @@
     "suggested_workflow_order": ["Q1", "Q2", "Q3", "Q4"]
   },
   "classification_risks": ["Q1 is deliberately not labeled as a pure optimization problem, but its optimization output requirements remain binding.", "Scenario analysis is encoded as a hybrid framing for Q4 because it is not a standalone standard classifier label.", "These classifications narrow the workflow but do not select a final algorithm or parameter set."],
-  "ambiguities": [],
+  "ambiguities": ["Q4分类标签已由建模者确认保留为情景分析—优化混合，但新增价格预测要求后的修订分类理由尚待建模者确认。"],
   "recommended_next_skill": "related-paper-analyzer"
 }
