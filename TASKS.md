@@ -8,6 +8,7 @@
 | 已完成 | 收集并归档附件 1-5（含数据和结果模板） | 电脑 A | `dev-pc-a` | `data/raw/`, `data/templates/` | 用户已确认映射；原始文件校验值保持一致 |
 | 已完成 | 整理主要参考文献与采用边界 | 电脑 A | `dev-pc-a` | `docs/literature-notes.md` | 三篇学位论文已登记，后续补充同行评审文献 |
 | 已完成 | 核对附件字段、时间粒度、缺失值和单位 | 电脑 A | `dev-pc-a` | `data/data_report.md`, `docs/data-dictionary.md` | 基础数据可用；时间标签解释须在建模前冻结 |
+| 待审核 | 解读题面并形成结构化问题解析 | 电脑 A | `dev-pc-a` | `planning/parse/` | 解析草稿已生成；待建模者确认评分标准与五条机制关系 |
 | 待认领 | 建立统一储能状态转移与购电成本模型 | — | — | `docs/model.md`, `src/` | 明确 90% 效率的采用方式 |
 | 待认领 | 完成问题 1 确定性优化与 `result1.xlsx` | — | — | `src/`, `tests/`, `output/` | 同日电价与负荷、光伏预测变化 |
 | 待认领 | 完成问题 2 全年日前优化与 `result2.xlsx` | — | — | `src/`, `tests/`, `output/` | 包含 5 倍电价紧急购电 |
