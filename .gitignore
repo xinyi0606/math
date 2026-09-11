@@ -39,4 +39,9 @@ temp/
 # Large local datasets (keep the directory placeholder)
 data/*
 !data/.gitkeep
-
+!data/raw/
+!data/raw/**
+!data/templates/
+!data/templates/**
+!data/data_report.md
+!data/manifest.sha256

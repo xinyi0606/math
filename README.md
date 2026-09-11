@@ -8,11 +8,15 @@
 
 主要参考文献及其在本题中的采用边界见 [`docs/literature-notes.md`](docs/literature-notes.md)。
 
+附件结构、字段、单位和审计结论见 [`docs/data-dictionary.md`](docs/data-dictionary.md) 与 [`data/data_report.md`](data/data_report.md)。
+
 ## 项目结构
 
 ```text
 math/
-├── data/          # 输入数据（只提交可公开、体积较小的数据）
+├── data/
+│   ├── raw/       # 竞赛原始附件，保持只读
+│   └── templates/ # 官方结果工作簿模板
 ├── docs/          # 题目说明、推导与设计文档
 ├── notebooks/     # 探索性计算与笔记本
 ├── src/           # 可复用的实现
