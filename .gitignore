@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# JavaScript / TypeScript
+node_modules/
+dist/
+build/
+coverage/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+*.local
+
+# Generated and temporary files
+tmp/
+temp/
+*.log
+*.bak
+*.tmp
+
+# Large local datasets (keep the directory placeholder)
+data/*
+!data/.gitkeep
+
