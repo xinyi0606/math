@@ -13,7 +13,7 @@
 | 已完成 | 归档、分析并发布三篇主要参考文献 | 电脑 A | `dev-pc-a` | `workspace/papers/`, `docs/literature-notes.md` | 用户确认已获发布同意；原文和分析报告均纳入GitHub，下一步进入候选方法比较 |
 | 已完成 | 建立Q1-Q4初版统一符号表 | 电脑 A | `dev-pc-a` | `planning/symbol_table.md` | 已统一题面、冻结口径与用户原符号说明；候选方法产生后须回填方法特有符号 |
 | 已完成 | 建立全局模型假设初稿 | 电脑 A | `dev-pc-a` | `planning/model_assumptions.md` | 26条假设、类型/违反影响、三项执行决定与论证均已按用户授权确认；方法选择后回填方法诱导假设 |
-| 待认领 | 完善问题依赖图 | — | — | `planning/question_dependency.md` | 第三优先；明确跨问状态、数据和结果复用关系 |
+| 已完成 | 完善问题依赖图 | 电脑 A | `dev-pc-a` | `planning/question_dependency.md` | 已含总体图、接口契约、15条边、时序、防泄漏矩阵、评价依赖和方法选择硬约束 |
 | 待认领 | 建立Q1-Q4候选方法池并做轻量验证 | — | — | `methods/Q1/`, `methods/Q2/`, `methods/Q3/`, `methods/Q4/` | 第四优先；使用 `method-selector`，每问2-4个候选及基线 |
 | 待认领 | 建立统一储能状态转移与购电成本模型 | — | — | `docs/model.md`, `src/` | 明确 90% 效率的采用方式 |
 | 待认领 | 完成问题 1 确定性优化与 `result1.xlsx` | — | — | `src/`, `tests/`, `output/` | 同日电价与负荷、光伏预测变化 |
