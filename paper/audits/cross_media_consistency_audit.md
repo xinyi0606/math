@@ -40,7 +40,7 @@
 27. **PASS**：三篇原文文件名、作者和年份与 docs/literature-notes.md、workspace/papers/related_paper_analysis.md 的登记一致。
 28. **PASS**：文献分析对Q1-Q4均给出方法线索和不适用边界，且没有把候选方法误标为最终已选方法。
 29. **PASS**：related_paper_analysis.md 中Q2/Q3的文献映射与预测—优化分类一致，Q4的文献映射与情景分析—优化分类一致。
-30. **PASS**：原始PDF被明确保留为本地可核验资料并由.gitignore排除，Git待提交内容仅包含分析工件，不会无意发布三篇大体积原文。
+30. **PASS**：用户已明确确认三篇PDF获得发布同意；.gitignore中的本地排除规则已移除，三篇原文与可追溯分析报告将一并纳入GitHub。
 31. **PASS**：problem_parse.md与problem_parse.json均保留解析工件自身的READY_FOR_CLASSIFICATION状态，同时Markdown注明下游分类已完成；该历史工件状态与进度看板的当前全局G1通过状态不存在语义冲突。
 
 ## 尚不可审计的内容

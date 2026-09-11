@@ -36,9 +36,6 @@ temp/
 *.bak
 *.tmp
 
-# User-supplied literature originals (keep local; commit the traceable analysis only)
-workspace/papers/*.pdf
-
 # Large local datasets (keep the directory placeholder)
 data/*
 !data/.gitkeep
