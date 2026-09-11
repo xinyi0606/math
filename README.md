@@ -6,6 +6,8 @@
 
 在负荷、光伏出力、电价和预测不断变化的条件下，建立包含储能约束的微网购电优化模型，完成问题 1-4，并生成竞赛指定的 5 个 Excel 结果文件。题目梳理见 [`docs/problem-definition.md`](docs/problem-definition.md)。
 
+主要参考文献及其在本题中的采用边界见 [`docs/literature-notes.md`](docs/literature-notes.md)。
+
 ## 项目结构
 
 ```text
