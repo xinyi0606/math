@@ -15,6 +15,7 @@
 | 已完成 | 建立统一符号、模型假设与四问候选方法池 | 电脑 A | `dev-pc-a` | `planning/`, `methods/`, `tests/` | 12个Python候选PoC均通过；Q1-M2、Q2-M3、Q3-M3、Q4-M3均已DECIDED |
 | 已完成 | 建立统一储能状态转移与购电成本模型 | 电脑 A | `dev-pc-a` | `src/model-code-analyzer.md`, `src/common/` | 统一LP、预测、结算、模板与审计接口已实现并通过单元测试 |
 | 已完成 | 整合手动上传的四问方法、源码与首轮结果 | 电脑 A | `dev-pc-a` | `methods/`, `src/`, `results/`, `output/`, `tests/`, `planning/` | 108个项目文件已整合；Q1按用户决定统一为机制—优化混合；本机16项回归测试全部通过 |
+| 已完成 | 整合完整记录分卷包的补充信息 | 电脑 A | `dev-pc-a` | `PACKAGE_README.md`, `data/data_report.md`, `results/Q1-Q4/experiments/round1/logs/`, `planning/progress_dashboard.md` | 保留当前新版规则与看板；补入数据状态修正和4份运行日志；用户明确要求本次不重跑测试 |
 | 已完成 | 完成问题 1 确定性优化与 `result1.xlsx` | 电脑 A | `dev-pc-a` | `src/Q1/`, `results/Q1/`, `output/result1.xlsx` | M2费用35126.95元；互斥审计与DP网格收敛通过 |
 | 待审核 | 完成问题 2 全年日前优化与 `result2.xlsx` | 电脑 A | `dev-pc-a` | `src/Q2/`, `results/Q2/`, `output/result2.xlsx` | M3首轮总费用与紧急购电均优于M1/M2；待稳健性实验 |
 | 阻塞 | 完成问题 3 滚动调整与 `result3.xlsx` | 电脑 A | `dev-pc-a` | `src/Q3/`, `results/Q3/`, `output/result3.xlsx` | 0.90参数不满足回退条件；0.975/0.99需嵌套验证后确认 |

@@ -4,6 +4,7 @@
 >
 > 当前全局阶段：G1、G2、全局G2.5与G3均已通过 / 首轮实验完成，G4.5尚未通过，Q3参数待复核
 > 实现目标：Python；会话模式：learning
+> 最新整合：已补入完整记录包说明、数据报告状态修正及Q1-Q4首轮运行日志；按用户要求本次未重新运行测试
 
 ## 环境状态
 
@@ -70,6 +71,8 @@
 | 正式源码与统一入口 | ✅ | `src/common/`、`src/Q1-Q4/`、`src/run_all.py` |
 | 代码审查 | ✅ 4/4 | `src/Qx/reviews/` |
 | 首轮实验与官方工作簿 | ✅ 已生成 | `results/Qx/experiments/round1/`、`output/` |
+| 首轮运行日志 | ✅ 4/4已补齐 | `results/Qx/experiments/round1/logs/run.log` |
+| 完整记录包说明 | ✅ 已归档 | `PACKAGE_README.md` |
 | 正式回归测试 | ✅ 本机复验16项全部通过 | `tests/test_formal_models.py`、`tests/test_formal_outputs.py`、`tests/test_method_pocs.py` |
 | 稳健性报告 | ❌ 尚未生成 | `robustness/Qx/` |
 | 最终结果冻结与论文材料包 | ❌ 尚未生成 | `results/Qx/reports/` |

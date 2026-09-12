@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "question": "Q1",
+  "method": "Q1-M2 continuous linear programming",
+  "runtime_seconds": 1.1195351169990317,
+  "seed": 2026,
+  "input": "data/raw/附件1.xlsx (read-only)",
+  "outputs": [
+    "/workspace/scratch/d90922647ae0/math-dev-pc-a/results/Q1/experiments/round1/tables/result1.xlsx",
+    "/workspace/scratch/d90922647ae0/math-dev-pc-a/output/result1.xlsx",
+    "/workspace/scratch/d90922647ae0/math-dev-pc-a/results/Q1/experiments/round1/figures/q1_dispatch.png"
+  ],
+  "audit": {
+    "solver_success": 1,
+    "balance_violation_kwh": 1.1368683772161603e-13,
+    "soc_violation_kwh": 7.275957614183426e-12,
+    "initial_error_kwh": 0.0,
+    "terminal_error_kwh": 6.366462912410498e-12,
+    "power_violation_kwh": 0.0,
+    "simultaneous_charge_discharge_count": 0
+  }
+}
