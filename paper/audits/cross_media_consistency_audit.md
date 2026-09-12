@@ -2,7 +2,7 @@
 
 > **Status**: NOT_RUN（G6）/ INCREMENTAL_CHECK_PASSED_WITH_WARNINGS（G6执行已由建模者禁用为非阻塞项）
 > **Date**: 2026-09-12
-> **Scope**: Q3、Q4 round2参数、代码、结果、工作簿、稳健性工件与进度文档
+> **Scope**: Q1—Q4 最终方法详解、未冻结结果分析、论文材料包、round2参数、代码、结果、工作簿、稳健性工件与进度文档
 > **Source-of-truth tier**: `results/Q3/experiments/round2/metrics/metrics.json`、`results/Q4/experiments/round2/metrics/metrics.json`；尚无冻结数字
 
 ## Pass Items
@@ -17,6 +17,10 @@
 8. ✅ Q3/Q4 README、TASKS、进度看板、数据报告和数据字典均已指向round2当前结果，并明确round1只作历史证据。
 9. ✅ 完整回归测试17项通过，覆盖成本公式、非前视、物理约束、工作簿结构、参数传播和原始附件哈希。
 10. ✅ Q3稳定性选择 `needs_caution` 已在决定文件和进度看板中一致登记；决定状态仍保持PENDING，未被错误传播为冻结结论。
+11. ✅ 四份最终方法详解均将方法选择追溯到 `Q1-D01`—`Q4-D01`，且与对应 round 结果中的 M2/M3 方法标识一致。
+12. ✅ 四份未冻结结果分析和材料包的主数值与各自 metrics JSON/实验报告一致：Q1 35,126.95 元、Q2 16,865,002.84 元、Q3 17,469,451.07 元、Q4-3 18,405,519.64 元。
+13. ✅ 四份材料包列出的四张比较图及五份官方工作簿均已在磁盘核验存在；Q3/Q4 图已正确标为需 300 dpi 重绘。
+14. ✅ 最终方法、结果分析和材料包的待确认记录均指向真实方法决定和结果证据；所有新增记录保持 PENDING，未被误标为人工签署或冻结数字。
 
 ## Divergences and Warnings
 
