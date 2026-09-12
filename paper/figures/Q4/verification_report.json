@@ -1,0 +1,1796 @@
+{
+  "status": "PASS_WITH_SOURCE_LIMITATION",
+  "figures": 34,
+  "format_files": 102,
+  "nominal_png_dpi": 600,
+  "source_files_checked": 168,
+  "numerical_checks": [
+    {
+      "round": "round1",
+      "family": "q4_2",
+      "alpha_q4_3_executed_not_frozen": 0.9,
+      "days": 334,
+      "slots": 48096,
+      "status": "PASS"
+    },
+    {
+      "round": "round2",
+      "family": "q4_2",
+      "alpha_q4_3_executed_not_frozen": 0.99,
+      "days": 334,
+      "slots": 48096,
+      "status": "PASS"
+    },
+    {
+      "round": "round2",
+      "family": "q4_3",
+      "alpha_q4_3_executed_not_frozen": 0.99,
+      "days": 334,
+      "slots": 48096,
+      "status": "PASS"
+    }
+  ],
+  "source_defects": [
+    {
+      "path": "results/Q4/experiments/round1/tables/q4_3_m3_full_schedule.csv.gz",
+      "issue": "Committed gzip stream truncated identically in both branches; preserved unchanged. Round1 comparison figures use complete daily metrics, not this file.",
+      "sha256": "6794a3d86fa2b01eb3bc5d978e137e9badba15577414b481abd3bea2ec2dbc84"
+    }
+  ],
+  "strictly_past_scenario_records": 9352,
+  "future_suffix_mutation_tests": 12,
+  "records": [
+    {
+      "path": "PNG_600dpi/Q4_01_双分支历史价格鲁棒优化闭环.png",
+      "bytes": 554029,
+      "sha256": "53a14ce2cb8c425e586c6f7a038e2bba4027b5c0ba62ae75736eb52132380f77",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_01_双分支历史价格鲁棒优化闭环.png",
+        "ext": "png",
+        "size_bytes": 554029,
+        "category": "raster",
+        "size_px": [
+          4320,
+          3480
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_01_双分支历史价格鲁棒优化闭环.pdf",
+      "bytes": 23189,
+      "sha256": "d0f10a88e9afdfd3f11cf3800b9970995b0f82bdbda51397e7fc049a0200eac9",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_01_双分支历史价格鲁棒优化闭环.pdf",
+        "ext": "pdf",
+        "size_bytes": 23189,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_01_双分支历史价格鲁棒优化闭环.svg",
+      "bytes": 9092,
+      "sha256": "a904a77def2b43d5c5ad65cf0c1336021191cb5474c8d02ba1f7cf09dcc46ab1",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_01_双分支历史价格鲁棒优化闭环.svg",
+        "ext": "svg",
+        "size_bytes": 9092,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_02_价格前缀条件化与七历史情景筛选.png",
+      "bytes": 466955,
+      "sha256": "a79a6fc908e8c3bb4b40e657099e12b5cd10635e6ad14e5ff7d86b4bd3704f75",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_02_价格前缀条件化与七历史情景筛选.png",
+        "ext": "png",
+        "size_bytes": 466955,
+        "category": "raster",
+        "size_px": [
+          4320,
+          3300
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_02_价格前缀条件化与七历史情景筛选.pdf",
+      "bytes": 18631,
+      "sha256": "caa92da262164ce17d0afd8e97fcf93af1d154aedb850ef241972480f97aa0ae",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_02_价格前缀条件化与七历史情景筛选.pdf",
+        "ext": "pdf",
+        "size_bytes": 18631,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_02_价格前缀条件化与七历史情景筛选.svg",
+      "bytes": 7772,
+      "sha256": "53b45bcd78f6a4c964ef3ef3229585cbc1f26e64db0dd8c1b394955112998b86",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_02_价格前缀条件化与七历史情景筛选.svg",
+        "ext": "svg",
+        "size_bytes": 7772,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_03_最坏合同费用上界线性规划结构.png",
+      "bytes": 476628,
+      "sha256": "c56dfad77ef189ee327cce96830ed4a3f9211204b936b499ecb4d382449fce8c",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_03_最坏合同费用上界线性规划结构.png",
+        "ext": "png",
+        "size_bytes": 476628,
+        "category": "raster",
+        "size_px": [
+          4320,
+          3600
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_03_最坏合同费用上界线性规划结构.pdf",
+      "bytes": 23952,
+      "sha256": "843f0120f8a6ec024a2cc539b62ebcbf2f3c7df2a1be7eab3785bdd7d9f3eb3e",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /BMQQDV+DejaVuSans, /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_03_最坏合同费用上界线性规划结构.pdf",
+        "ext": "pdf",
+        "size_bytes": 23952,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_03_最坏合同费用上界线性规划结构.svg",
+      "bytes": 6798,
+      "sha256": "ac9d3c59bb47dd2a288b109bd8db3899443f9a766979fac5c74e2e6dcd61edca",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_03_最坏合同费用上界线性规划结构.svg",
+        "ext": "svg",
+        "size_bytes": 6798,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_04_非对称调整合同与紧急结算边界.png",
+      "bytes": 429293,
+      "sha256": "ef5f443cb589a14d27f8f89f3518b5824e7af8b3add5f346ce747351eb4e6713",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_04_非对称调整合同与紧急结算边界.png",
+        "ext": "png",
+        "size_bytes": 429293,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2760
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_04_非对称调整合同与紧急结算边界.pdf",
+      "bytes": 17548,
+      "sha256": "51b3703b8c1264732dccfd18a2124916163dc66b71d330aff51d1c932967d804",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /BMQQDV+DejaVuSans, /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_04_非对称调整合同与紧急结算边界.pdf",
+        "ext": "pdf",
+        "size_bytes": 17548,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_04_非对称调整合同与紧急结算边界.svg",
+      "bytes": 16397,
+      "sha256": "c50320b823ddb3053ec850fe0f14d71a8e0072ce2c4ad3ce15a6a81b97b65c47",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_04_非对称调整合同与紧急结算边界.svg",
+        "ext": "svg",
+        "size_bytes": 16397,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_05_全年波动电价日期小时场.png",
+      "bytes": 364851,
+      "sha256": "ffbc2f51bb17730743f9b0f9f9fc4010cd05e63c354b8960e84bf81b6b092c5b",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_05_全年波动电价日期小时场.png",
+        "ext": "png",
+        "size_bytes": 364851,
+        "category": "raster",
+        "size_px": [
+          4320,
+          3060
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_05_全年波动电价日期小时场.pdf",
+      "bytes": 108351,
+      "sha256": "850c09087d3550b52e82d754adf57451fd45737e609f83d1029e48ef32f16056",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_05_全年波动电价日期小时场.pdf",
+        "ext": "pdf",
+        "size_bytes": 108351,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_05_全年波动电价日期小时场.svg",
+      "bytes": 238198,
+      "sha256": "321ba6d2686b430ae54236af3833f95bb0e9e5407d44c0f111b864de7025bc98",
+      "basic_audit": [
+        [
+          "WARN",
+          "SVG 中包含 base64 嵌入的位图——会丢失矢量优势。检查是否在 plot 中误用了 imshow 或图像贴图。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_05_全年波动电价日期小时场.svg",
+        "ext": "svg",
+        "size_bytes": 238198,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_06_月度日内电价经验分位带.png",
+      "bytes": 1344659,
+      "sha256": "4bce1ff9169f3bc7313bd80477ac2d5cee8c1572937751c18f4cbb643da38eb8",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_06_月度日内电价经验分位带.png",
+        "ext": "png",
+        "size_bytes": 1344659,
+        "category": "raster",
+        "size_px": [
+          4320,
+          4560
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_06_月度日内电价经验分位带.pdf",
+      "bytes": 61863,
+      "sha256": "75cf4a846b6acffa071c7efa9c0f0f19d00c244640ae3aa807578920ed6e7c57",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_06_月度日内电价经验分位带.pdf",
+        "ext": "pdf",
+        "size_bytes": 61863,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_06_月度日内电价经验分位带.svg",
+      "bytes": 194282,
+      "sha256": "b859ea42f2a736fc9ef1a1db124eef0207fd8ae0ca84ebf3781ad61216324d46",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_06_月度日内电价经验分位带.svg",
+        "ext": "svg",
+        "size_bytes": 194282,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_07_日均电价与日内价差联合结构.png",
+      "bytes": 821473,
+      "sha256": "a10c07c1d4856da0b25e735a6dedb7a213065e3bb574e6f64fc0186bbb36fa99",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_07_日均电价与日内价差联合结构.png",
+        "ext": "png",
+        "size_bytes": 821473,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2700
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_07_日均电价与日内价差联合结构.pdf",
+      "bytes": 182442,
+      "sha256": "090d5a3fd51172b1df2a2280dff0fb1b070d5bca16a6814377fc7b8fcfd7c839",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_07_日均电价与日内价差联合结构.pdf",
+        "ext": "pdf",
+        "size_bytes": 182442,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_07_日均电价与日内价差联合结构.svg",
+      "bytes": 321445,
+      "sha256": "cdf3617fccc8c1f93f74f5e135af0fb4411213fb2bfc3bd072a014a12b662583",
+      "basic_audit": [
+        [
+          "WARN",
+          "SVG 中包含 base64 嵌入的位图——会丢失矢量优势。检查是否在 plot 中误用了 imshow 或图像贴图。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_07_日均电价与日内价差联合结构.svg",
+        "ext": "svg",
+        "size_bytes": 321445,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_08_实际电价与实际净负荷联合密度.png",
+      "bytes": 719902,
+      "sha256": "4f2b453e75d178c3ed287aa54028786f1c9605ceffbc7abb0fe04e6281074e14",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_08_实际电价与实际净负荷联合密度.png",
+        "ext": "png",
+        "size_bytes": 719902,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2700
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_08_实际电价与实际净负荷联合密度.pdf",
+      "bytes": 201041,
+      "sha256": "ba8b27b37e2894855d38059896fce1b1580f39c636dbb781152fccfb85fecbf8",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_08_实际电价与实际净负荷联合密度.pdf",
+        "ext": "pdf",
+        "size_bytes": 201041,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_08_实际电价与实际净负荷联合密度.svg",
+      "bytes": 298992,
+      "sha256": "f481ecfc0bf2cd621a93358f44ee7ce125c94ccab06b4f53d5ccb337204b90ca",
+      "basic_audit": [
+        [
+          "WARN",
+          "SVG 中包含 base64 嵌入的位图——会丢失矢量优势。检查是否在 plot 中误用了 imshow 或图像贴图。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_08_实际电价与实际净负荷联合密度.svg",
+        "ext": "svg",
+        "size_bytes": 298992,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_09_四发布时刻历史价格情景年龄雨云图.png",
+      "bytes": 406767,
+      "sha256": "d0a469c624f274a1252dd519c4e4de1c6f9dbd1ef7b5190da6102afec8d3b266",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_09_四发布时刻历史价格情景年龄雨云图.png",
+        "ext": "png",
+        "size_bytes": 406767,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2700
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_09_四发布时刻历史价格情景年龄雨云图.pdf",
+      "bytes": 56927,
+      "sha256": "f1542b22f29ad0262fd4ea41aac00c10bb1fca9a708684a7a1aca055186d8a66",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_09_四发布时刻历史价格情景年龄雨云图.pdf",
+        "ext": "pdf",
+        "size_bytes": 56927,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_09_四发布时刻历史价格情景年龄雨云图.svg",
+      "bytes": 116210,
+      "sha256": "f048c122fd54e0db4c3fe60d1a5ec756753b0abf73e840c9ec83352d04e3f8de",
+      "basic_audit": [
+        [
+          "WARN",
+          "SVG 中包含 base64 嵌入的位图——会丢失矢量优势。检查是否在 plot 中误用了 imshow 或图像贴图。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_09_四发布时刻历史价格情景年龄雨云图.svg",
+        "ext": "svg",
+        "size_bytes": 116210,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_10_四时点七情景历史日期迁移矩阵.png",
+      "bytes": 269294,
+      "sha256": "bf6e213edd16fbce05ff51f5c7e89fd9c46934c222d6d3ed2af60c97e395c4b6",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_10_四时点七情景历史日期迁移矩阵.png",
+        "ext": "png",
+        "size_bytes": 269294,
+        "category": "raster",
+        "size_px": [
+          4320,
+          3060
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_10_四时点七情景历史日期迁移矩阵.pdf",
+      "bytes": 47943,
+      "sha256": "0832e868ca36d61336ef68077f8cbea4e097edb371813b407ff21b141cb9bef3",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_10_四时点七情景历史日期迁移矩阵.pdf",
+        "ext": "pdf",
+        "size_bytes": 47943,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_10_四时点七情景历史日期迁移矩阵.svg",
+      "bytes": 86563,
+      "sha256": "9d9bbdce5973b94c52d9596bfe8e5fec76d6f3e44f90ef96fb423d13d2e4d154",
+      "basic_audit": [
+        [
+          "WARN",
+          "SVG 中包含 base64 嵌入的位图——会丢失矢量优势。检查是否在 plot 中误用了 imshow 或图像贴图。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_10_四时点七情景历史日期迁移矩阵.svg",
+        "ext": "svg",
+        "size_bytes": 86563,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_11_最高费用日七价格情景与真实后缀.png",
+      "bytes": 1344228,
+      "sha256": "b9e8a66bc9814bafdc9ba9d030f54da8ea9fab45a27ea338dc9a0a02ca2a6d71",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_11_最高费用日七价格情景与真实后缀.png",
+        "ext": "png",
+        "size_bytes": 1344228,
+        "category": "raster",
+        "size_px": [
+          4320,
+          3780
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_11_最高费用日七价格情景与真实后缀.pdf",
+      "bytes": 37084,
+      "sha256": "2d320dde7d504a3e8da1be07e965d158210cb9f1e6c85ef2a0e5394f501ac37f",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_11_最高费用日七价格情景与真实后缀.pdf",
+        "ext": "pdf",
+        "size_bytes": 37084,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_11_最高费用日七价格情景与真实后缀.svg",
+      "bytes": 132278,
+      "sha256": "4d990a68b156d713b78386e0bfc492242b19f62a33b632fcc3260a73be01b269",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_11_最高费用日七价格情景与真实后缀.svg",
+        "ext": "svg",
+        "size_bytes": 132278,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_12_有限历史情景未来价格范围覆盖诊断.png",
+      "bytes": 331293,
+      "sha256": "791123810f74564c11f5969fab437453bc44f01b6b3d12bf9859d75f94cf20be",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_12_有限历史情景未来价格范围覆盖诊断.png",
+        "ext": "png",
+        "size_bytes": 331293,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2700
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_12_有限历史情景未来价格范围覆盖诊断.pdf",
+      "bytes": 27889,
+      "sha256": "a8302c7c23aa96ef094dbb7537446ee2dae2b5bd7d2eed8762480dcfda500080",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_12_有限历史情景未来价格范围覆盖诊断.pdf",
+        "ext": "pdf",
+        "size_bytes": 27889,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_12_有限历史情景未来价格范围覆盖诊断.svg",
+      "bytes": 39388,
+      "sha256": "b0b635d2558bd6cf48715344244a154954e4f43ef28ac4b2393fd28a0b6566af",
+      "basic_audit": [
+        [
+          "WARN",
+          "SVG 中包含 base64 嵌入的位图——会丢失矢量优势。检查是否在 plot 中误用了 imshow 或图像贴图。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_12_有限历史情景未来价格范围覆盖诊断.svg",
+        "ext": "svg",
+        "size_bytes": 39388,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_13_两分支三策略累计费用风险取舍.png",
+      "bytes": 227470,
+      "sha256": "524f3d61a47be26cce5a45bd1016c3a4973a52e708569d7b8221861f8e3d3b0c",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_13_两分支三策略累计费用风险取舍.png",
+        "ext": "png",
+        "size_bytes": 227470,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2880
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_13_两分支三策略累计费用风险取舍.pdf",
+      "bytes": 12328,
+      "sha256": "9736a58f40dc1e3e09507b4fceeda97ba7680ef6aace906ec5c930276bb7a594",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_13_两分支三策略累计费用风险取舍.pdf",
+        "ext": "pdf",
+        "size_bytes": 12328,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_13_两分支三策略累计费用风险取舍.svg",
+      "bytes": 22197,
+      "sha256": "166be12c7b1d86016ed951b55803c9759bc2121035841107cc77e16fcfe01a25",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_13_两分支三策略累计费用风险取舍.svg",
+        "ext": "svg",
+        "size_bytes": 22197,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_14_相对无储能多指标正反证据矩阵.png",
+      "bytes": 461773,
+      "sha256": "7502f8bf8158fe1e63e3901d24f921e29d2ed88bf27be12c422ae9d1d97e95d8",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_14_相对无储能多指标正反证据矩阵.png",
+        "ext": "png",
+        "size_bytes": 461773,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2940
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_14_相对无储能多指标正反证据矩阵.pdf",
+      "bytes": 34438,
+      "sha256": "e96e2e3fd530c8f940cef36e7a2a51d2a2cd7cef4596e4df8d617e9ec67505a1",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_14_相对无储能多指标正反证据矩阵.pdf",
+        "ext": "pdf",
+        "size_bytes": 34438,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_14_相对无储能多指标正反证据矩阵.svg",
+      "bytes": 33395,
+      "sha256": "5e54a0e57c9b6af31826e3e256a073914e43c774a1757a63f28e5be50604f70e",
+      "basic_audit": [
+        [
+          "WARN",
+          "SVG 中包含 base64 嵌入的位图——会丢失矢量优势。检查是否在 plot 中误用了 imshow 或图像贴图。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_14_相对无储能多指标正反证据矩阵.svg",
+        "ext": "svg",
+        "size_bytes": 33395,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_15_多置信水平每日总费用尾部曲线.png",
+      "bytes": 333101,
+      "sha256": "3973e0858c8b418bc7a5de46ad7ed63448f396cb26fc0e21583f0fecd6368e37",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_15_多置信水平每日总费用尾部曲线.png",
+        "ext": "png",
+        "size_bytes": 333101,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2820
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_15_多置信水平每日总费用尾部曲线.pdf",
+      "bytes": 17352,
+      "sha256": "c32785bfab1763279e7999111f3b6255f2df63eb22246ee1d2337e34c58b1acc",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_15_多置信水平每日总费用尾部曲线.pdf",
+        "ext": "pdf",
+        "size_bytes": 17352,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_15_多置信水平每日总费用尾部曲线.svg",
+      "bytes": 34952,
+      "sha256": "03fd536b07f7bb0db424169d164bc8e1129f6b99372750d05035772c55ac919f",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_15_多置信水平每日总费用尾部曲线.svg",
+        "ext": "svg",
+        "size_bytes": 34952,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_16_每日紧急购电尾部超越概率.png",
+      "bytes": 298061,
+      "sha256": "cdfe63d1e6f93303dce1d2bb5ef7d3e152547f48879587714a9b0ced44a235a7",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_16_每日紧急购电尾部超越概率.png",
+        "ext": "png",
+        "size_bytes": 298061,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2820
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_16_每日紧急购电尾部超越概率.pdf",
+      "bytes": 25807,
+      "sha256": "40a69fa9e4c95fd63240f1f81d6af32425b131e033cb3e08f78701c13ce9b64b",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_16_每日紧急购电尾部超越概率.pdf",
+        "ext": "pdf",
+        "size_bytes": 25807,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_16_每日紧急购电尾部超越概率.svg",
+      "bytes": 82952,
+      "sha256": "048749b46e1931fecefe650d724ecd51ce1629474dca145d366c401e6ab59cc2",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_16_每日紧急购电尾部超越概率.svg",
+        "ext": "svg",
+        "size_bytes": 82952,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_17_三策略两分支日费用风险联合分布.png",
+      "bytes": 1615226,
+      "sha256": "41cbc84498155971fe2a96433caeb1088e18445ae8594553d53371506506b8a4",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_17_三策略两分支日费用风险联合分布.png",
+        "ext": "png",
+        "size_bytes": 1615226,
+        "category": "raster",
+        "size_px": [
+          4320,
+          4440
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_17_三策略两分支日费用风险联合分布.pdf",
+      "bytes": 203022,
+      "sha256": "328dc3386a8e993af89c249c0bac9678abfee4d8aebe09a2b7970dae88daec4e",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_17_三策略两分支日费用风险联合分布.pdf",
+        "ext": "pdf",
+        "size_bytes": 203022,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_17_三策略两分支日费用风险联合分布.svg",
+      "bytes": 483662,
+      "sha256": "4b576af511b5e12fb7af0cc30150f57447c37d85e3413f0819227867f6d53ddb",
+      "basic_audit": [
+        [
+          "WARN",
+          "SVG 中包含 base64 嵌入的位图——会丢失矢量优势。检查是否在 plot 中误用了 imshow 或图像贴图。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_17_三策略两分支日费用风险联合分布.svg",
+        "ext": "svg",
+        "size_bytes": 483662,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_18_历史情景与价格oracle逐日费用配对.png",
+      "bytes": 480183,
+      "sha256": "3f6f833a5f47175debb3bb14df1185bc59838981805c451c41e516fd14638a8c",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_18_历史情景与价格oracle逐日费用配对.png",
+        "ext": "png",
+        "size_bytes": 480183,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2820
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_18_历史情景与价格oracle逐日费用配对.pdf",
+      "bytes": 56091,
+      "sha256": "fcc6717623f3dbdfeb68b3d4315151ec78611a15c96b1ad1135213e97e0df6b7",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_18_历史情景与价格oracle逐日费用配对.pdf",
+        "ext": "pdf",
+        "size_bytes": 56091,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_18_历史情景与价格oracle逐日费用配对.svg",
+      "bytes": 124893,
+      "sha256": "68dc3e07d10eec83b3c7e59ffcaac973d75839a04db637caec09893504a23d85",
+      "basic_audit": [
+        [
+          "WARN",
+          "SVG 中包含 base64 嵌入的位图——会丢失矢量优势。检查是否在 plot 中误用了 imshow 或图像贴图。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_18_历史情景与价格oracle逐日费用配对.svg",
+        "ext": "svg",
+        "size_bytes": 124893,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_19_相对价格oracle累计费用差轨迹.png",
+      "bytes": 302137,
+      "sha256": "17596f56b8a4cbc20a9f137a170310156e0a54061b77a7e9119b46173a96ea75",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_19_相对价格oracle累计费用差轨迹.png",
+        "ext": "png",
+        "size_bytes": 302137,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2700
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_19_相对价格oracle累计费用差轨迹.pdf",
+      "bytes": 14831,
+      "sha256": "095e121ae52053db9891ba53a360723ee0b143e78def406ee8a5ccc630070818",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_19_相对价格oracle累计费用差轨迹.pdf",
+        "ext": "pdf",
+        "size_bytes": 14831,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_19_相对价格oracle累计费用差轨迹.svg",
+      "bytes": 28651,
+      "sha256": "52a55695629b03662c852da68c6a74ab5bbab440ab55a272fdcca69d9470b7e0",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_19_相对价格oracle累计费用差轨迹.svg",
+        "ext": "svg",
+        "size_bytes": 28651,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_20_相对无储能累计费用节省轨迹.png",
+      "bytes": 316962,
+      "sha256": "e3f7d12bebdab06c24d0adf33fc3f0efaf73d18c29022c73ae60a821f0b6d033",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_20_相对无储能累计费用节省轨迹.png",
+        "ext": "png",
+        "size_bytes": 316962,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2700
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_20_相对无储能累计费用节省轨迹.pdf",
+      "bytes": 13801,
+      "sha256": "ddb687daf713b2765fd3a1077f4d31460fbf20e7d96fb3483cb94f976a3319ef",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_20_相对无储能累计费用节省轨迹.pdf",
+        "ext": "pdf",
+        "size_bytes": 13801,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_20_相对无储能累计费用节省轨迹.svg",
+      "bytes": 23516,
+      "sha256": "6427d81a352d8f2687ca22e88280c88b5dcfd7998d3295680dfc119938964779",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_20_相对无储能累计费用节省轨迹.svg",
+        "ext": "svg",
+        "size_bytes": 23516,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_21_两分支月度非对称实际结算分解.png",
+      "bytes": 392327,
+      "sha256": "c7a38d2d0f89e5fb01714feef8d4b38f8f14cf8de62bf9e83296f2766454cf38",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_21_两分支月度非对称实际结算分解.png",
+        "ext": "png",
+        "size_bytes": 392327,
+        "category": "raster",
+        "size_px": [
+          4320,
+          3720
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_21_两分支月度非对称实际结算分解.pdf",
+      "bytes": 12435,
+      "sha256": "818605c40ff38d94ba0af6f20fe98262551184d5097dc065f87fb3783110d2e4",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_21_两分支月度非对称实际结算分解.pdf",
+        "ext": "pdf",
+        "size_bytes": 12435,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_21_两分支月度非对称实际结算分解.svg",
+      "bytes": 29485,
+      "sha256": "9d193b9f9c82b9db6647a9c06ff529faed06fd276e1ce2e72332123cf292366d",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_21_两分支月度非对称实际结算分解.svg",
+        "ext": "svg",
+        "size_bytes": 29485,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_22_合同与紧急费用相对oracle差值象限.png",
+      "bytes": 468913,
+      "sha256": "d6876ad64e88634a8c95f7679a70122985fd33bb0faf785770541d3cce62afc5",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_22_合同与紧急费用相对oracle差值象限.png",
+        "ext": "png",
+        "size_bytes": 468913,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2880
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_22_合同与紧急费用相对oracle差值象限.pdf",
+      "bytes": 45176,
+      "sha256": "91f2cb2a03638882771c3f20aac4b2b19c0cba7a9a13b3d60b9376d26a19da92",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_22_合同与紧急费用相对oracle差值象限.pdf",
+        "ext": "pdf",
+        "size_bytes": 45176,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_22_合同与紧急费用相对oracle差值象限.svg",
+      "bytes": 110523,
+      "sha256": "71ce1e8c6471efbbeca2b0dc81fa897afb22bc244d973578c680d2a2f31c375e",
+      "basic_audit": [
+        [
+          "WARN",
+          "SVG 中包含 base64 嵌入的位图——会丢失矢量优势。检查是否在 plot 中误用了 imshow 或图像贴图。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_22_合同与紧急费用相对oracle差值象限.svg",
+        "ext": "svg",
+        "size_bytes": 110523,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_23_日前到滚动分位策略配对费用风险变化.png",
+      "bytes": 728681,
+      "sha256": "306fd254c579495196801aca637a42c0887ce484061154988c5a27be33e76a7e",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_23_日前到滚动分位策略配对费用风险变化.png",
+        "ext": "png",
+        "size_bytes": 728681,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2700
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_23_日前到滚动分位策略配对费用风险变化.pdf",
+      "bytes": 179403,
+      "sha256": "5ffca6aaa94d47b6fe84664d67b444363672dfc1a8d9d12f3f73b20d219a9071",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_23_日前到滚动分位策略配对费用风险变化.pdf",
+        "ext": "pdf",
+        "size_bytes": 179403,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_23_日前到滚动分位策略配对费用风险变化.svg",
+      "bytes": 291390,
+      "sha256": "8bafe5918b4f406cc799da4373dc8f9b1523407ac93fed0620efc2a32c0245a7",
+      "basic_audit": [
+        [
+          "WARN",
+          "SVG 中包含 base64 嵌入的位图——会丢失矢量优势。检查是否在 plot 中误用了 imshow 或图像贴图。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_23_日前到滚动分位策略配对费用风险变化.svg",
+        "ext": "svg",
+        "size_bytes": 291390,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_24_滚动分位策略紧急费用日历热图.png",
+      "bytes": 137808,
+      "sha256": "687af380e6b3727e76305b93ce496151dd1992e3cbb9b23959a4e53ea26c2571",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_24_滚动分位策略紧急费用日历热图.png",
+        "ext": "png",
+        "size_bytes": 137808,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2400
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_24_滚动分位策略紧急费用日历热图.pdf",
+      "bytes": 27980,
+      "sha256": "3a0ad00b28450e75c84626b205b714f6571c5b859ab4f2f01684eb0be277feaf",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_24_滚动分位策略紧急费用日历热图.pdf",
+        "ext": "pdf",
+        "size_bytes": 27980,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_24_滚动分位策略紧急费用日历热图.svg",
+      "bytes": 31356,
+      "sha256": "3df0e52af9a83609049cb6b0fea9cc146fdd84515e7778b5a4f57246a1463848",
+      "basic_audit": [
+        [
+          "WARN",
+          "SVG 中包含 base64 嵌入的位图——会丢失矢量优势。检查是否在 plot 中误用了 imshow 或图像贴图。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_24_滚动分位策略紧急费用日历热图.svg",
+        "ext": "svg",
+        "size_bytes": 31356,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_25_滚动最终购电调整日期小时场.png",
+      "bytes": 248261,
+      "sha256": "e130e484a4309e3c607530e34c8d736c0772769504cff45927e7233bbddcc138",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_25_滚动最终购电调整日期小时场.png",
+        "ext": "png",
+        "size_bytes": 248261,
+        "category": "raster",
+        "size_px": [
+          4320,
+          3000
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_25_滚动最终购电调整日期小时场.pdf",
+      "bytes": 48224,
+      "sha256": "7847fc0532f9d1badfe40c7e0cd1fac92c8a77b88d99fefb68035906b310dc0b",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_25_滚动最终购电调整日期小时场.pdf",
+        "ext": "pdf",
+        "size_bytes": 48224,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_25_滚动最终购电调整日期小时场.svg",
+      "bytes": 93995,
+      "sha256": "59174063ef5c682389da90eab7b5cfb893edb9e001a2ae41dded9e2d0f237039",
+      "basic_audit": [
+        [
+          "WARN",
+          "SVG 中包含 base64 嵌入的位图——会丢失矢量优势。检查是否在 plot 中误用了 imshow 或图像贴图。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_25_滚动最终购电调整日期小时场.svg",
+        "ext": "svg",
+        "size_bytes": 93995,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_26_日内发布段最终购电调整雨云图.png",
+      "bytes": 275627,
+      "sha256": "14226f1c3c13acd6097ab9238e2664d918ed2de7b00b4d1d7f781651d1b526a9",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_26_日内发布段最终购电调整雨云图.png",
+        "ext": "png",
+        "size_bytes": 275627,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2700
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_26_日内发布段最终购电调整雨云图.pdf",
+      "bytes": 32663,
+      "sha256": "3d803000e72430aca3e8c01f65811242aab4827697974132cf08065bed42254c",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_26_日内发布段最终购电调整雨云图.pdf",
+        "ext": "pdf",
+        "size_bytes": 32663,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_26_日内发布段最终购电调整雨云图.svg",
+      "bytes": 64715,
+      "sha256": "3547ffb1d80ed44063291885a7ad6c47fb16251a19dc87798eb63a65e6b7a28e",
+      "basic_audit": [
+        [
+          "WARN",
+          "SVG 中包含 base64 嵌入的位图——会丢失矢量优势。检查是否在 plot 中误用了 imshow 或图像贴图。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_26_日内发布段最终购电调整雨云图.svg",
+        "ext": "svg",
+        "size_bytes": 64715,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_27_实际电价与储能充放电响应联合密度.png",
+      "bytes": 895057,
+      "sha256": "c7d5459551e43392fd5cf0690841745dc158add212ff223303742a6a8e1f8e45",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_27_实际电价与储能充放电响应联合密度.png",
+        "ext": "png",
+        "size_bytes": 895057,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2880
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_27_实际电价与储能充放电响应联合密度.pdf",
+      "bytes": 307656,
+      "sha256": "a563d0caa9100fd6cf71ecff664163a9fbe585b93ae69209ccc0d20f89d549cc",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_27_实际电价与储能充放电响应联合密度.pdf",
+        "ext": "pdf",
+        "size_bytes": 307656,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_27_实际电价与储能充放电响应联合密度.svg",
+      "bytes": 461213,
+      "sha256": "ab518249168aee0ff235b236eb365dc4c27b2d0e3e75260f5420eb23e6f77761",
+      "basic_audit": [
+        [
+          "WARN",
+          "SVG 中包含 base64 嵌入的位图——会丢失矢量优势。检查是否在 plot 中误用了 imshow 或图像贴图。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_27_实际电价与储能充放电响应联合密度.svg",
+        "ext": "svg",
+        "size_bytes": 461213,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_28_两分支SOC跨日时空轨迹.png",
+      "bytes": 515192,
+      "sha256": "9e842654c00ca8130efaacceb63ad186de36733e2bd0c7180f6f10d344d2cbf2",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_28_两分支SOC跨日时空轨迹.png",
+        "ext": "png",
+        "size_bytes": 515192,
+        "category": "raster",
+        "size_px": [
+          4320,
+          4200
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_28_两分支SOC跨日时空轨迹.pdf",
+      "bytes": 119234,
+      "sha256": "e547541a7609361f8855612ba5cda6a9e83506ec553476649c95dc6d85f8c546",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_28_两分支SOC跨日时空轨迹.pdf",
+        "ext": "pdf",
+        "size_bytes": 119234,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_28_两分支SOC跨日时空轨迹.svg",
+      "bytes": 292910,
+      "sha256": "7ee2dab5bf9bd9991b0f61e9cd7d7d32319a27f998f0ee36de117b3ef1bd7ed2",
+      "basic_audit": [
+        [
+          "WARN",
+          "SVG 中包含 base64 嵌入的位图——会丢失矢量优势。检查是否在 plot 中误用了 imshow 或图像贴图。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_28_两分支SOC跨日时空轨迹.svg",
+        "ext": "svg",
+        "size_bytes": 292910,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_29_储能状态净放电功率相平面密度.png",
+      "bytes": 1171807,
+      "sha256": "c2107b215aa29f50bd5991ff02a23e08349de0386afa80166b170825e9ad66ba",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_29_储能状态净放电功率相平面密度.png",
+        "ext": "png",
+        "size_bytes": 1171807,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2880
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_29_储能状态净放电功率相平面密度.pdf",
+      "bytes": 438150,
+      "sha256": "de7abce1f3fa5ae1f82277f7726688685e3bafc9b3d81a7d9c4599c8e31ca1ef",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_29_储能状态净放电功率相平面密度.pdf",
+        "ext": "pdf",
+        "size_bytes": 438150,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_29_储能状态净放电功率相平面密度.svg",
+      "bytes": 643848,
+      "sha256": "eb1403dd349e13d92d79cf596057b2ece531cc9a20d1cd3dbf5a557b5b0ec1a5",
+      "basic_audit": [
+        [
+          "WARN",
+          "SVG 中包含 base64 嵌入的位图——会丢失矢量优势。检查是否在 plot 中误用了 imshow 或图像贴图。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_29_储能状态净放电功率相平面密度.svg",
+        "ext": "svg",
+        "size_bytes": 643848,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_30_日前策略典型日电价调度状态联动.png",
+      "bytes": 1015713,
+      "sha256": "7c2d411b19eb66981d089ba58e04deb0af65d0273938af1c52e252fa3fd45cdb",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_30_日前策略典型日电价调度状态联动.png",
+        "ext": "png",
+        "size_bytes": 1015713,
+        "category": "raster",
+        "size_px": [
+          4320,
+          5580
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_30_日前策略典型日电价调度状态联动.pdf",
+      "bytes": 20648,
+      "sha256": "e7edc8770f4d16b1f0866cdd0cb3c5a269cb300db1f8fe6af9700ff6b0090580",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_30_日前策略典型日电价调度状态联动.pdf",
+        "ext": "pdf",
+        "size_bytes": 20648,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_30_日前策略典型日电价调度状态联动.svg",
+      "bytes": 63497,
+      "sha256": "a8ac38125b993eb27451be54187462a2093a67c66ec6369fa0bbfd9251b8fad4",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_30_日前策略典型日电价调度状态联动.svg",
+        "ext": "svg",
+        "size_bytes": 63497,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_31_滚动策略典型日预测调整储能联动.png",
+      "bytes": 1149701,
+      "sha256": "b9250b7b04af6964a4b5de5553d29dda229fcd74fc39531aacb331792d7897b8",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_31_滚动策略典型日预测调整储能联动.png",
+        "ext": "png",
+        "size_bytes": 1149701,
+        "category": "raster",
+        "size_px": [
+          4320,
+          5580
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_31_滚动策略典型日预测调整储能联动.pdf",
+      "bytes": 21172,
+      "sha256": "9ce3bb2b43f81911291357610a201b5dde53c2035cd04a0cc8c2e1a3758203f9",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_31_滚动策略典型日预测调整储能联动.pdf",
+        "ext": "pdf",
+        "size_bytes": 21172,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_31_滚动策略典型日预测调整储能联动.svg",
+      "bytes": 69379,
+      "sha256": "bc9a070023afb57b27043a3b13187e0777f11557dd45ea6b0199ca8aa37c2ad0",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_31_滚动策略典型日预测调整储能联动.svg",
+        "ext": "svg",
+        "size_bytes": 69379,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_32_滚动最高费用日价格缺口储能复盘.png",
+      "bytes": 1105027,
+      "sha256": "dcd2b4883818c74bca7b88070e3c71932198dae263727765e6d88b7b8ddab7fb",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_32_滚动最高费用日价格缺口储能复盘.png",
+        "ext": "png",
+        "size_bytes": 1105027,
+        "category": "raster",
+        "size_px": [
+          4320,
+          5580
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_32_滚动最高费用日价格缺口储能复盘.pdf",
+      "bytes": 21237,
+      "sha256": "6fc8fad664e6f821b682588e088ab0b4e8b74c348694a39ac89ede676a47392e",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_32_滚动最高费用日价格缺口储能复盘.pdf",
+        "ext": "pdf",
+        "size_bytes": 21237,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_32_滚动最高费用日价格缺口储能复盘.svg",
+      "bytes": 67914,
+      "sha256": "58dc41b4e7555eb3c81436306a31039e7b73951e86fc69c7d6fba531c78c86e9",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_32_滚动最高费用日价格缺口储能复盘.svg",
+        "ext": "svg",
+        "size_bytes": 67914,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_33_安全裕度参数向Q4三传播的两轮配对变化.png",
+      "bytes": 172742,
+      "sha256": "776cf618987ca8fbe5181ef64e5a0336a460f517af32b3bd36f9299373facff4",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_33_安全裕度参数向Q4三传播的两轮配对变化.png",
+        "ext": "png",
+        "size_bytes": 172742,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2760
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_33_安全裕度参数向Q4三传播的两轮配对变化.pdf",
+      "bytes": 12205,
+      "sha256": "746384cd52d4c176216156252b5dfb69c8faec964dad67d8c4db6c4235845bc8",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_33_安全裕度参数向Q4三传播的两轮配对变化.pdf",
+        "ext": "pdf",
+        "size_bytes": 12205,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_33_安全裕度参数向Q4三传播的两轮配对变化.svg",
+      "bytes": 23162,
+      "sha256": "a9b6be0cde5865a3b0ca000f0df4c342795874446a04737c90186c267dc1e5a8",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_33_安全裕度参数向Q4三传播的两轮配对变化.svg",
+        "ext": "svg",
+        "size_bytes": 23162,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q4_34_实际计划费用超出七历史情景最坏值诊断.png",
+      "bytes": 1449945,
+      "sha256": "5b9ef2491b2293a2bfd2876c354571bd1fdede1deaa4891730c154486b8ccd58",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PNG_600dpi/Q4_34_实际计划费用超出七历史情景最坏值诊断.png",
+        "ext": "png",
+        "size_bytes": 1449945,
+        "category": "raster",
+        "size_px": [
+          4320,
+          3600
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q4_34_实际计划费用超出七历史情景最坏值诊断.pdf",
+      "bytes": 21980,
+      "sha256": "fbfd158c488aea0f79cd4bd01491f27fab81e2f9581bd2a17063fccd0752089f",
+      "basic_audit": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/PDF_vector/Q4_34_实际计划费用超出七历史情景最坏值诊断.pdf",
+        "ext": "pdf",
+        "size_bytes": 21980,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q4_34_实际计划费用超出七历史情景最坏值诊断.svg",
+      "bytes": 66784,
+      "sha256": "933cb65a1864eb1cb9ea802ebd0214fcb38f2a7f10f261d360c0e9fa89bb7e62",
+      "basic_audit": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q4_Chinese_HighRes_34Figures/SVG_editable/Q4_34_实际计划费用超出七历史情景最坏值诊断.svg",
+        "ext": "svg",
+        "size_bytes": 66784,
+        "category": "vector"
+      }
+    }
+  ],
+  "limits": "Read-only verification, not a solver rerun, frozen research decision, or out-of-sample robustness guarantee. Dense PDF/SVG layers may be rasterized; fonts independently checked including CID descendants. Round1 Q4-3 numerical checks cover daily aggregates only because the committed trace is truncated."
+}

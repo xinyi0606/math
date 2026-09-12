@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="518.4pt" height="396pt" viewBox="0 0 518.4 396" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-12T11:34:23.752232</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 396 
+L 518.4 396 
+L 518.4 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 26.058218 115.710101 
+L 220.770036 115.710101 
+Q 227.943629 115.710101 227.943629 110.250108 
+L 227.943629 36.150199 
+Q 227.943629 30.690206 220.770036 30.690206 
+L 26.058218 30.690206 
+Q 18.884625 30.690206 18.884625 36.150199 
+L 18.884625 110.250108 
+Q 18.884625 115.710101 26.058218 115.710101 
+z
+" clip-path="url(#p980adebfdb)" style="fill: #767676; fill-opacity: 0.06; stroke: #767676; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 297.629964 115.710101 
+L 492.341782 115.710101 
+Q 499.515375 115.710101 499.515375 110.250108 
+L 499.515375 36.150199 
+Q 499.515375 30.690206 492.341782 30.690206 
+L 297.629964 30.690206 
+Q 290.456371 30.690206 290.456371 36.150199 
+L 290.456371 110.250108 
+Q 290.456371 115.710101 297.629964 115.710101 
+z
+" clip-path="url(#p980adebfdb)" style="fill: #f28e2b; fill-opacity: 0.06; stroke: #f28e2b; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 26.058218 252.209933 
+L 220.770036 252.209933 
+Q 227.943629 252.209933 227.943629 246.74994 
+L 227.943629 172.650031 
+Q 227.943629 167.190038 220.770036 167.190038 
+L 26.058218 167.190038 
+Q 18.884625 167.190038 18.884625 172.650031 
+L 18.884625 246.74994 
+Q 18.884625 252.209933 26.058218 252.209933 
+z
+" clip-path="url(#p980adebfdb)" style="fill: #4e79a7; fill-opacity: 0.06; stroke: #4e79a7; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 297.629964 252.209933 
+L 492.341782 252.209933 
+Q 499.515375 252.209933 499.515375 246.74994 
+L 499.515375 172.650031 
+Q 499.515375 167.190038 492.341782 167.190038 
+L 297.629964 167.190038 
+Q 290.456371 167.190038 290.456371 172.650031 
+L 290.456371 246.74994 
+Q 290.456371 252.209933 297.629964 252.209933 
+z
+" clip-path="url(#p980adebfdb)" style="fill: #8c6bb1; fill-opacity: 0.06; stroke: #8c6bb1; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 123.414127 388.709765 
+L 394.985873 388.709765 
+Q 402.159466 388.709765 402.159466 383.249772 
+L 402.159466 309.149863 
+Q 402.159466 303.68987 394.985873 303.68987 
+L 123.414127 303.68987 
+Q 116.240534 303.68987 116.240534 309.149863 
+L 116.240534 383.249772 
+Q 116.240534 388.709765 123.414127 388.709765 
+z
+" clip-path="url(#p980adebfdb)" style="fill: #4e79a7; fill-opacity: 0.06; stroke: #4e79a7; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(82.914127 66.411482)">候选日期：0,…,d-1</text>
+    <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(73.914127 76.269294)">目标日前的真实历史价格</text>
+    <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(87.414127 86.000544)">严禁当天未来价格</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(347.735873 67.139216)">当前已知前缀：p[d,:s]</text>
+    <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(365.735873 75.689216)">s=0/35/71/107</text>
+    <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(345.485873 85.589216)">只用于历史日相似度计算</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(80.664127 202.935923)">00:00：不做前缀匹配</text>
+    <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(80.664127 212.793736)">直接取最近7个历史日</text>
+    <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(89.664127 222.651548)">决策区间144个槽</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(340.985873 202.935923)">06/12/18：按前缀RMSE排序</text>
+    <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(354.485873 212.751548)">同距离优先较近日期</text>
+    <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(356.735873 222.651548)">取7条历史价格后缀</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 120.85213 121.997939 
+Q 120.85213 141.447908 120.85213 159.779843 
+" style="fill: none; stroke: #5b6770; stroke-linecap: round"/>
+    <path d="M 122.65213 156.179843 
+L 120.85213 159.779843 
+L 119.05213 156.179843 
+z
+" style="fill: #5b6770; stroke: #5b6770; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 397.54787 121.997939 
+Q 397.54787 141.447908 397.54787 159.779843 
+" style="fill: none; stroke: #5b6770; stroke-linecap: round"/>
+    <path d="M 399.34787 156.179843 
+L 397.54787 159.779843 
+L 395.74787 156.179843 
+z
+" style="fill: #5b6770; stroke: #5b6770; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 224.715612 78.548127 
+Q 264.325831 120.002017 303.16366 160.647567 
+" style="fill: none; stroke: #5b6770; stroke-linecap: round"/>
+    <path d="M 301.978018 156.801238 
+L 303.16366 160.647567 
+L 299.375211 159.288284 
+z
+" style="fill: #5b6770; stroke: #5b6770; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(182.7 344.171302)">未执行区间：历史价格后缀 → 鲁棒LP</text>
+    <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(169.2 354.240052)">已执行前缀冻结；真实未来价格仅供事后评价</text>
+   </g>
+   <g id="patch_10">
+    <path d="M 122.667608 257.344364 
+Q 166.969398 277.950512 210.25745 298.085138 
+" style="fill: none; stroke: #5b6770; stroke-linecap: round"/>
+    <path d="M 207.752408 294.934779 
+L 210.25745 298.085138 
+L 206.234137 298.198956 
+z
+" style="fill: #5b6770; stroke: #5b6770; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 395.773987 257.428153 
+Q 356.553853 277.950977 318.324327 297.955444 
+" style="fill: none; stroke: #5b6770; stroke-linecap: round"/>
+    <path d="M 322.348564 297.881211 
+L 318.324327 297.955444 
+L 320.679483 294.691514 
+z
+" style="fill: #5b6770; stroke: #5b6770; stroke-linecap: round"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p980adebfdb">
+   <rect x="3.00024" y="3.00024" width="512.39952" height="389.99952"/>
+  </clipPath>
+ </defs>
+</svg>
