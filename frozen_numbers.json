@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN",
+  "frozen_at": "2026-09-12",
+  "scope": ["Q3", "Q4-3"],
+  "parameter": {"q3_reserve_alpha": 0.99, "status": "COMPUTATION_LOCKED"},
+  "q3": {"total_cost_yuan": 17469451.074343435, "emergency_kwh": 959911.0195582306, "emergency_daily_cvar95_kwh": 10341.242207651296, "total_cost_cvar95_yuan": 86859.00127348695},
+  "q4_3": {"total_cost_yuan": 18405519.640229046, "emergency_kwh": 966930.3836614129, "future_price_leakage_count": 0},
+  "artifacts": {"output/result3.xlsx": "6cbc8abae872e03d037085e77d321e4b00c6cebdcbe66364bf6c2657ebafae1d", "output/result4-3.xlsx": "5b1714840cfa5ced4d6f6cb6b95045d19a873b1df79d1687f7cfa7af08b0b309"},
+  "stability_grade": "needs_caution",
+  "interpretation_boundary": "冻结仅确认当前第二轮可引用数字；不表示Q3在所有尾部指标上稳定优于M1。"
+}
