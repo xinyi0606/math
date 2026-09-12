@@ -1,0 +1,48 @@
+{
+  "freeze_version": "paper-v2-2026-09-13",
+  "status": "FROZEN_FOR_PAPER",
+  "scope": "The values below are the sole numerical source for the paper text, tables and captions.",
+  "source_hashes_sha256": {
+    "Q1": "061FA9DA6647807CC2441D774134ADD20975A04C6AB96E4E68E6E1FC48111614",
+    "Q2": "53F476F1522ADB533ED7945CC4CB65703FCCB4F8029EF24553C15326F2E8FB72",
+    "Q3_round2": "13889F02B7A0B0A9EC87EA406875B5EB5C45D3E71B3D586AA7787003C8F8AA15",
+    "Q4_round2": "6E513C5E8A45B0E8B31B7E6A5160BE4A18666AD39970F5336DB5403C508C791E"
+  },
+  "Q1": {
+    "lp_cost_yuan": 35126.95,
+    "baseline_cost_yuan": 48052.05,
+    "savings_pct": 26.90,
+    "dp_50kwh_gap_pct": 0.79
+  },
+  "Q2": {
+    "evaluation_days": 334,
+    "rmse_kw": 451.70,
+    "mae_kw": 312.31,
+    "annual_total_cost_yuan": 16865002.84,
+    "annual_emergency_kwh": 1163433.11,
+    "cost_change_vs_persistence_pct": -25.88,
+    "emergency_change_vs_persistence_pct": -54.88,
+    "daily_cost_saving_block_bootstrap_95ci_yuan": [16166.43, 18554.07],
+    "daily_emergency_reduction_block_bootstrap_95ci_kwh": [3776.10, 4480.58]
+  },
+  "Q3": {
+    "reserve_alpha": 0.99,
+    "stability_verdict": "needs_caution",
+    "annual_total_cost_yuan": 17469451.07,
+    "annual_emergency_kwh": 959911.02,
+    "cost_change_vs_no_adjustment_pct": 3.58,
+    "emergency_change_vs_no_adjustment_pct": -17.50,
+    "cvar95_cost_change_vs_no_adjustment_pct": 2.17,
+    "worst_day_cost_change_vs_no_adjustment_pct": 1.83,
+    "daily_added_cost_block_bootstrap_95ci_yuan": [1348.42, 2272.44],
+    "daily_emergency_reduction_block_bootstrap_95ci_kwh": [446.39, 779.81]
+  },
+  "Q4": {
+    "Q4_2_total_cost_yuan": 17786226.74,
+    "Q4_3_total_cost_yuan": 18405519.64,
+    "Q4_3_gap_vs_price_oracle_yuan": 149161.64,
+    "Q4_3_gap_vs_price_oracle_pct": 0.82,
+    "future_price_leakage_count": 0,
+    "finite_scenario_exceedance_days_Q4_2": 101
+  }
+}

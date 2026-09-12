@@ -1,10 +1,10 @@
 # 项目进度看板
 
-> 最后更新：2026-09-12
+> 最后更新：2026-09-13
 >
-> 当前全局阶段：全部门禁已禁用为非阻塞记录项 / 论文正文第一版及 Word 排版版已完成 / Q1、Q2 正文图已筛选
+> 当前全局阶段：全部门禁已禁用为非阻塞记录项 / 论文第二版评审增强已完成 / Word版25页与26张正文图已核验
 > 实现目标：Python；会话模式：speed；门禁执行：disabled
-> 最新整合：已依据四问材料包完成中文论文正文第一版及26页 Word 排版版，并嵌入Q1、Q2及7张Q4中文高清图；Q4鲁棒目标和价格oracle边界已按复现证据纠正，Q3正式图、数字冻结和外部参考文献核验仍待补充
+> 最新整合：已区分PoC与334天正式结果，加入7日移动块Bootstrap及四季稳定性证据，冻结核心数字，补入7条可追溯参考文献和复现说明，并重建25页Word正文；公式排版按用户要求不在本轮处理
 
 ## 环境状态
 
@@ -14,7 +14,7 @@
 | Python | 通过 | 本机实测 Python 3.12.10 |
 | 科学计算依赖 | 通过 | 已按 `requirements-model.txt` 安装并验证：NumPy 2.3.5、pandas 2.2.3、SciPy 1.17.0、scikit-learn 1.8.0、matplotlib 3.10.8、openpyxl 3.1.5 |
 | 数据审计 | 通过（有警示） | 9个题目附件校验值一致；两份最新结果工作簿结构、日期、数值和日汇总通过核验；时间标签敏感性仍须正式实验 |
-| 建模目录 | 部分建立 | `planning/`、`methods/Q1-Q4/`、`src/Q1-Q4/`、`results/Q1-Q4/`、`tests/` 已建立；`robustness/` 尚未建立 |
+| 建模目录 | 通过 | `planning/`、`methods/Q1-Q4/`、`src/Q1-Q4/`、`results/Q1-Q4/`、`robustness/`、`tests/` 已建立 |
 | 决策提示模式 | learning | AI首选在建模者写出独立理由前保持隐藏 |
 
 ## 全局门禁状态（仅记录，不阻塞）
@@ -37,8 +37,8 @@
 | G2.5方法选择 | ✅ Q1-M2 | ✅ Q2-M3 | ✅ Q3-M3 | ✅ Q4-M3 |
 | 正式实验报告 | ✅ round1 | ✅ round1 | ✅ round2（0.99） | ✅ round2（Q4-3继承0.99） |
 | 最终方法说明 | ✅ M2 | ✅ M3 | ✅ M3（0.99） | ✅ M3 |
-| 最终结果分析 | ✅ 未冻结 | ✅ 未冻结 | ✅ 未冻结 | ✅ 未冻结 |
-| 论文材料包 | ✅ 未冻结 | ✅ 未冻结 | ✅ 未冻结 | ✅ 未冻结 |
+| 最终结果分析 | ✅ 已纳入论文冻结快照 | ✅ 已纳入论文冻结快照 | ✅ 已纳入论文冻结快照 | ✅ 已纳入论文冻结快照 |
+| 论文材料包 | ✅ 写作版 | ✅ 写作版 | ✅ 写作版 | ✅ 写作版 |
 | 可交论文手 | ✅ 流程允许 | ✅ 流程允许 | ✅ 流程允许 | ✅ 流程允许 |
 
 ## 当前状态摘要
@@ -69,16 +69,16 @@
 | 正式实验与官方工作簿 | ✅ round1保留、Q3/Q4 round2已生成 | `results/Qx/experiments/`、`output/` |
 | 首轮运行日志 | ✅ 4/4已补齐 | `results/Qx/experiments/round1/logs/run.log` |
 | 完整记录包说明 | ✅ 已归档 | `PACKAGE_README.md` |
-| 正式回归测试 | ✅ 本机复验17项全部通过 | `tests/test_formal_models.py`、`tests/test_formal_outputs.py`、`tests/test_method_pocs.py` |
-| 稳健性报告 | ⚠️ Q3计算报告已生成、人工置信度PENDING | `robustness/Q3/` |
+| 正式回归测试 | ✅ 本机复验22项全部通过 | `tests/test_formal_models.py`、`tests/test_formal_outputs.py`、`tests/test_method_pocs.py`、`tests/test_paper_frozen_numbers.py` |
+| 稳健性报告 | ✅ Q3参数报告及终稿配对时间稳定性报告已生成；人工置信度保持needs_caution | `robustness/Q3/`、`robustness/final_submission/` |
 | Q1/Q2最终方法说明 | ✅ 已归档 | `Q1_Q2最终方法说明.docx` |
 | 四问最终方法详解 | ✅ 已生成 | `methods/Qx/qx_final_method_explanation.md` |
-| 四问最终结果分析 | ✅ 未冻结写作版 | `results/Qx/reports/qx_final_result_analysis.md` |
-| 四问论文材料包 | ✅ 未冻结写作版 | `results/Qx/reports/qx_solution_package_for_writer.md` |
-| Q1/Q2 论文图 | ✅ 已筛选，数字仍未冻结 | `paper/figures/README.md`、`paper/figures/Q1/`、`paper/figures/Q2/` |
-| Q4 论文图 | ✅ 7张正文图已筛选，数字仍未冻结 | `paper/figures/Q4/README.md`、`paper/figures/Q4/` |
-| 论文正文第一版 | ✅ 已完成，数字仍未冻结 | `paper/sections/complete_first_draft.md`、`paper/main.md` |
-| 论文正文 Word 版 | ✅ 已更新为30页，方案名已展开并补齐Q3正式图；数字仍未冻结 | `paper/光储微电网多时间尺度协调调度论文正文.docx` |
+| 四问最终结果分析 | ✅ 已被论文冻结快照引用 | `results/Qx/reports/qx_final_result_analysis.md` |
+| 四问论文材料包 | ✅ 写作版 | `results/Qx/reports/qx_solution_package_for_writer.md` |
+| Q1-Q4论文图 | ✅ 26张正文图已嵌入Word并逐页核验 | `paper/figures/` |
+| 论文正文第二版 | ✅ 已完成评审增强与数字冻结 | `paper/sections/complete_first_draft.md`、`paper/frozen_numbers.json` |
+| 论文正文 Word 版 | ✅ 25页、26图；引用和新增证据已写入并完成视觉检查 | `paper/光储微电网多时间尺度协调调度论文正文.docx` |
+| 参考文献 | ✅ 7条均可追溯，4个英文DOI已核验 | `paper/refs.bib`、`paper/reference_audit.md` |
 | 论文写作摘要 | ✅ | `paper/writing_summary.json` |
 | 跨媒体一致性审计 | ✅ 有警示 | `paper/audits/cross_media_consistency_audit.md` |
 
@@ -88,10 +88,10 @@
 |---|---|---|
 | Q3稳定性仍为谨慎判断 | Q3与Q4-3结论的外推范围 | 0.99的风险优先理由已写入正文；稳定性继续记录为 `needs_caution` |
 | 时间标签与终端价值敏感性尚未执行 | Q1-Q4结论稳健性 | 可按需要补做整体平移一格、双侧效率和多日时域/终端价值实验 |
-| 同行评审或官方来源尚未补充 | 后续论文引用强度 | 正式写作前可由reference-manager处理 |
+| 跨年度与独立嵌套验证缺失 | 外推置信度 | 题面仅提供2025年数据；正文限定为年度内部证据，不伪造跨年度结果 |
 | Q2 PDF 字体嵌入未在本机复验 | 跨设备打开矢量 PDF 可能发生字体替换 | 正文优先使用已通过 600 dpi 检查的 PNG；需要矢量排版时优先用 SVG 或补装 `pypdf` 后复验 |
 | Q3正式正文图已生成但证据边界仍需保留 | 7张图覆盖机制、参数前沿、尾部证据、配对差异、动态裕度、全年调整和典型日联动 | 保持`needs_caution`，不把334天回放写成总体风险保证 |
-| 结果数字尚未冻结 | 正文数字虽可追溯到四问材料包，但还不是最终锁定值 | 最终排版前生成各问冻结数字快照并再次运行一致性审计 |
+| Word公式仍为LaTeX明文 | 最终排版规范 | 用户明确排除本轮公式处理；提交前仍建议转换为原生公式 |
 
 ## 三条论文交付规则（仅跟踪，不阻塞）
 
@@ -101,11 +101,11 @@
 | 最终结果分析已存在 | ✅ | ✅ | ✅ | ✅ |
 | 论文材料包已存在 | ✅ | ✅ | ✅ | ✅ |
 
-门禁已禁用；四问材料包和论文正文第一版均已建立。未冻结、未复现和未覆盖的敏感性风险已在正文与材料包中如实标注。
+门禁已禁用；四问材料包、论文第二版、数字冻结、参考文献审计和时间稳定性证据均已建立。未覆盖的跨年度、退化成本和情景外风险已在正文中如实限定。
 
 ## 推荐下一步
 
-- **正文完善**：Q3正式正文图已完成；下一步优先进行参考文献核验、数字冻结和全文润色排版。
+- **正文完善**：除公式排版外，评审提出的正文、引用、证据和冻结问题已完成；下一步优先转换Word公式并按具体赛事模板压缩页数。
 - **论文图表**：Q1/Q2 已完成正文优先图与补充图筛选；图型覆盖时序、热力、联合密度、泰勒图、生存曲线、散点、累计轨迹、状态联动和收敛分析，未堆叠简单柱状图。
 - **已完成**：建模者已全部采纳 `planning/model_assumptions.md` 中20条假设的类型与违背影响，G2机械门禁所需工件现已完整。
-- **已完成代码阶段**：Q3/Q4 round2均执行PASS；本机17项测试复验全部通过，五个官方工作簿均保持官方结构且小于5 MB。
+- **已完成代码阶段**：Q3/Q4 round2均执行PASS；本机22项测试复验全部通过，五个官方工作簿均保持官方结构且小于5 MB。

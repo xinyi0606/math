@@ -6,6 +6,7 @@ __pycache__/
 .ruff_cache/
 .venv/
 venv/
+.deps/
 
 # Jupyter
 .ipynb_checkpoints/
@@ -36,6 +37,7 @@ workspace/incoming/
 *.log
 *.bak
 *.tmp
+paper/rendered_v2/
 
 # Large local datasets (keep the directory placeholder)
 data/*

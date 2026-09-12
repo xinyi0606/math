@@ -1,14 +1,14 @@
 {
-  "status": "draft_complete_unfrozen",
+  "status": "review_enhanced_frozen",
   "generated_on": "2026-09-13",
   "main_draft": "paper/sections/complete_first_draft.md",
   "entry_page": "paper/main.md",
   "prerequisites": {"Q1": true, "Q2": true, "Q3": true, "Q4": true},
-  "sections_completed": ["摘要与关键词", "问题重述", "问题分析", "模型假设", "符号说明与公共模型", "数据预处理", "问题1模型与结果", "问题2模型与结果", "问题3模型与结果", "问题4模型与结果", "稳健性与敏感性分析", "模型评价", "结论", "参考文献"],
+  "sections_completed": ["摘要与关键词", "问题重述", "问题分析与文献定位", "模型假设", "符号说明与公共模型", "数据预处理", "问题1模型与结果", "问题2模型与结果", "问题3模型与结果", "问题4模型与结果", "稳健性与敏感性分析", "模型评价", "结论", "数据代码与复现说明", "参考文献"],
   "decision_provenance": ["Q1-D01", "Q2-D01", "Q3-D01", "Q4-D01"],
   "unsupported_claims": [],
-  "known_incomplete_items": ["各问frozen_numbers.json数字冻结快照", "参考文献的外部来源核验与扩充", "最终格式排版与语言润色"],
+  "known_incomplete_items": ["用户明确排除的Word公式转换", "跨年度独立验证（题面只提供2025年数据）", "电池退化成本与情景数敏感性扩展"],
   "figure_status": {"Q3_formal_figures": 7, "main_text_figures": 26, "scheme_codes_expanded": true},
-  "risk_notes": ["Q3稳定性结论保持needs_caution", "Q4的价格oracle仅作不可实施参照且不是严格费用下界", "Q4有限七情景的最坏合同费用不构成真实未来费用保证", "门禁禁用不等于结果已冻结或外部验证已通过"],
+  "risk_notes": ["Q3稳定性结论保持needs_caution", "Q4的价格oracle仅作不可实施参照且不是严格费用下界", "Q4有限七情景的最坏合同费用不构成真实未来费用保证", "冻结状态只锁定当前论文数字，不等于跨年度外部验证"],
   "paper_seed_checks": {"human_selected_headline_result": false, "human_selected_novelty_claim": false, "why_this_method_present": true, "physical_meaning_judgment_added_by_writer": false}
 }
