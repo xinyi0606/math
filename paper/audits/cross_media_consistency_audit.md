@@ -1,49 +1,55 @@
-# Cross-Media Consistency Audit Report
+# 论文正文第一版跨媒体一致性审计
 
-> **Status**: NOT_RUN（G6）/ INCREMENTAL_CHECK_PASSED_WITH_WARNINGS（G6执行已由建模者禁用为非阻塞项）
-> **Date**: 2026-09-12
-> **Scope**: Q1—Q4 最终方法详解、未冻结结果分析、论文材料包、round2参数、代码、结果、工作簿、稳健性工件与进度文档
-> **Source-of-truth tier**: `results/Q3/experiments/round2/metrics/metrics.json`、`results/Q4/experiments/round2/metrics/metrics.json`；尚无冻结数字
+> 审计日期：2026-09-12
+>
+> 审计对象：`paper/sections/complete_first_draft.md`及其上游方法、结果、稳健性、符号和图片工件
+>
+> 审计结论：**正文增量检查PASSED（有非阻塞警示）**
+>
+> 最终交付装配：**暂不建议**，原因是数字尚未冻结，且Q3、Q4正式正文图和参考文献外部核验尚未完成。
 
-## Pass Items
+## 通过项
 
-1. ✅ 参数 `RESERVE_ALPHA=0.99` 在 `src/common/config.py:30`、Q3 round2指标、Q4 round2指标和 `planning/symbol_table.md:68` 中一致。
-2. ✅ Q3和Q4运行摘要均记录round编号2及0.99参数；运行入口把轮次传给独立的 `experiments/round2/` 目录，没有覆盖round1。
-3. ✅ Q3报告中的总费用17,469,451.07元、紧急购电959,911.02 kWh与round2 JSON/CSV在报告精度内一致。
-4. ✅ Q3报告中的相对M1变化：总费用+3.58%、紧急购电-17.50%、紧急量CVaR95-0.97%，与 `robustness/Q3/baseline_comparison.csv` 一致。
-5. ✅ Q4-3报告中的总费用18,405,519.64元、紧急购电966,930.38 kWh、未来价格泄漏0，与round2指标一致。
-6. ✅ `output/result3.xlsx` 和 `output/result4-3.xlsx` 的工作表及行列结构与官方模板一致，计划/调整矩阵全部为非负有限值。
-7. ✅ Q3/Q4 round2年末SOC均为6000 kWh，同时充放电为0，最大平衡与SOC残差均低于 $2\times10^{-11}$ kWh。
-8. ✅ Q3/Q4 README、TASKS、进度看板、数据报告和数据字典均已指向round2当前结果，并明确round1只作历史证据。
-9. ✅ 完整回归测试17项通过，覆盖成本公式、非前视、物理约束、工作簿结构、参数传播和原始附件哈希。
-10. ✅ Q3稳定性选择 `needs_caution` 已在决定文件和进度看板中一致登记；决定状态仍保持PENDING，未被错误传播为冻结结论。
-11. ✅ 四份最终方法详解均将方法选择追溯到 `Q1-D01`—`Q4-D01`，且与对应 round 结果中的 M2/M3 方法标识一致。
-12. ✅ 四份未冻结结果分析和材料包的主数值与各自 metrics JSON/实验报告一致：Q1 35,126.95 元、Q2 16,865,002.84 元、Q3 17,469,451.07 元、Q4-3 18,405,519.64 元。
-13. ✅ 四份材料包列出的四张比较图及五份官方工作簿均已在磁盘核验存在；Q3/Q4 图已正确标为需 300 dpi 重绘。
-14. ✅ 最终方法、结果分析和材料包的待确认记录均指向真实方法决定和结果证据；所有新增记录保持 PENDING，未被误标为人工签署或冻结数字。
+1. **PASS-01 四问方法口径一致**：正文保持Q1“机制—优化”、Q2/Q3“预测—优化”、Q4“情景分析—优化”，与四问最终方法说明及材料包一致。
+2. **PASS-02 决策来源可追溯**：四问方法选择段均保留`Q1-D01`至`Q4-D01`来源标记；Q3采用0.99的风险优先口径另有`Q3-D01`标记。
+3. **PASS-03 Q1数字一致**：35126.95元、48052.05元、12925.10元、26.90%、0.79%及可行性残差与Q1材料包和实验报告一致。
+4. **PASS-04 Q2数字一致**：451.70 kW、312.31 kW、16865002.84元、1163433.11 kWh以及相对M1/M2变化率与Q2材料包一致。
+5. **PASS-05 Q3取舍表述一致**：正文同时陈述0.99相对M1紧急购电下降17.50%和总费用增加3.58%，未写成最低费用或全面尾部风险优势，并保留`needs_caution`。
+6. **PASS-06 Q4信息边界一致**：M3未来价格泄漏为0，M2泄漏334次且仅作完全信息参照；Q4-3费用18405519.64元和机会损失149161.64元（约0.82%）与round2材料一致。
+7. **PASS-07 公共物理口径一致**：10分钟步长、12000 kWh容量、10%—90%运行区间、5000 kW功率上限、0.9双侧效率、5倍紧急购电及0.5/1.5调整结算与统一符号表和模型假设一致。
+8. **PASS-08 图文范围一致**：正文仅嵌入已审核的Q1、Q2中文600 dpi图；Q3、Q4没有将诊断图冒充正式图，而是明确保留待绘位置。
+9. **PASS-09 结论强度受控**：问题1只宣称给定条件下连续LP最优；问题2没有把逐日计划费用最优扩大为全年随机优化全局最优；问题3和问题4均保留适用边界。
+10. **PASS-10 状态陈述一致**：正文入口、写作摘要和进度看板均把当前成果标为第一版/未冻结，未因门禁禁用而写成已验证终稿。
 
-## Divergences and Warnings
+## 未发现的关键分歧
 
-| # | Severity | Dimension | Claim Location | Source/Target Location | Claim | Actual State | Repair Skill |
-|---|---|---|---|---|---|---|---|
-| 1 | BLOCKING | decision provenance | `methods/Q3/decisions/reserve-alpha_modeler_decision.md:7-34` | `methods/Q3/q3_decision_log.md` | 选择0.99 | 用户已明确选择，但人工理由仍为哨兵、状态PENDING，不能写入决定日志 | modeler-decision-logger（需用户先写理由） |
-| 2 | BLOCKING | stability verdict | `methods/Q3/decisions/robustness-checker_modeler_decision.md` | `robustness/Q3/q3_robustness_report.md` | Q3稳定性 | 建模者已选择 `needs_caution`，但人工理由及对 high / medium 的排除理由仍为哨兵，状态PENDING，G4.5未通过 | robustness-checker / modeler-decision-logger |
-| 3 | WARNING | missing evidence | `robustness/Q3/uploaded_q3_robustness_report.md:53-57` | `robustness/Q3/validation_rerun.json`、嵌套验证CSV | 上传报告称证据可追溯 | 所引用的验证哈希和嵌套CSV未上传；本轮只复现全年固定参数结果 | robustness-checker |
-| 4 | BLOCKING | stale freeze | `workspace/archived/Q3-Q4/uploaded_frozen_numbers_UNVERIFIED.json` | `output/result3.xlsx`、`output/result4-3.xlsx` | 上传文件标记FROZEN | G4.5未通过，且文件记录的两个工作簿哈希均与当前文件不符；已原样归档 | solution-package-builder |
+- 未发现正文数字与四问材料包的数值冲突。
+- 未发现方法编号M1/M2/M3在正文与方法说明之间错配。
+- 未发现Q3的0.99被误写为最低费用参数。
+- 未发现Q4完全信息模型被误写为可实施策略。
+- 未发现已有Q1/Q2图片文件名与正文论证主题相矛盾。
 
-## Unauditable Items
+## 非阻塞警示与不可审计项
 
-| # | Reason | Affects | Suggested Resolution |
+1. Q1—Q4均不存在`frozen_numbers.json`，本次只能按各问最新solution package、final result analysis和round2指标核对，不能证明数字已经冻结。
+2. Q3、Q4正式正文图尚未生成；现阶段只能审计待插图说明及其数据源，不能审计最终成图中的数值和标注。
+3. 三篇学位论文的题名和本地文件可追溯，但作者、学校、年份及后续扩展文献尚未经过`reference-manager`的外部核验。
+4. 时间标签整体平移、终端价值、多年份泛化和极端价格情景压力测试仍未完成；正文已在局限性中披露，不能据此作超范围外推。
+5. Markdown正文尚未进入最终Word或LaTeX排版，因此分页、公式编号、交叉引用和印刷版字体嵌入不在本次审计范围。
+
+## 继承的上游审计记录
+
+以下记录来自本轮正文写作前的跨媒体审计，门禁虽已禁用，但事实状态继续保留。
+
+| # | 原严重度 | 事项 | 当前状态 |
 |---|---|---|---|
-| 1 | Q3/Q4尚无 `frozen_numbers.json` | 最终论文数值追溯 | G4.5通过后运行solution-package-builder |
-| 2 | 尚无论文正文 | 论文数值、图表、符号和决定来源 | 结果冻结并形成材料包后重新运行正式G6审计 |
-| 3 | 上传嵌套验证报告缺少原始CSV和验证哈希 | “0.99具有独立/盲测稳定性”的主张 | 上传原始工件或将结论限定为回溯式辅助证据 |
+| 1 | BLOCKING | `methods/Q3/decisions/reserve-alpha_modeler_decision.md`中的人工理由仍为哨兵、状态PENDING | 用户已要求按0.99执行，正文按风险优先理由写作；规范决定文件尚未冻结 |
+| 2 | BLOCKING | Q3稳定性判断的人工理由及排除其他置信度的记录未完整冻结 | 用户选择为`needs_caution`，正文如实沿用；决定状态仍为PENDING |
+| 3 | WARNING | 上传的嵌套验证报告缺少所引用原始CSV和验证哈希 | 只作为回溯式辅助证据，正文未写成盲测或概率保证 |
+| 4 | BLOCKING | `workspace/archived/Q3-Q4/uploaded_frozen_numbers_UNVERIFIED.json`的工作簿哈希与当前文件不符 | 该文件继续仅作归档，不作为正文数字源 |
 
-## Verdict
+既有机械核对还确认：`RESERVE_ALPHA=0.99`已在代码配置、Q3/Q4 round2指标与统一符号表中一致传播；五份官方工作簿结构此前已通过核验；正式回归测试17项此前全部通过。本次按用户要求未重跑模型或测试。
 
-- **当前round2机械一致性**：通过，有警示。
-- **G4结果冻结证据状态**：未满足；缺少人工参数理由、稳定性置信度和结果判定，但该状态不阻塞后续工作。
-- **最终论文组装流程状态**：允许继续推进（门禁已禁用）；本报告的未核验项和警示仍然有效。
-- **Blocking divergences**：3。
-- **Warnings**：1。
-- **Recommended next skill**：用户完成两项人工理由后运行 `modeler-decision-logger`。
+## 传播结论
+
+本次正文所用关键参数、方法编号、比较基线、费用和风险指标均已从当前上游材料传播到正文、写作摘要和进度看板。当前可以继续进行Q3/Q4制图、文献核验与全文润色；在生成冻结数字快照和最终排版文件后，应重新运行本审计。
