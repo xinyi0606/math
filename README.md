@@ -1,12 +1,22 @@
 # Math
 
-一个适合两台电脑上的 Codex 共同维护的数学项目。
+2026 年高教社杯全国大学生数学建模竞赛 C 题“微网与外部电网电力调控策略”的协作项目，适合两台电脑上的 Codex 共同维护。
+
+## 核心目标
+
+在负荷、光伏出力、电价和预测不断变化的条件下，建立包含储能约束的微网购电优化模型，完成问题 1-4，并生成竞赛指定的 5 个 Excel 结果文件。题目摘要见 [`docs/problem-definition.md`](docs/problem-definition.md)，正式结构化解析见 [`planning/parse/problem_parse.md`](planning/parse/problem_parse.md)。
+
+主要参考文献及其在本题中的采用边界见 [`docs/literature-notes.md`](docs/literature-notes.md)。
+
+附件结构、字段、单位和审计结论见 [`docs/data-dictionary.md`](docs/data-dictionary.md) 与 [`data/data_report.md`](data/data_report.md)。
 
 ## 项目结构
 
 ```text
 math/
-├── data/          # 输入数据（只提交可公开、体积较小的数据）
+├── data/
+│   ├── raw/       # 竞赛原始附件，保持只读
+│   └── templates/ # 官方结果工作簿模板
 ├── docs/          # 题目说明、推导与设计文档
 ├── notebooks/     # 探索性计算与笔记本
 ├── src/           # 可复用的实现
@@ -29,4 +39,5 @@ math/
 - 可复用计算放在 `src/`，并在 `tests/` 中加入验证。
 - 大型数据、密钥、缓存和本地环境文件不进入 Git。
 - 一次提交只处理一个明确任务，提交信息说明“做了什么”。
-
+- 所有能量统一使用 kWh，功率统一使用 kW，时间步长显式换算为小时。
+- 最终模型文件与结果文件均不得超过 5 MB。
