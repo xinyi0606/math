@@ -38,6 +38,7 @@ workspace/incoming/
 *.bak
 *.tmp
 paper/rendered_v2/
+paper/rendered_three_line/
 
 # Large local datasets (keep the directory placeholder)
 data/*

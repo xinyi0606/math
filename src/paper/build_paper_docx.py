@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import re
 import sys
+import argparse
 from pathlib import Path
 
 
@@ -25,12 +26,13 @@ from docx.shared import Cm, Pt, RGBColor  # noqa: E402
 
 
 SOURCE = ROOT / "paper" / "sections" / "complete_first_draft.md"
-OUTPUT = ROOT / "paper" / "光储微电网多时间尺度协调调度论文正文.docx"
+DEFAULT_OUTPUT = ROOT / "paper" / "光储微电网多时间尺度协调调度论文正文.docx"
 
 
 def set_run_font(run, east_asia: str = "宋体", latin: str = "Times New Roman", size: float = 10.5, bold=None):
     run.font.name = latin
     run.font.size = Pt(size)
+    run.font.color.rgb = RGBColor(0, 0, 0)
     if bold is not None:
         run.bold = bold
     run._element.get_or_add_rPr().rFonts.set(qn("w:eastAsia"), east_asia)
@@ -38,11 +40,60 @@ def set_run_font(run, east_asia: str = "宋体", latin: str = "Times New Roman",
     run._element.get_or_add_rPr().rFonts.set(qn("w:hAnsi"), latin)
 
 
-def set_cell_shading(cell, fill: str) -> None:
+def set_cell_border(cell, edge: str, value: str, size: str = "0", color: str = "000000") -> None:
     tc_pr = cell._tc.get_or_add_tcPr()
-    shading = OxmlElement("w:shd")
-    shading.set(qn("w:fill"), fill)
-    tc_pr.append(shading)
+    borders = tc_pr.first_child_found_in("w:tcBorders")
+    if borders is None:
+        borders = OxmlElement("w:tcBorders")
+        tc_pr.append(borders)
+    element = borders.find(qn(f"w:{edge}"))
+    if element is None:
+        element = OxmlElement(f"w:{edge}")
+        borders.append(element)
+    element.set(qn("w:val"), value)
+    if value != "nil":
+        element.set(qn("w:sz"), size)
+        element.set(qn("w:color"), color)
+
+
+def set_cell_margins(cell, top: str = "90", start: str = "100", bottom: str = "90", end: str = "100") -> None:
+    tc_pr = cell._tc.get_or_add_tcPr()
+    margins = tc_pr.first_child_found_in("w:tcMar")
+    if margins is None:
+        margins = OxmlElement("w:tcMar")
+        tc_pr.append(margins)
+    for side, value in (("top", top), ("start", start), ("bottom", bottom), ("end", end)):
+        item = margins.find(qn(f"w:{side}"))
+        if item is None:
+            item = OxmlElement(f"w:{side}")
+            margins.append(item)
+        item.set(qn("w:w"), value)
+        item.set(qn("w:type"), "dxa")
+
+
+def apply_three_line_table_style(table) -> None:
+    """Apply a black academic three-line table: top, header rule, bottom."""
+    table_pr = table._tbl.tblPr
+    borders = table_pr.first_child_found_in("w:tblBorders")
+    if borders is None:
+        borders = OxmlElement("w:tblBorders")
+        table_pr.append(borders)
+    for edge in ("top", "left", "bottom", "right", "insideH", "insideV"):
+        item = borders.find(qn(f"w:{edge}"))
+        if item is None:
+            item = OxmlElement(f"w:{edge}")
+            borders.append(item)
+        item.set(qn("w:val"), "nil")
+    for row_index, row in enumerate(table.rows):
+        for cell in row.cells:
+            set_cell_margins(cell)
+            for edge in ("top", "left", "right", "bottom"):
+                set_cell_border(cell, edge, "nil")
+            if row_index == 0:
+                set_cell_border(cell, "top", "single", "12")
+                set_cell_border(cell, "bottom", "single", "8")
+            if row_index == len(table.rows) - 1:
+                set_cell_border(cell, "bottom", "single", "12")
 
 
 def repeat_table_header(row) -> None:
@@ -141,12 +192,10 @@ def configure_document(doc: Document) -> None:
 
 def add_table(doc: Document, rows: list[list[str]]) -> None:
     table = doc.add_table(rows=1, cols=len(rows[0]))
-    table.style = "Table Grid"
     table.autofit = True
     for index, value in enumerate(rows[0]):
         cell = table.rows[0].cells[index]
         cell.text = clean_inline(value)
-        set_cell_shading(cell, "D9EAF7")
         cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
         for run in cell.paragraphs[0].runs:
             set_run_font(run, east_asia="黑体", size=8.5, bold=True)
@@ -160,10 +209,11 @@ def add_table(doc: Document, rows: list[list[str]]) -> None:
             cells[index].paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
             for run in cells[index].paragraphs[0].runs:
                 set_run_font(run, size=8.2)
+    apply_three_line_table_style(table)
     doc.add_paragraph().paragraph_format.space_after = Pt(0)
 
 
-def build() -> None:
+def build(output: Path = DEFAULT_OUTPUT) -> None:
     doc = Document()
     configure_document(doc)
     lines = SOURCE.read_text(encoding="utf-8").splitlines()
@@ -250,10 +300,13 @@ def build() -> None:
     doc.core_properties.title = "面向预测不确定性与波动电价的光储微电网多时间尺度协调调度"
     doc.core_properties.subject = "数学建模竞赛论文"
     doc.core_properties.author = ""
-    temporary = OUTPUT.with_suffix(".tmp.docx")
+    temporary = output.with_suffix(".tmp.docx")
     doc.save(temporary)
-    temporary.replace(OUTPUT)
+    temporary.replace(output)
 
 
 if __name__ == "__main__":
-    build()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    args = parser.parse_args()
+    build(args.output)
