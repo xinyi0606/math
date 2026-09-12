@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import time
+import argparse
 
 import matplotlib
 matplotlib.use("Agg")
@@ -155,9 +156,9 @@ def _method_metrics(data, result):
     }
 
 
-def run() -> dict:
+def run(round_number: int = 2, reserve_alpha: float = RESERVE_ALPHA) -> dict:
     started = time.perf_counter()
-    paths = round_directories("Q3")
+    paths = round_directories("Q3", round_number)
     data = load_project_data()
     q2_cache = RESULTS / "Q2" / "experiments" / "round1" / "tables" / "net_load_forecasts.npz"
     net_forecasts, cache_hit = cached_net_load_forecasts(data.load_kw - data.pv_actual_kw, q2_cache)
@@ -169,13 +170,14 @@ def run() -> dict:
     metrics = {}
     for method in ("m1", "m2", "m3"):
         results[method] = _simulate_method(
-            data, net_forecasts["m3"], pv_10min, forecast_blocks, actual_blocks, method, start_soc
+            data, net_forecasts["m3"], pv_10min, forecast_blocks, actual_blocks, method, start_soc,
+            reserve_alpha=reserve_alpha,
         )
         metrics[method] = _method_metrics(data, results[method])
 
     sensitivity = []
     for alpha in (0.80, 0.90, 0.95, 0.975, 0.99):
-        if alpha == RESERVE_ALPHA:
+        if np.isclose(alpha, reserve_alpha):
             sensitivity_result = results["m3"]
         else:
             sensitivity_result = _simulate_method(
@@ -248,14 +250,16 @@ def run() -> dict:
     plt.close(fig)
 
     payload = {
-        "question": "Q3", "selected_method": "Q3-M3", "q2_forecast_cache_hit": cache_hit,
+        "question": "Q3", "round": round_number, "selected_method": "Q3-M3",
+        "reserve_alpha": reserve_alpha, "q2_forecast_cache_hit": cache_hit,
         "common_warmup_soc_2025_02_01_kwh": start_soc, "methods": metrics,
         "reserve_sensitivity": sensitivity,
     }
     write_json(paths["metrics"] / "metrics.json", payload)
     summary = {
-        "status": "PASS", "question": "Q3",
+        "status": "PASS", "question": "Q3", "round": round_number,
         "method": "Q3-M3 rolling quantile-reserve LP",
+        "reserve_alpha": reserve_alpha,
         "runtime_seconds": time.perf_counter() - started, "seed": 2026,
         "information_boundary": "Each release freezes executed slots and uses only historical reserve errors",
         "outputs": [str(workbook), str(official), str(figure_path)], "chosen_metrics": metrics["m3"],
@@ -266,4 +270,8 @@ def run() -> dict:
 
 
 if __name__ == "__main__":
-    print(json.dumps(run(), ensure_ascii=False, indent=2))
+    parser = argparse.ArgumentParser(description="Run the Q3 rolling optimization experiment.")
+    parser.add_argument("--round-number", type=int, default=2)
+    parser.add_argument("--reserve-alpha", type=float, default=RESERVE_ALPHA)
+    args = parser.parse_args()
+    print(json.dumps(run(args.round_number, args.reserve_alpha), ensure_ascii=False, indent=2))

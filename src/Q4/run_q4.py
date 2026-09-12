@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import time
+import argparse
 
 import matplotlib
 matplotlib.use("Agg")
@@ -139,7 +140,10 @@ def _simulate_q42(data, net_forecast_kw, method, initial_soc):
     return result
 
 
-def _simulate_q43(data, net_forecast_kw, pv_10min, forecast_blocks, actual_blocks, method, initial_soc):
+def _simulate_q43(
+    data, net_forecast_kw, pv_10min, forecast_blocks, actual_blocks, method, initial_soc,
+    reserve_alpha=RESERVE_ALPHA,
+):
     dates = data.dates[OUTPUT_START_INDEX:]
     result = _empty_result(dates)
     current_soc = initial_soc
@@ -149,7 +153,7 @@ def _simulate_q43(data, net_forecast_kw, pv_10min, forecast_blocks, actual_block
         price = data.variable_price[day]
         pv_midnight = pv_10min[day, 0]
         load_forecast = np.maximum(net_forecast_kw[day] + pv_midnight, 0.0)
-        reserves[out_index, 0] = quantile_reserve(forecast_blocks, actual_blocks, day, 0, RESERVE_ALPHA)
+        reserves[out_index, 0] = quantile_reserve(forecast_blocks, actual_blocks, day, 0, reserve_alpha)
         safe = np.maximum(pv_midnight - reserves[out_index, 0], 0.0)
         plan_net = (load_forecast - safe) * DT_HOURS
         terminal = SOC_INITIAL if day == 364 else None
@@ -175,7 +179,7 @@ def _simulate_q43(data, net_forecast_kw, pv_10min, forecast_blocks, actual_block
         for release in range(1, 4):
             start = RELEASE_START_SLOTS[release]
             reserves[out_index, release] = quantile_reserve(
-                forecast_blocks, actual_blocks, day, release, RESERVE_ALPHA
+                forecast_blocks, actual_blocks, day, release, reserve_alpha
             )
             latest = np.maximum(pv_10min[day, release] - reserves[out_index, release], 0.0)
             remaining_net = (load_forecast[start:] - latest[start:]) * DT_HOURS
@@ -256,9 +260,9 @@ def _write_daily_table(path, family, results):
     return frame
 
 
-def run() -> dict:
+def run(round_number: int = 2, reserve_alpha: float = RESERVE_ALPHA) -> dict:
     started = time.perf_counter()
-    paths = round_directories("Q4")
+    paths = round_directories("Q4", round_number)
     data = load_project_data()
     q2_cache = RESULTS / "Q2" / "experiments" / "round1" / "tables" / "net_load_forecasts.npz"
     net_forecasts, cache_hit = cached_net_load_forecasts(data.load_kw - data.pv_actual_kw, q2_cache)
@@ -268,7 +272,7 @@ def run() -> dict:
 
     q42 = {method: _simulate_q42(data, net_forecasts["m3"], method, warmup[method]) for method in PRICE_METHODS}
     q43 = {method: _simulate_q43(data, net_forecasts["m3"], pv_10min, forecast_blocks, actual_blocks,
-                                 method, warmup[method]) for method in PRICE_METHODS}
+                                 method, warmup[method], reserve_alpha) for method in PRICE_METHODS}
     metrics42 = {method: _metrics(result) for method, result in q42.items()}
     metrics43 = {method: _metrics(result) for method, result in q43.items()}
 
@@ -318,10 +322,13 @@ def run() -> dict:
     fig.savefig(figure_path, dpi=160)
     plt.close(fig)
 
-    payload = {"question": "Q4", "selected_method": "Q4-M3", "q2_forecast_cache_hit": cache_hit,
+    payload = {"question": "Q4", "round": round_number, "selected_method": "Q4-M3",
+               "reserve_alpha_q4_3": reserve_alpha, "q2_forecast_cache_hit": cache_hit,
                "warmup_soc_2025_02_01_kwh": warmup, "q4_2": metrics42, "q4_3": metrics43}
     write_json(paths["metrics"] / "metrics.json", payload)
-    summary = {"status": "PASS", "question": "Q4", "method": "Q4-M3 historical-price scenario robust LP",
+    summary = {"status": "PASS", "question": "Q4", "round": round_number,
+               "method": "Q4-M3 historical-price scenario robust LP",
+               "reserve_alpha_q4_3": reserve_alpha,
                "runtime_seconds": time.perf_counter() - started, "seed": 2026,
                "information_boundary": "M3 uses only historical days; M2 is explicitly an oracle",
                "outputs": [str(workbook42), str(workbook43), str(official42), str(official43), str(figure_path)],
@@ -332,4 +339,8 @@ def run() -> dict:
 
 
 if __name__ == "__main__":
-    print(json.dumps(run(), ensure_ascii=False, indent=2))
+    parser = argparse.ArgumentParser(description="Run the Q4 price-scenario experiment.")
+    parser.add_argument("--round-number", type=int, default=2)
+    parser.add_argument("--reserve-alpha", type=float, default=RESERVE_ALPHA)
+    args = parser.parse_args()
+    print(json.dumps(run(args.round_number, args.reserve_alpha), ensure_ascii=False, indent=2))

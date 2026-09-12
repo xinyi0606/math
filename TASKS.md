@@ -19,8 +19,8 @@
 | 已完成 | 核验并整合最新上传的 Q3/Q4-3 结果工作簿 | 电脑 A | `dev-pc-a` | `output/result3.xlsx`, `output/result4-3.xlsx`, `data/data_report.md`, `docs/data-dictionary.md`, `planning/progress_dashboard.md` | 根目录上传件与既有规范副本 SHA-256 完全一致；已审计结构、日期、汇总和数值有效性，并移除根目录重复副本 |
 | 已完成 | 完成问题 1 确定性优化与 `result1.xlsx` | 电脑 A | `dev-pc-a` | `src/Q1/`, `results/Q1/`, `output/result1.xlsx` | M2费用35126.95元；互斥审计与DP网格收敛通过 |
 | 待审核 | 完成问题 2 全年日前优化与 `result2.xlsx` | 电脑 A | `dev-pc-a` | `src/Q2/`, `results/Q2/`, `output/result2.xlsx` | M3首轮总费用与紧急购电均优于M1/M2；待稳健性实验 |
-| 阻塞 | 完成问题 3 滚动调整与 `result3.xlsx` | 电脑 A | `dev-pc-a` | `src/Q3/`, `results/Q3/`, `output/result3.xlsx` | 0.90参数不满足回退条件；0.975/0.99需嵌套验证后确认 |
-| 待审核 | 完成问题 4 波动电价重算 | 电脑 A | `dev-pc-a` | `src/Q4/`, `results/Q4/`, `output/result4-2.xlsx`, `output/result4-3.xlsx` | M3未来价格泄漏0；Q4-3待Q3参数冻结后重算 |
+| 待审核 | 完成问题 3 滚动调整与 `result3.xlsx` | 电脑 A | `dev-pc-a` | `src/Q3/`, `results/Q3/`, `robustness/Q3/`, `output/result3.xlsx` | 建模者已选择0.99并完成round2；紧急购电较M1下降17.50%、费用增加3.58%；稳定性理由与置信度仍待人工填写 |
+| 待审核 | 完成问题 4 波动电价重算 | 电脑 A | `dev-pc-a` | `src/Q4/`, `results/Q4/`, `output/result4-2.xlsx`, `output/result4-3.xlsx` | Q4-3已继承0.99完成round2；M3未来价格泄漏0；待Q3稳定性判定后冻结 |
 | 待认领 | 撰写论文并验证结果、图表和文件大小 | — | — | `docs/`, `tests/`, `output/` | 对照题面逐项验收 |
 
 状态使用：`待认领`、`进行中`、`待审核`、`已完成`、`阻塞`。

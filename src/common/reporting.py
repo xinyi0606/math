@@ -9,7 +9,7 @@ from typing import Any
 import numpy as np
 from openpyxl import load_workbook
 
-from .config import DATA_TEMPLATES, OUTPUT, RESULTS
+from .config import DATA_TEMPLATES, OUTPUT, RESULTS, TOLERANCE
 
 
 def round_directories(qx: str, round_number: int = 1) -> dict[str, Path]:
@@ -68,6 +68,15 @@ def _date_key(value) -> str | None:
     return None
 
 
+def _nonnegative_output(value: float) -> float:
+    number = float(value)
+    if not np.isfinite(number):
+        raise ValueError(f"Official workbook value is not finite: {number}")
+    if number < -TOLERANCE:
+        raise ValueError(f"Official workbook value is materially negative: {number}")
+    return max(number, 0.0)
+
+
 def _fill_daily_matrix(sheet, dates: np.ndarray, values: np.ndarray, daily_cost: np.ndarray) -> None:
     date_lookup = {str(date.astype("datetime64[D]")): index for index, date in enumerate(dates)}
     for row in range(2, sheet.max_row + 1):
@@ -75,9 +84,10 @@ def _fill_daily_matrix(sheet, dates: np.ndarray, values: np.ndarray, daily_cost:
         if key not in date_lookup:
             continue
         index = date_lookup[key]
-        for slot, value in enumerate(values[index], start=2):
+        normalized = np.array([_nonnegative_output(value) for value in values[index]])
+        for slot, value in enumerate(normalized, start=2):
             sheet.cell(row, slot, float(value))
-        sheet.cell(row, 146, float(values[index].sum()))
+        sheet.cell(row, 146, float(normalized.sum()))
         sheet.cell(row, 147, float(daily_cost[index]))
 
 

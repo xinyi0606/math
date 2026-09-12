@@ -66,6 +66,20 @@ class FormalOutputTest(unittest.TestCase):
         for path in paths:
             self.assertGreater(path.stat().st_size, 10_000, str(path))
 
+    def test_round2_uses_selected_q3_reserve_and_preserves_constraints(self):
+        q3 = json.loads((ROOT / "results/Q3/experiments/round2/metrics/metrics.json").read_text(encoding="utf-8"))
+        q4 = json.loads((ROOT / "results/Q4/experiments/round2/metrics/metrics.json").read_text(encoding="utf-8"))
+        self.assertEqual(q3["round"], 2)
+        self.assertAlmostEqual(q3["reserve_alpha"], 0.99)
+        self.assertAlmostEqual(q4["reserve_alpha_q4_3"], 0.99)
+        self.assertEqual(q3["methods"]["m3"]["simultaneous_charge_discharge_count"], 0)
+        self.assertLessEqual(q3["methods"]["m3"]["max_balance_violation_kwh"], 1e-6)
+        self.assertEqual(q4["q4_3"]["m3"]["future_price_leakage_count"], 0)
+        for name in ("result3.xlsx", "result4-3.xlsx"):
+            result = load_workbook(ROOT / "output" / name, read_only=True, data_only=True)
+            template = load_workbook(ROOT / "data/templates" / name, read_only=True)
+            self.assertEqual(result.sheetnames, template.sheetnames)
+
 
 if __name__ == "__main__":
     unittest.main()

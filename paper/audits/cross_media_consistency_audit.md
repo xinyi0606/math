@@ -1,110 +1,43 @@
-# 跨媒介一致性审计
+# Cross-Media Consistency Audit Report
 
-- 审计日期：2026-09-12
-- 当前状态：NOT_RUN
-- 当前范围：C题规划工件、候选方法、正式代码与首轮实验结果的增量预检
-- 正式门禁：G6 未执行
+> **Status**: NOT_RUN（G6）/ INCREMENTAL_CHECK_PASSED_WITH_WARNINGS
+> **Date**: 2026-09-12
+> **Scope**: Q3、Q4 round2参数、代码、结果、工作簿、稳健性工件与进度文档
+> **Source-of-truth tier**: `results/Q3/experiments/round2/metrics/metrics.json`、`results/Q4/experiments/round2/metrics/metrics.json`；尚无冻结数字
 
-## 结论
+## Pass Items
 
-当前尚未形成论文正文、冻结结果与最终方法说明，因此无法执行面向最终交付物的正式跨媒介一致性审计，也不能给出G6通过结论。规划层、候选方法、正式代码与首轮实验结果已完成增量预检；四问路线为Q1-M2、Q2-M3、Q3-M3、Q4-M3。Q3的安全裕度参数仍待复核，Q4-3随其保持未冻结状态。
+1. ✅ 参数 `RESERVE_ALPHA=0.99` 在 `src/common/config.py:30`、Q3 round2指标、Q4 round2指标和 `planning/symbol_table.md:68` 中一致。
+2. ✅ Q3和Q4运行摘要均记录round编号2及0.99参数；运行入口把轮次传给独立的 `experiments/round2/` 目录，没有覆盖round1。
+3. ✅ Q3报告中的总费用17,469,451.07元、紧急购电959,911.02 kWh与round2 JSON/CSV在报告精度内一致。
+4. ✅ Q3报告中的相对M1变化：总费用+3.58%、紧急购电-17.50%、紧急量CVaR95-0.97%，与 `robustness/Q3/baseline_comparison.csv` 一致。
+5. ✅ Q4-3报告中的总费用18,405,519.64元、紧急购电966,930.38 kWh、未来价格泄漏0，与round2指标一致。
+6. ✅ `output/result3.xlsx` 和 `output/result4-3.xlsx` 的工作表及行列结构与官方模板一致，计划/调整矩阵全部为非负有限值。
+7. ✅ Q3/Q4 round2年末SOC均为6000 kWh，同时充放电为0，最大平衡与SOC残差均低于 $2\times10^{-11}$ kWh。
+8. ✅ Q3/Q4 README、TASKS、进度看板、数据报告和数据字典均已指向round2当前结果，并明确round1只作历史证据。
+9. ✅ 完整回归测试17项通过，覆盖成本公式、非前视、物理约束、工作簿结构、参数传播和原始附件哈希。
 
-## 建模前一致性预检
+## Divergences and Warnings
 
-1. **PASS**：data/manifest.sha256 中 9 个工作簿的 SHA-256 与归档文件逐一一致。
-2. **PASS**：附件与问题 1—4 的对应关系在题面、data/data_report.md 和 docs/data-dictionary.md 中一致。
-3. **PASS**：结果模板文件名与题面要求的 result1、result2、result3、result4-2、result4-3 一致。
-4. **PASS**：原始逐日数据覆盖 2025-01-01 至 2025-12-31，结果模板覆盖 2025-02-01 至 2025-12-31，符合首月用于计划/预测、后续月份输出运行结果的结构。
-5. **PASS**：输入功率单位为 kW、购电结果单位为 kWh、电价单位为元/kWh；文档已明确 10 分钟功率转电量需乘以 1/6 小时。
-6. **PASS**：result2.xlsx 与 result4-2.xlsx 结构一致，result3.xlsx 与 result4-3.xlsx 结构一致，符合问题 4 复用问题 2、3 输出结构的要求。
-7. **PASS**：附件 1、2、4 的 10 分钟时间轴均为 144 个时点/时段，附件 3 的预测结构为每日 4 次、每次 24 小时。
-8. **PASS**：题面四个问题均在 planning/parse/problem_parse.md 与 problem_parse.json 中逐问表示，且依赖关系保持 Q1→Q2→Q3、Q2/Q3→Q4。
-9. **PASS**：储能参数 12000、5000、6000、1200-10800 与 90% 在题面摘要和两份解析文件中一致。
-10. **PASS**：紧急购电 5 倍、减少计划量相关价格 50%、增加购电超出部分 1.5 倍在题面摘要和两份解析文件中一致。
-11. **PASS**：四个指定日期及“Q2、Q3均按表1、表2、表3展示”的要求在 docs/problem-definition.md 和两份解析文件中一致。
-12. **PASS**：problem_parse.json 已通过 JSON 语法校验，包含Q1-Q4四个小问、每问非空评价口径和五条已确认机制关系。
-13. **PASS**：用户的确认原话、来源任务ID与确认日期已记录在 planning/modeling_conventions.md；本次用户另行明确授权将AI起草的分类论证作为人工回答，两个授权范围已分开记录。
-14. **PASS**：planning/parse/problem_parse.md 与 problem_parse.json 中已无 `[MODELER INPUT NEEDED]`、`[AI-DRAFT]` 或 `DRAFT_GATE_FAIL` 残留。
-15. **PASS**：效率主口径 `eta_c=eta_d=0.9`、`sqrt(0.9)` 敏感性方案在问题定义、解析和口径记录中一致。
-16. **PASS**：Q2严格非前视、附件3线性插值、调整购电量为调整后总量在问题定义、解析和口径记录中一致。
-17. **PASS**：Q3取消量承担50%违约成本、增加量按1.5倍计费、紧急购电按5倍计费且不重复计费的口径一致。
-18. **PASS**：Q2-Q4跨日连续、不要求每日回到固定值、全年末主约束6000 kWh的口径一致。
-19. **PASS**：Q1“机制—优化混合”、Q2/Q3“预测—优化混合”和Q4“情景分析—优化混合”在 framing_input.md、problem_classification.md 与 problem_classification.json 中逐项一致。
-20. **PASS**：Q1在三份分类工件中均明确为“机制主线、优化求解层”，同时保留最低成本策略的输出要求，没有被误写成纯优化或纯机制问题。
-21. **PASS**：Q2在分类工件与题面解析中均遵守严格非前视边界，并将预测误差通过紧急购电传递到决策评价。
-22. **PASS**：Q3在分类工件与题面解析中均包含0时、6时、12时、18时预测更新、滚动调整和非对称结算机制。
-23. **PASS**：Q4新增价格预测要求已同步至题面解析、分类工件、冻结口径、符号表和假设表；所有文件均禁止未来实际电价前视。
-24. **PASS**：分类JSON通过语法解析，含Q1-Q4四条分类；Q4修订理由明确保留AI草案标记，没有误报为建模者已确认。
-25. **PASS**：用户授权来源在 framing_input.md、problem_classification.md 和 problem_classification.json 中均如实标为“AI起草、用户直接采纳”，没有冒充用户亲笔理由。
-26. **PASS**：TASKS.md、planning/progress_dashboard.md、题面解析与分类工件均将Q4修订理由标为已按用户授权采纳，G1恢复通过，状态一致。
-27. **PASS**：三篇原文文件名、作者和年份与 docs/literature-notes.md、workspace/papers/related_paper_analysis.md 的登记一致。
-28. **PASS**：文献分析对Q1-Q4均给出方法线索和不适用边界，且没有把候选方法误标为最终已选方法。
-29. **PASS**：related_paper_analysis.md 中Q2/Q3的文献映射与预测—优化分类一致，Q4的文献映射与情景分析—优化分类一致。
-30. **PASS**：用户已明确确认三篇PDF获得发布同意；.gitignore中的本地排除规则已移除，三篇原文与可追溯分析报告将一并纳入GitHub。
-31. **PASS**：problem_parse.md与problem_parse.json均保留解析工件自身的READY_FOR_CLASSIFICATION状态，同时Markdown注明下游分类已完成；该历史工件状态与进度看板的当前全局G1通过状态不存在语义冲突。
-32. **PASS**：本机Python 3.12.10已实际导入NumPy 2.3.5、pandas 2.2.3、SciPy 1.17.0、scikit-learn 1.8.0、matplotlib 3.10.8和openpyxl 3.1.5，进度看板与 `requirements-model.txt` 的记录一致。
-33. **PASS**：`symbol-table-builder` → `model-assumptions-builder` → 完善问题依赖图 → `method-selector` 的既定优先工作链已经依次完成；当前主动作已顺延为Q3稳健性与参数验证。
-34. **PASS**：统一符号表和假设表已回填Q1-M2、Q2-M3、Q3-M3、Q4-M3所需的方法特有符号与假设，同时仍明确其后续需接受最终方法说明的反向核验。
-35. **PASS**：方法候选、12个PoC、四问源码、首轮结果与测试均已生成，且其生成顺序有G1、G2和G2.5门禁工件支撑，没有越过方法验证直接写正式代码。
-36. **PASS**：TASKS.md已将统一规划、候选方法、统一模型和Q1结果标为完成，将Q2/Q4标为待审核、Q3标为阻塞；状态与现有首轮结果和参数缺口一致。
-37. **PASS**：planning/symbol_table.md中的储能容量12000 kWh、运行上下限1200/10800 kWh、最大功率5000 kW、单步电量上限5000/6 kWh与题面解析及冻结口径一致。
-38. **PASS**：planning/symbol_table.md中的主模型效率 `eta_c=eta_d=0.9`、敏感性方案两侧取 `sqrt(0.9)` 与 planning/modeling_conventions.md 一致。
-39. **PASS**：统一符号表将大写 `P` 固定为功率、小写变量固定为10分钟电量，并对每个核心量列出单位，未发现kW与kWh混用。
-40. **PASS**：统一符号表的能量平衡、储能状态转移、弃光、禁止负购电售电、充放电互斥与跨日衔接关系均与五条冻结机制一致。
-41. **PASS**：Q1、Q2/Q4-2、Q3/Q4-3的最终外网购电定义分别为计划购电、计划加紧急购电、最终调整加紧急购电，与冻结口径一致。
-42. **PASS**：Q3结算式中的0.5退款比例、1.5上调倍数和5倍紧急购电仅结算一次，与冻结公式一致。
-43. **PASS**：用户《符号说明.docx》中的 `L_t,P_t,N_t,G_t,H_t,C_t,D_t,E_t,p_t,eta,q,S,W,rho,lambda,alpha,tau` 均已在符号映射表中逐项处理；未选方法的符号明确标为暂不启用。
-44. **PASS**：日期索引采用 `n`，未与放电量 `d_{n,t}` 重名；正常电价 `p_{n,t}` 未与功率 `P` 重名；调整后总量 `q^A` 未误写为有符号增减量。
-45. **PASS**：TASKS.md和planning/progress_dashboard.md均记录方法选择、正式源码与首轮实验已经完成，并将当前动作顺延至Q3的稳健性与参数验证，二者与实际工件状态一致。
-46. **PASS**：planning/model_assumptions.md共列出26条假设，编号唯一；每条均有来源、建模理由、范围、类型草案和违反/放宽影响草案。
-47. **PASS**：26条假设已分为17条必要假设和9条简化假设，每条均保留违反/放宽影响；文件中已无AI草案或待建模者输入标记。
-48. **PASS**：假设表把题面及冻结约束单独列为模型边界，未将10分钟时间步、储能上下限、效率、禁止售电、跨日连续和结算倍数伪写为可自由选择的假设。
-49. **PASS**：Q2-A01与冻结的严格非前视信息边界一致；Q1完全已知基准未被错误传递到Q2-Q4。
-50. **PASS**：Q3-A01、Q3-A02和Q3-A05分别与四个预测发布时点、冻结插值规则及最终调整总量单次结算口径一致。
-51. **PASS**：Q4-A01和Q4-A04明确除新增非前视价格预测层外，负荷、光伏、储能参数和比较基准保持不变，与情景可比性要求一致。
-52. **PASS**：Q1日首尾相等与Q2-Q4跨日连续/全年末6000 kWh被识别为分题边界差异，未错误合并为每日统一终端约束。
-53. **PASS**：D-A01至D-A03已按建模者原话记录为Q2储能实时修正、Q4未来电价预测、Q3联合调整未来购电与储能计划，没有改变选择含义。
-54. **PASS**：题面解析、问题定义、数据风险记录、冻结口径、符号表、假设表、任务看板和进度看板均已同步三项决定；旧的“Q4无需价格预测”表述已被显式标为失效。
-55. **PASS**：统一符号表新增 `\widehat p_{n,t\mid r}`，含义、单位、非前视信息边界和Q4适用范围均完整。
-56. **PASS**：problem_parse.json与problem_classification.json均通过JSON语法解析，前者新增价格预测未知量和三项确认关系，后者记录Q4修订理由及AI代拟授权来源。
-57. **PASS**：三项执行决定的论证明确标为“AI依据用户授权代拟并采纳”，没有冒充用户逐句亲笔理由；正式的人类决策日志未被伪造。
-58. **PASS**：D-A01采用“日前购电计划—因果储能recourse—紧急购电兜底”，同时明确实时修正只能使用已实现信息，与Q2非前视边界一致。
-59. **PASS**：D-A02把价格预测限定为情景生成层，附件4未来实价仅用于结算与评价；Q4仍以情景重优化比较为主要交付，分类与信息边界不冲突。
-60. **PASS**：D-A03联合调整尚未执行的购电与储能计划并冻结过去时段，同时保持最终调整总量只与原计划结算一次。
-61. **PASS**：统一符号表已区分日前储能计划 `c^P,d^P`、发布时间滚动版本 `c^{A,r},d^{A,r}`、最终执行量 `c,d` 和实时修正量 `\Delta c^R,\Delta d^R`，计划—调整—执行层次与D-A01/D-A03一致。
-62. **PASS**：planning/question_dependency.md已表示Q1→Q2→Q3主链以及Q2→Q4-2、Q3→Q4-3双分支，没有把四问误写为相互独立。
-63. **PASS**：依赖图的15条边均给出传递对象、可用时点、强制性和断裂后果，可直接约束后续模块接口。
-64. **PASS**：Q1-Q4接口契约明确区分输入、预测输出、计划输出、执行输入、滚动变量、结算接口和验收条件。
-65. **PASS**：依赖图使用的 `q^P,q^{A,r},q^A,q^E,c^P,d^P,c^{A,r},d^{A,r},c,d,E,\widehat l,\widehat v,\widehat p` 均能在统一符号表中找到同义定义。
-66. **PASS**：防泄漏矩阵明确附件2未来实际负荷/光伏和附件4未来实际电价只能在实现后进入执行或评价，不得进入相应日前或滚动预测。
-67. **PASS**：Q1日首尾循环约束未传递为Q2-Q4每日重置；Q2-Q4保持跨日SOC连续和研究期末6000 kWh。
-68. **PASS**：Q3依赖同时包含光伏预测更新、联合购电/储能滚动和单次最终结算；Q4依赖同时包含价格预测、Q2/Q3结构复用和控制变量一致性。
-69. **PASS**：依赖图未错误调用纯数据图表达流程关系；已按SciPilot适用边界采用Mermaid和接口矩阵，并保留后续真实结果数据图的独立空间。
+| # | Severity | Dimension | Claim Location | Source/Target Location | Claim | Actual State | Repair Skill |
+|---|---|---|---|---|---|---|---|
+| 1 | BLOCKING | decision provenance | `methods/Q3/decisions/reserve-alpha_modeler_decision.md:7-34` | `methods/Q3/q3_decision_log.md` | 选择0.99 | 用户已明确选择，但人工理由仍为哨兵、状态PENDING，不能写入决定日志 | modeler-decision-logger（需用户先写理由） |
+| 2 | BLOCKING | stability verdict | `methods/Q3/decisions/robustness-checker_modeler_decision.md` | `robustness/Q3/q3_robustness_report.md` | Q3稳定性 | 置信度与人工理由均PENDING，G4.5未通过 | robustness-checker / modeler-decision-logger |
+| 3 | WARNING | missing evidence | `robustness/Q3/uploaded_q3_robustness_report.md:53-57` | `robustness/Q3/validation_rerun.json`、嵌套验证CSV | 上传报告称证据可追溯 | 所引用的验证哈希和嵌套CSV未上传；本轮只复现全年固定参数结果 | robustness-checker |
 
-## 方法与正式模型阶段增量预检
+## Unauditable Items
 
-70. **PASS**：Q1-Q4各有3个语义不同的候选方法，共12个；每问均指定最简单可行基线，候选池与总览数量一致。
-71. **PASS**：12个Python PoC均读取仓库真实Excel附件，能够运行并输出有限指标；每个脚本不超过30行。
-72. **PASS**：Q1和Q4优化PoC的终端SOC误差与能量平衡违例均不超过 $10^{-5}$ kWh。
-73. **PASS**：Q2三个预测PoC统一使用2025-01-22至01-28时间外窗口；Q3三个预测PoC统一使用2025-01-22至02-04窗口。
-74. **PASS**：方法阶段模型假设共20条，均已由建模者全部采纳，文件中无 `[AI-DRAFT]` 或待确认标记。
-75. **PASS**：Q1-Q4方法决定均为 `status: DECIDED`，选择依次为Q1-M2、Q2-M3、Q3-M3、Q4-M3；全局索引与分问日志一致。
-76. **PASS**：Q1-M2费用为35126.95元，较M1降低26.90%；正式解同时充放电次数为0，DP网格加密结果用于独立核验。
-77. **PASS**：Q2-M3在PoC窗口的RMSE为301.91 kW，欠预测紧急成本代理为54992.61元；正式特征时间戳审计未发现未来数据泄漏。
-78. **PASS**：Q3首轮报告明确0.90安全裕度未满足回退条件，没有将该参数伪装成冻结结论；0.975与0.99仍需嵌套时间验证。
-79. **PASS**：Q4-M2被限定为完全信息oracle；Q4-M3仅使用决策时刻之前的历史价格情景，未来价格泄漏计数为0。
-80. **PASS**：`src/Q1/`至`src/Q4/`、`src/common/`及统一入口均存在，四份代码审查工件分别包含不少于5项显式通过项。
-81. **PASS**：四问首轮实验目录均含 `run_summary.json`、指标、表格和图形；五个官方结构工作簿均已生成且小于5 MB。
-82. **PASS**：完整16项回归测试于2026-09-12重新运行并全部通过，覆盖物理约束、非前视、成本公式、工作簿结构和原始附件校验值。
+| # | Reason | Affects | Suggested Resolution |
+|---|---|---|---|
+| 1 | Q3/Q4尚无 `frozen_numbers.json` | 最终论文数值追溯 | G4.5通过后运行solution-package-builder |
+| 2 | 尚无论文正文 | 论文数值、图表、符号和决定来源 | 结果冻结并形成材料包后重新运行正式G6审计 |
+| 3 | 上传嵌套验证报告缺少原始CSV和验证哈希 | “0.99具有独立/盲测稳定性”的主张 | 上传原始工件或将结论限定为回溯式辅助证据 |
 
-## 尚不可审计的内容
+## Verdict
 
-- 统一符号表和方法诱导假设已存在，但尚未经过最终方法说明与论文符号的反向核验。
-- Q1-Q4方法选择已经登记；首轮结果判断、稳健性置信度和最终包签署仍须经过后续人工门禁。
-- 尚无冻结参数、冻结数值结果或 frozen_numbers.json。
-- 尚无正式方法说明、实验结果分析与论文正文。
-- 首轮图表和代码输出已存在，但Q3及依赖它的Q4-3仍待参数复核。
-
-## 后续门禁
-
-G1、G2、G2.5与G3所需工件均已形成，本次增量检查未发现机械事实漂移。下一步对Q3的0.95、0.975、0.99安全裕度开展独立/嵌套时间验证，冻结参数后重算Q4-3，再进入结果判断、稳健性与冻结流程。待最终结果、图表和论文正文齐备后，必须重新执行正式G6审计；当前状态仍为NOT_RUN。
+- **当前round2机械一致性**：通过，有警示。
+- **G4结果冻结允许**：否；缺少人工参数理由、稳定性置信度和结果判定。
+- **最终论文组装允许**：否。
+- **Blocking divergences**：2。
+- **Warnings**：1。
+- **Recommended next skill**：用户完成两项人工理由后运行 `modeler-decision-logger`。
