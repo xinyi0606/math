@@ -16,13 +16,14 @@
 7. ✅ Q3/Q4 round2年末SOC均为6000 kWh，同时充放电为0，最大平衡与SOC残差均低于 $2\times10^{-11}$ kWh。
 8. ✅ Q3/Q4 README、TASKS、进度看板、数据报告和数据字典均已指向round2当前结果，并明确round1只作历史证据。
 9. ✅ 完整回归测试17项通过，覆盖成本公式、非前视、物理约束、工作簿结构、参数传播和原始附件哈希。
+10. ✅ Q3稳定性选择 `needs_caution` 已在决定文件和进度看板中一致登记；决定状态仍保持PENDING，未被错误传播为冻结结论。
 
 ## Divergences and Warnings
 
 | # | Severity | Dimension | Claim Location | Source/Target Location | Claim | Actual State | Repair Skill |
 |---|---|---|---|---|---|---|---|
 | 1 | BLOCKING | decision provenance | `methods/Q3/decisions/reserve-alpha_modeler_decision.md:7-34` | `methods/Q3/q3_decision_log.md` | 选择0.99 | 用户已明确选择，但人工理由仍为哨兵、状态PENDING，不能写入决定日志 | modeler-decision-logger（需用户先写理由） |
-| 2 | BLOCKING | stability verdict | `methods/Q3/decisions/robustness-checker_modeler_decision.md` | `robustness/Q3/q3_robustness_report.md` | Q3稳定性 | 置信度与人工理由均PENDING，G4.5未通过 | robustness-checker / modeler-decision-logger |
+| 2 | BLOCKING | stability verdict | `methods/Q3/decisions/robustness-checker_modeler_decision.md` | `robustness/Q3/q3_robustness_report.md` | Q3稳定性 | 建模者已选择 `needs_caution`，但人工理由及对 high / medium 的排除理由仍为哨兵，状态PENDING，G4.5未通过 | robustness-checker / modeler-decision-logger |
 | 3 | WARNING | missing evidence | `robustness/Q3/uploaded_q3_robustness_report.md:53-57` | `robustness/Q3/validation_rerun.json`、嵌套验证CSV | 上传报告称证据可追溯 | 所引用的验证哈希和嵌套CSV未上传；本轮只复现全年固定参数结果 | robustness-checker |
 | 4 | BLOCKING | stale freeze | `workspace/archived/Q3-Q4/uploaded_frozen_numbers_UNVERIFIED.json` | `output/result3.xlsx`、`output/result4-3.xlsx` | 上传文件标记FROZEN | G4.5未通过，且文件记录的两个工作簿哈希均与当前文件不符；已原样归档 | solution-package-builder |
 
