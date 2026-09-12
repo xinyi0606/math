@@ -41,3 +41,14 @@ math/
 - 一次提交只处理一个明确任务，提交信息说明“做了什么”。
 - 所有能量统一使用 kWh，功率统一使用 kW，时间步长显式换算为小时。
 - 最终模型文件与结果文件均不得超过 5 MB。
+
+## 正式模型运行
+
+四问方法决定完成后，正式Python实现位于 `src/Q1/` 至 `src/Q4/`，共同的数据、预测、LP和模板接口位于 `src/common/`。安装 `requirements-model.txt` 中的依赖后，在仓库根目录运行：
+
+```bash
+python -m src.run_all
+python -m unittest tests.test_formal_models tests.test_formal_outputs tests.test_method_pocs -v
+```
+
+五个官方结构工作簿生成到 `output/`；完整逐时明细、指标、图形、实验报告和运行摘要位于 `results/Qx/experiments/round1/`。Q3当前仍是首轮参数实验，不能在分位参数重新确认前标记为最终冻结结果。

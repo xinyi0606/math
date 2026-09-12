@@ -1,0 +1,92 @@
+{
+  "question": "Q4",
+  "selected_method": "Q4-M3",
+  "q2_forecast_cache_hit": true,
+  "warmup_soc_2025_02_01_kwh": {
+    "m1": 6000.0,
+    "m2": 1200.0000000000068,
+    "m3": 1200.0000000000055
+  },
+  "q4_2": {
+    "m1": {
+      "annual_plan_cost_yuan": 16636236.941132648,
+      "annual_contract_cost_yuan": 16636236.941132648,
+      "annual_emergency_cost_yuan": 4395797.010137355,
+      "annual_total_cost_yuan": 21032033.951270007,
+      "annual_emergency_kwh": 965426.5119623884,
+      "worst_day_cost_yuan": 124738.47618824369,
+      "terminal_soc_kwh": 6000.0,
+      "max_balance_violation_kwh": 0.0,
+      "max_soc_violation_kwh": 0.0,
+      "simultaneous_charge_discharge_count": 0,
+      "future_price_leakage_count": 0
+    },
+    "m2": {
+      "annual_plan_cost_yuan": 12537242.299875736,
+      "annual_contract_cost_yuan": 12537242.299875736,
+      "annual_emergency_cost_yuan": 5136517.766697848,
+      "annual_total_cost_yuan": 17673760.066573586,
+      "annual_emergency_kwh": 1163674.2527555586,
+      "worst_day_cost_yuan": 126872.08497567731,
+      "terminal_soc_kwh": 5999.999999999998,
+      "max_balance_violation_kwh": 1.1368683772161603e-13,
+      "max_soc_violation_kwh": 1.3642420526593924e-11,
+      "simultaneous_charge_discharge_count": 0,
+      "future_price_leakage_count": 334
+    },
+    "m3": {
+      "annual_plan_cost_yuan": 12671146.116552118,
+      "annual_contract_cost_yuan": 12671146.116552118,
+      "annual_emergency_cost_yuan": 5115080.625044312,
+      "annual_total_cost_yuan": 17786226.74159643,
+      "annual_emergency_kwh": 1160750.1707966132,
+      "worst_day_cost_yuan": 127334.15679089293,
+      "terminal_soc_kwh": 6000.000000000002,
+      "max_balance_violation_kwh": 1.1368683772161603e-13,
+      "max_soc_violation_kwh": 1.3869794202037156e-11,
+      "simultaneous_charge_discharge_count": 0,
+      "future_price_leakage_count": 0
+    }
+  },
+  "q4_3": {
+    "m1": {
+      "annual_plan_cost_yuan": 16636236.941132648,
+      "annual_contract_cost_yuan": 17431485.653314948,
+      "annual_emergency_cost_yuan": 4030556.5463140765,
+      "annual_total_cost_yuan": 21462042.199629024,
+      "annual_emergency_kwh": 893982.347620014,
+      "worst_day_cost_yuan": 122694.37065291128,
+      "terminal_soc_kwh": 6000.0,
+      "max_balance_violation_kwh": 0.0,
+      "max_soc_violation_kwh": 0.0,
+      "simultaneous_charge_discharge_count": 0,
+      "future_price_leakage_count": 0
+    },
+    "m2": {
+      "annual_plan_cost_yuan": 12537242.299875736,
+      "annual_contract_cost_yuan": 13354013.233623384,
+      "annual_emergency_cost_yuan": 5120212.263287237,
+      "annual_total_cost_yuan": 18474225.496910617,
+      "annual_emergency_kwh": 1196390.224137012,
+      "worst_day_cost_yuan": 134494.58402335967,
+      "terminal_soc_kwh": 6000.000000000002,
+      "max_balance_violation_kwh": 1.1368683772161603e-13,
+      "max_soc_violation_kwh": 1.6370904631912708e-11,
+      "simultaneous_charge_discharge_count": 0,
+      "future_price_leakage_count": 334
+    },
+    "m3": {
+      "annual_plan_cost_yuan": 12671146.116552118,
+      "annual_contract_cost_yuan": 13496212.115521263,
+      "annual_emergency_cost_yuan": 5104239.800168976,
+      "annual_total_cost_yuan": 18600451.915690236,
+      "annual_emergency_kwh": 1195808.7428401853,
+      "worst_day_cost_yuan": 135184.3289716369,
+      "terminal_soc_kwh": 6000.000000000002,
+      "max_balance_violation_kwh": 1.1368683772161603e-13,
+      "max_soc_violation_kwh": 1.4551915228366852e-11,
+      "simultaneous_charge_discharge_count": 0,
+      "future_price_leakage_count": 0
+    }
+  }
+}

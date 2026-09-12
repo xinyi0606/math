@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "question": "Q2",
+  "method": "Q2-M3 gradient boosting plus daily receding-horizon LP",
+  "runtime_seconds": 20.64499805199921,
+  "seed": 2026,
+  "information_boundary": "Each day uses only rows strictly before the target day",
+  "forecast_cache_hit": true,
+  "outputs": [
+    "/workspace/scratch/d90922647ae0/math-dev-pc-a/results/Q2/experiments/round1/tables/result2.xlsx",
+    "/workspace/scratch/d90922647ae0/math-dev-pc-a/output/result2.xlsx",
+    "/workspace/scratch/d90922647ae0/math-dev-pc-a/results/Q2/experiments/round1/figures/q2_method_comparison.png"
+  ],
+  "chosen_metrics": {
+    "rmse_kw": 451.6958295406053,
+    "mae_kw": 312.3060851858313,
+    "underprediction_p95_kw": 636.6892192517726,
+    "annual_plan_cost_yuan": 12046165.170273216,
+    "annual_emergency_cost_yuan": 4818837.667194076,
+    "annual_total_cost_yuan": 16865002.83746729,
+    "annual_plan_grid_kwh": 20042981.748803593,
+    "annual_emergency_kwh": 1163433.1111514424,
+    "emergency_rate": 0.031437273352414655,
+    "worst_day_cost_yuan": 116003.75174713231,
+    "terminal_soc_kwh": 6000.000000000002,
+    "max_balance_violation_kwh": 1.1368683772161603e-13,
+    "max_soc_violation_kwh": 1.432454155292362e-11,
+    "simultaneous_charge_discharge_count": 0
+  }
+}
