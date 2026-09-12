@@ -3055,7 +3055,7 @@ L 33.953147 59.198834
 z
 " style="fill: #ffffff; opacity: 0.8"/>
     </g>
-    <text style="font-size: 8px; font-family: 'SimHei', 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="37.953147" y="69.542584" transform="rotate(-0 37.953147 69.542584)">M1：昨日持久性</text>
+    <text style="font-size: 8px; font-family: 'SimHei', 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="37.953147" y="69.542584" transform="rotate(-0 37.953147 69.542584)">前日同槽持久性</text>
    </g>
   </g>
   <g id="axes_2">
@@ -4911,7 +4911,7 @@ L 175.011773 59.198834
 z
 " style="fill: #ffffff; opacity: 0.8"/>
     </g>
-    <text style="font-size: 8px; font-family: 'SimHei', 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="179.011773" y="69.448834" transform="rotate(-0 179.011773 69.448834)">M2：七日均值</text>
+    <text style="font-size: 8px; font-family: 'SimHei', 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="179.011773" y="69.448834" transform="rotate(-0 179.011773 69.448834)">近7日同槽均值</text>
    </g>
   </g>
   <g id="axes_3">
@@ -6359,7 +6359,7 @@ L 316.070399 59.198834
 z
 " style="fill: #ffffff; opacity: 0.8"/>
     </g>
-    <text style="font-size: 8px; font-family: 'SimHei', 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="320.070399" y="69.605084" transform="rotate(-0 320.070399 69.605084)">M3：梯度提升</text>
+    <text style="font-size: 8px; font-family: 'SimHei', 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="320.070399" y="69.605084" transform="rotate(-0 320.070399 69.605084)">非前视梯度提升</text>
    </g>
   </g>
   <g id="axes_4">

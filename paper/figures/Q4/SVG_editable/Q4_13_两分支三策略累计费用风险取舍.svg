@@ -300,7 +300,7 @@ L 256.19976 316.66226
      </g>
     </g>
     <g id="text_16">
-     <text style="font-size: 7px; font-family: 'SimHei', 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="64.126802" y="289.58101" transform="rotate(-0 64.126802 289.58101)">M1：无储能</text>
+     <text style="font-size: 7px; font-family: 'SimHei', 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="64.126802" y="289.58101" transform="rotate(-0 64.126802 289.58101)">无储能购电基线</text>
     </g>
     <g id="PathCollection_5">
      <g>
@@ -308,7 +308,7 @@ L 256.19976 316.66226
      </g>
     </g>
     <g id="text_17">
-     <text style="font-size: 7px; font-family: 'SimHei', 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="64.126802" y="299.479447" transform="rotate(-0 64.126802 299.479447)">M2：价格oracle</text>
+     <text style="font-size: 7px; font-family: 'SimHei', 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="64.126802" y="299.479447" transform="rotate(-0 64.126802 299.479447)">完全信息价格参照</text>
     </g>
     <g id="PathCollection_6">
      <g>
@@ -316,7 +316,7 @@ L 256.19976 316.66226
      </g>
     </g>
     <g id="text_18">
-     <text style="font-size: 7px; font-family: 'SimHei', 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="64.126802" y="309.48726" transform="rotate(-0 64.126802 309.48726)">M3：历史价格情景</text>
+     <text style="font-size: 7px; font-family: 'SimHei', 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="64.126802" y="309.48726" transform="rotate(-0 64.126802 309.48726)">历史价格情景鲁棒</text>
     </g>
    </g>
   </g>

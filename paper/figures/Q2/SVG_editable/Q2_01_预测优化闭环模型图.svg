@@ -154,7 +154,7 @@ z
    <g id="text_2">
     <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(225.45 64.337354)">每个目标日00:00</text>
     <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(223.2 74.152979)">最多30日滚动训练</text>
-    <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(227.7 84.052979)">M3直预测净负荷</text>
+    <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(227.7 84.052979)">梯度提升直预测净负荷</text>
    </g>
    <g id="text_3">
     <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(406.727834 64.379542)">144个10分钟槽</text>
@@ -183,8 +183,8 @@ z
    </g>
    <g id="text_8">
     <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(227.7 307.730647)">公平基线与对照</text>
-    <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(232.2 317.419709)">M1昨日持久性</text>
-    <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(236.7 326.982209)">M2七日均值</text>
+    <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(232.2 317.419709)">前日同槽持久性</text>
+    <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(236.7 326.982209)">近7日同槽均值</text>
    </g>
    <g id="text_9">
     <text style="font-size: 9px; font-family: 'SimHei', 'DejaVu Sans'; fill: #1f2933" transform="translate(417.977834 307.516194)">接口边界</text>

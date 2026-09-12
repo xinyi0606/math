@@ -150,7 +150,7 @@ L -3.5 0
       </g>
      </g>
      <g id="text_8">
-      <text style="font-size: 7px; font-family: 'SimHei'; text-anchor: end" x="56.1" y="14.289865" transform="rotate(-0 56.1 14.289865)">M1 无储能</text>
+      <text style="font-size: 7px; font-family: 'SimHei'; text-anchor: end" x="56.1" y="14.289865" transform="rotate(-0 56.1 14.289865)">无储能基线</text>
      </g>
     </g>
     <g id="ytick_2">
@@ -160,7 +160,7 @@ L -3.5 0
       </g>
      </g>
      <g id="text_9">
-      <text style="font-size: 7px; font-family: 'SimHei'; text-anchor: end" x="56.1" y="93.694375" transform="rotate(-0 56.1 93.694375)">M2 连续 LP</text>
+      <text style="font-size: 7px; font-family: 'SimHei'; text-anchor: end" x="56.1" y="93.694375" transform="rotate(-0 56.1 93.694375)">连续LP调度</text>
      </g>
     </g>
     <g id="ytick_3">
@@ -170,7 +170,7 @@ L -3.5 0
       </g>
      </g>
      <g id="text_10">
-      <text style="font-size: 7px; font-family: 'SimHei'; text-anchor: end" x="56.1" y="172.880135" transform="rotate(-0 56.1 172.880135)">M3 DP（50 kWh）</text>
+      <text style="font-size: 7px; font-family: 'SimHei'; text-anchor: end" x="56.1" y="172.880135" transform="rotate(-0 56.1 172.880135)">DP核验</text>
      </g>
     </g>
    </g>

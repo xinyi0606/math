@@ -318,7 +318,7 @@ L 252.19976 309.602885
     <text style="font-size: 8px; font-family: 'SimHei', 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="37.022397" y="30.450149" transform="rotate(-0 37.022397 30.450149)">Q4-2：日前策略</text>
    </g>
    <g id="text_20">
-    <text style="font-size: 8px; font-family: 'SimHei', 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="41.459044" y="60.443716" transform="rotate(-0 41.459044 60.443716)">M3费用低于oracle：31天</text>
+    <text style="font-size: 8px; font-family: 'SimHei', 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="41.459044" y="60.443716" transform="rotate(-0 41.459044 60.443716)">历史情景费用低于价格oracle：31天</text>
    </g>
   </g>
   <g id="axes_2">
@@ -601,7 +601,7 @@ L 511.39976 309.602885
     <text style="font-size: 8px; font-family: 'SimHei', 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="296.222397" y="30.418899" transform="rotate(-0 296.222397 30.418899)">Q4-3：滚动0.99</text>
    </g>
    <g id="text_40">
-    <text style="font-size: 8px; font-family: 'SimHei', 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="300.659044" y="60.443716" transform="rotate(-0 300.659044 60.443716)">M3费用低于oracle：24天</text>
+    <text style="font-size: 8px; font-family: 'SimHei', 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="300.659044" y="60.443716" transform="rotate(-0 300.659044 60.443716)">历史情景费用低于价格oracle：24天</text>
    </g>
   </g>
  </g>
