@@ -1,0 +1,11 @@
+{
+  "mode": "speed",
+  "workflow_gates": {
+    "enforcement": "disabled",
+    "scope": ["G1", "G2", "G2.5", "G3", "G4.5", "G4", "G5", "G6", "three_critical_rules"],
+    "disabled_by": "human_modeler",
+    "disabled_at": "2026-09-12",
+    "effect": "Gates and decision artifacts remain traceability records only; they must not block downstream work.",
+    "truthfulness_constraint": "Pending, unverified, unfrozen, and audit-warning states remain visible and must not be represented as validated."
+  }
+}
