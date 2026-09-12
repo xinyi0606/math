@@ -1,0 +1,16 @@
+{
+  "q1_dispatch_overview": [],
+  "q1_soc_trajectory": [],
+  "q1_price_response": [],
+  "q1_energy_supply_composition": [],
+  "q1_method_cost_comparison": [],
+  "q1_cost_savings": [],
+  "q1_net_load_surplus": [],
+  "q1_cumulative_energy_balance": [],
+  "q1_constraint_slack": [],
+  "q1_balance_residual": [],
+  "q1_dp_convergence": [],
+  "q1_price_grid_scatter": [],
+  "q1_key_intervals": [],
+  "q1_correlation_heatmap": []
+}

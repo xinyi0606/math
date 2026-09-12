@@ -21,6 +21,7 @@
 | 已完成 | 识别并登记 Q1/Q2 最终方法说明 | 电脑 A | `dev-pc-a` | `Q1_Q2最终方法说明.docx`, `planning/progress_dashboard.md` | Q1确认M2连续线性规划；Q2确认M3非前视梯度提升预测加日前线性规划；敏感性验证和结果冻结仍待完成 |
 | 已完成 | 禁用项目全部流程门禁 | 电脑 A | `dev-pc-a` | `AGENTS.md`, `planning/session_config.json`, `planning/workflow_override.md`, `planning/progress_dashboard.md` | 用户明确授权；门禁改为非阻塞记录项，未验证状态与审计警示仍须保留 |
 | 已完成 | 生成四问最终方法详解、结果分析与论文材料包 | 电脑 A | `dev-pc-a` | `methods/Q1-Q4/`, `results/Q1-Q4/reports/`, `planning/progress_dashboard.md` | 按用户禁用门禁的授权生成；全部标为未冻结写作材料，并保留各问证据边界 |
+| 已完成 | 审核并整理 Q1/Q2 中文高清论文图 | 电脑 A | `dev-pc-a` | `paper/figures/`, `paper/fonts/`, `planning/progress_dashboard.md` | 筛选18张图；逐图目视复核与600 dpi PNG严格检查通过；Q2 PDF字体嵌入未在本机复验并已如实记录 |
 | 已完成 | 完成问题 1 确定性优化与 `result1.xlsx` | 电脑 A | `dev-pc-a` | `src/Q1/`, `results/Q1/`, `output/result1.xlsx` | M2费用35126.95元；互斥审计与DP网格收敛通过 |
 | 待审核 | 完成问题 2 全年日前优化与 `result2.xlsx` | 电脑 A | `dev-pc-a` | `src/Q2/`, `results/Q2/`, `output/result2.xlsx` | M3首轮总费用与紧急购电均优于M1/M2；待稳健性实验 |
 | 待审核 | 完成问题 3 滚动调整与 `result3.xlsx` | 电脑 A | `dev-pc-a` | `src/Q3/`, `results/Q3/`, `robustness/Q3/`, `output/result3.xlsx` | 建模者已选择0.99并完成round2；紧急购电较M1下降17.50%、费用增加3.58%；稳定性理由与置信度仍待人工填写 |

@@ -1,0 +1,1347 @@
+{
+  "status": "PASS",
+  "independent_figures": 27,
+  "checked_format_files": 81,
+  "figure_dpi_nominal": 600,
+  "evaluation_days": 334,
+  "slots_per_method": 48096,
+  "numerical_checks": [
+    "all three RMSEs",
+    "all three annual total costs",
+    "all three emergency totals",
+    "forecast and execution trace agreement",
+    "per-slot emergency equation",
+    "SOC state equation",
+    "cross-day SOC continuity",
+    "initial and terminal SOC",
+    "charge/discharge mutual exclusion",
+    "forecast-side supply inequality",
+    "SOC bounds"
+  ],
+  "interpretation": "Read-only numerical verification; not a claim of yearly stochastic optimality.",
+  "records": [
+    {
+      "path": "PNG_600dpi/Q2_01_预测优化闭环模型图.png",
+      "bytes": 615618,
+      "sha256": "fe314f505fce041bd9c9fd30dde93d599cdc77837bb936dea7bc0cb06df48ca1",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_01_预测优化闭环模型图.png",
+        "ext": "png",
+        "size_bytes": 615618,
+        "category": "raster",
+        "size_px": [
+          4320,
+          3120
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_01_预测优化闭环模型图.pdf",
+      "bytes": 27060,
+      "sha256": "fca345044d146064ce377e15678e0c7f0ffffb2c204845b79870d35ef67c0ce4",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_01_预测优化闭环模型图.pdf",
+        "ext": "pdf",
+        "size_bytes": 27060,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_01_预测优化闭环模型图.svg",
+      "bytes": 12565,
+      "sha256": "3dff9ec75f61af0aef674b41c6012a805ee454fbd6bc662a4458cd27d335a3f3",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_01_预测优化闭环模型图.svg",
+        "ext": "svg",
+        "size_bytes": 12565,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_02_特征与梯度提升结构图.png",
+      "bytes": 530184,
+      "sha256": "12cc64326fc7a744bca6db24c2e0a284be1e3123465456eab4b44fb53477af7d",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_02_特征与梯度提升结构图.png",
+        "ext": "png",
+        "size_bytes": 530184,
+        "category": "raster",
+        "size_px": [
+          4320,
+          3120
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_02_特征与梯度提升结构图.pdf",
+      "bytes": 21821,
+      "sha256": "0e8ac3d95733239f52fc23f475df7afe9e4ba4aa2fdf3d55dedad71e66b5a7a8",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_02_特征与梯度提升结构图.pdf",
+        "ext": "pdf",
+        "size_bytes": 21821,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_02_特征与梯度提升结构图.svg",
+      "bytes": 11456,
+      "sha256": "50b136f7755acf9c24dce97389afc5ccd6280457cceb8fce395cb864adeebc97",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_02_特征与梯度提升结构图.svg",
+        "ext": "svg",
+        "size_bytes": 11456,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_03_滚动训练非前视边界图.png",
+      "bytes": 221509,
+      "sha256": "e6e52c12a93987321973777a4db3a8226f9a3d897f2bdd292525ec199c86bae4",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_03_滚动训练非前视边界图.png",
+        "ext": "png",
+        "size_bytes": 221509,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2460
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_03_滚动训练非前视边界图.pdf",
+      "bytes": 14062,
+      "sha256": "6ba2941256f581eae5f793c5a7c2216f9ffa366cb72ec67b7069ac943392f244",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_03_滚动训练非前视边界图.pdf",
+        "ext": "pdf",
+        "size_bytes": 14062,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_03_滚动训练非前视边界图.svg",
+      "bytes": 20372,
+      "sha256": "b31001e6627a354f13add6ac8f3f62af98f72e9dd6d899a6ff3608248e3b9d92",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_03_滚动训练非前视边界图.svg",
+        "ext": "svg",
+        "size_bytes": 20372,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_04_储能线性规划约束机制图.png",
+      "bytes": 519272,
+      "sha256": "cf4e85dc4e2f184705f9698b51dc9e5bc0758fc69216371a80f911e9588d8e46",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_04_储能线性规划约束机制图.png",
+        "ext": "png",
+        "size_bytes": 519272,
+        "category": "raster",
+        "size_px": [
+          4320,
+          3120
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_04_储能线性规划约束机制图.pdf",
+      "bytes": 19819,
+      "sha256": "23068e411ca912cf6d5e2698c947da86d333be7916095e1532f239ec2653320f",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_04_储能线性规划约束机制图.pdf",
+        "ext": "pdf",
+        "size_bytes": 19819,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_04_储能线性规划约束机制图.svg",
+      "bytes": 9851,
+      "sha256": "2317f04eff04df2a997882afdd7f2c444387c649129ae748eedaf5d2ac1329c5",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_04_储能线性规划约束机制图.svg",
+        "ext": "svg",
+        "size_bytes": 9851,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_05_全年实际净负荷时空热图.png",
+      "bytes": 405773,
+      "sha256": "83871c66a0d9a7030c5f09d48cfd344c4f77b50ac6def165006420b58cd0ba41",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_05_全年实际净负荷时空热图.png",
+        "ext": "png",
+        "size_bytes": 405773,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2820
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_05_全年实际净负荷时空热图.pdf",
+      "bytes": 101661,
+      "sha256": "d1ed6f4b7adaa5f499ec17939609545c47afeb20d8cf65f25b54f513eb49b4ac",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_05_全年实际净负荷时空热图.pdf",
+        "ext": "pdf",
+        "size_bytes": 101661,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_05_全年实际净负荷时空热图.svg",
+      "bytes": 220107,
+      "sha256": "73d7353caa8be0ffa194b2bbe02e122702bc32dd7bd1f49cd366ef09917ecd36",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_05_全年实际净负荷时空热图.svg",
+        "ext": "svg",
+        "size_bytes": 220107,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_06_全年预测残差时空热图.png",
+      "bytes": 447172,
+      "sha256": "2e2cc88c1f55228536675db48b19df8772fa90b7c87ce4cc8bbbac79bdfb6c86",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_06_全年预测残差时空热图.png",
+        "ext": "png",
+        "size_bytes": 447172,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2820
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_06_全年预测残差时空热图.pdf",
+      "bytes": 102906,
+      "sha256": "21693ce2752d47a0c953b21f1b520e73b53feb1e0bf5848c25346a5ab3fc929a",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_06_全年预测残差时空热图.pdf",
+        "ext": "pdf",
+        "size_bytes": 102906,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_06_全年预测残差时空热图.svg",
+      "bytes": 260298,
+      "sha256": "bb98f913418d81c0531d0e8315afa45a869728f369daaab15b4788e84013ba19",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_06_全年预测残差时空热图.svg",
+        "ext": "svg",
+        "size_bytes": 260298,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_07_三模型预测实际联合密度图.png",
+      "bytes": 643289,
+      "sha256": "76c095264ecbf48b5a6f287f335afea79b2e0d51b6c22e779680c5fcaa931882",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_07_三模型预测实际联合密度图.png",
+        "ext": "png",
+        "size_bytes": 643289,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2040
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_07_三模型预测实际联合密度图.pdf",
+      "bytes": 26567,
+      "sha256": "c7a71e8e9c8c43f8365affe735b5bb6bc3d456795e72dad71a9c411689bc8e0a",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_07_三模型预测实际联合密度图.pdf",
+        "ext": "pdf",
+        "size_bytes": 26567,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_07_三模型预测实际联合密度图.svg",
+      "bytes": 337115,
+      "sha256": "58cd24e89e9d12f7b13f2522a41170798903930b1ff2a7398ceb00954807b476",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_07_三模型预测实际联合密度图.svg",
+        "ext": "svg",
+        "size_bytes": 337115,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_08_标准化泰勒图.png",
+      "bytes": 650247,
+      "sha256": "5162a53f5ca786e0e4f21aff2fa07747e42c3d33dd58738dcb862449ffe56084",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_08_标准化泰勒图.png",
+        "ext": "png",
+        "size_bytes": 650247,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2880
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_08_标准化泰勒图.pdf",
+      "bytes": 15621,
+      "sha256": "23f1d802d9de4ec538aa0e0a7a4704dcb3867234f88fe04ae5975b68ee8cfda4",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_08_标准化泰勒图.pdf",
+        "ext": "pdf",
+        "size_bytes": 15621,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_08_标准化泰勒图.svg",
+      "bytes": 22458,
+      "sha256": "240e0d0c76a6b50bb8ad5c1fc21226bc6e83dcb0592a992a564b90e1abaaddc5",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_08_标准化泰勒图.svg",
+        "ext": "svg",
+        "size_bytes": 22458,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_09_预测残差核密度对比图.png",
+      "bytes": 332654,
+      "sha256": "f17309b9d3e2b696b29124861c48e60af437b883540e2411fafbc12688849d3f",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_09_预测残差核密度对比图.png",
+        "ext": "png",
+        "size_bytes": 332654,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2700
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_09_预测残差核密度对比图.pdf",
+      "bytes": 12733,
+      "sha256": "5301530a23d190d95541576b2d018e65b0ee57e292a89a2072ab35bee0cfec7e",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_09_预测残差核密度对比图.pdf",
+        "ext": "pdf",
+        "size_bytes": 12733,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_09_预测残差核密度对比图.svg",
+      "bytes": 19408,
+      "sha256": "c762eb5f2a62c1d05cd2cf099fdcd535c28561c8dcd876ca56ffd9e1c12b71cf",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_09_预测残差核密度对比图.svg",
+        "ext": "svg",
+        "size_bytes": 19408,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_10_日内分组残差雨云图.png",
+      "bytes": 528451,
+      "sha256": "63d5207514304c18772ebfefc95e839aa6d39135685e6c132c5c3418f1423ed8",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_10_日内分组残差雨云图.png",
+        "ext": "png",
+        "size_bytes": 528451,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2700
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_10_日内分组残差雨云图.pdf",
+      "bytes": 68675,
+      "sha256": "75d55a0f31f005f1dd9aa766f4e8405572e98c78c2a75674b12e89215c2bbd0b",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_10_日内分组残差雨云图.pdf",
+        "ext": "pdf",
+        "size_bytes": 68675,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_10_日内分组残差雨云图.svg",
+      "bytes": 129955,
+      "sha256": "5137aca70631699da9ac65c33802ff51985ecf5c7672a839cd3485da4cb60e1c",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_10_日内分组残差雨云图.svg",
+        "ext": "svg",
+        "size_bytes": 129955,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_11_绝对误差经验累积分布图.png",
+      "bytes": 296974,
+      "sha256": "8bce2ec6de96c3a897668b82422a231133d2015d0204d2de30621fda4074bfbb",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_11_绝对误差经验累积分布图.png",
+        "ext": "png",
+        "size_bytes": 296974,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2700
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_11_绝对误差经验累积分布图.pdf",
+      "bytes": 55380,
+      "sha256": "ff14ab47bcd7b3d2798209e6efb293b28fa75fbc28ae12f1b2dcd84dba2ad2c5",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_11_绝对误差经验累积分布图.pdf",
+        "ext": "pdf",
+        "size_bytes": 55380,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_11_绝对误差经验累积分布图.svg",
+      "bytes": 118887,
+      "sha256": "96db1cfd0fb9bf91eef9942317bf0ef72926a809a193adcc3e3f7c106ff07022",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_11_绝对误差经验累积分布图.svg",
+        "ext": "svg",
+        "size_bytes": 118887,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_12_欠预测尾部超越概率图.png",
+      "bytes": 341044,
+      "sha256": "4e4ec113fb89aefcb4d435b0de14a57c707819b23a7ac3510b2aaf6b2419b6b4",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_12_欠预测尾部超越概率图.png",
+        "ext": "png",
+        "size_bytes": 341044,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2700
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_12_欠预测尾部超越概率图.pdf",
+      "bytes": 14049,
+      "sha256": "bf88c5cfe405b9c7874721fcafb6da458a27f2bef6bfcc04fd6eb1bee0441c01",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_12_欠预测尾部超越概率图.pdf",
+        "ext": "pdf",
+        "size_bytes": 14049,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_12_欠预测尾部超越概率图.svg",
+      "bytes": 28233,
+      "sha256": "6490bf8955a0e3d3463deb388bb36a91d21000d8bc56100ea01e827fd5813a90",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_12_欠预测尾部超越概率图.svg",
+        "ext": "svg",
+        "size_bytes": 28233,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_13_月份小时误差强度矩阵.png",
+      "bytes": 207793,
+      "sha256": "9bce28d8d0ebcd16b077fc9d233ce0e2649a8a07b09c80ed7921e88e0229c9ce",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_13_月份小时误差强度矩阵.png",
+        "ext": "png",
+        "size_bytes": 207793,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2520
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_13_月份小时误差强度矩阵.pdf",
+      "bytes": 23507,
+      "sha256": "42986b32c5a0a003a85f4c823aa06dd700768e32f3290dfadd37688840bbdf90",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_13_月份小时误差强度矩阵.pdf",
+        "ext": "pdf",
+        "size_bytes": 23507,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_13_月份小时误差强度矩阵.svg",
+      "bytes": 34072,
+      "sha256": "ead342734e26758a0b9c4daa3d37f02efe9c4c9d431cc8527146e1185508692d",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_13_月份小时误差强度矩阵.svg",
+        "ext": "svg",
+        "size_bytes": 34072,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_14_日费用紧急购电联合风险图.png",
+      "bytes": 643787,
+      "sha256": "5446cf3bc65060478edf304baf39f8edf014246d25f2ff05a4bd1a81c1d5fa72",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_14_日费用紧急购电联合风险图.png",
+        "ext": "png",
+        "size_bytes": 643787,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2700
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_14_日费用紧急购电联合风险图.pdf",
+      "bytes": 26870,
+      "sha256": "4d8493c85e8bfb1b06c7f0296087ab00e8892533d6b97fae395cca147e742b9f",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_14_日费用紧急购电联合风险图.pdf",
+        "ext": "pdf",
+        "size_bytes": 26870,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_14_日费用紧急购电联合风险图.svg",
+      "bytes": 160596,
+      "sha256": "014ab6a529efe672b24f75e5cd787c01da65c84a256aab2934f0196705831ceb",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_14_日费用紧急购电联合风险图.svg",
+        "ext": "svg",
+        "size_bytes": 160596,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_15_累计费用节省轨迹图.png",
+      "bytes": 304336,
+      "sha256": "3ff4d27590c7b15aad2932268fbf45c14c77ebde841d2716fc110628c0418e28",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_15_累计费用节省轨迹图.png",
+        "ext": "png",
+        "size_bytes": 304336,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2700
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_15_累计费用节省轨迹图.pdf",
+      "bytes": 14478,
+      "sha256": "46eac81784af157a1cfe0c45919b12b1db816e5fec78d32010c61de548a2c156",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_15_累计费用节省轨迹图.pdf",
+        "ext": "pdf",
+        "size_bytes": 14478,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_15_累计费用节省轨迹图.svg",
+      "bytes": 25396,
+      "sha256": "2435868f6f4c134d7c6fc5113076d07312f048ff345bc14663bac279ba5cdd63",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_15_累计费用节省轨迹图.svg",
+        "ext": "svg",
+        "size_bytes": 25396,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_16_累计紧急购电风险轨迹图.png",
+      "bytes": 331018,
+      "sha256": "157633f6e77e714c2b9088693a0e0555186948e794a95ca545935b7035cfd2ba",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_16_累计紧急购电风险轨迹图.png",
+        "ext": "png",
+        "size_bytes": 331018,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2700
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_16_累计紧急购电风险轨迹图.pdf",
+      "bytes": 15870,
+      "sha256": "2d01578ac3867fd70f9bc497b4861c3f11a37713a44a608264b6900e674dfd28",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_16_累计紧急购电风险轨迹图.pdf",
+        "ext": "pdf",
+        "size_bytes": 15870,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_16_累计紧急购电风险轨迹图.svg",
+      "bytes": 28700,
+      "sha256": "33b3f4d7c39bd431f12067d4a6d4826d28118663e439ee1660b702ae2e304147",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_16_累计紧急购电风险轨迹图.svg",
+        "ext": "svg",
+        "size_bytes": 28700,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_17_日综合费用尾部分布图.png",
+      "bytes": 266462,
+      "sha256": "c2236982db9b4d7b146ce6c75445761e0d819188cab4c3d0b7eda58c74609a09",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_17_日综合费用尾部分布图.png",
+        "ext": "png",
+        "size_bytes": 266462,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2700
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_17_日综合费用尾部分布图.pdf",
+      "bytes": 20448,
+      "sha256": "9d19c3dbd6074c391bce4a60ca8845976d00f1cd1ce2ec39b1a75a08434a79ad",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_17_日综合费用尾部分布图.pdf",
+        "ext": "pdf",
+        "size_bytes": 20448,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_17_日综合费用尾部分布图.svg",
+      "bytes": 54097,
+      "sha256": "891e5d57b69b7ec10ff0b739db5f6fb98adc92479a9d9a209d4deb638c9bb69e",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_17_日综合费用尾部分布图.svg",
+        "ext": "svg",
+        "size_bytes": 54097,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_18_紧急购电日历热图.png",
+      "bytes": 186437,
+      "sha256": "d68448e9364745a95880a223f87bd2c2b39322f9e683347ba81deb4b56af34d4",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_18_紧急购电日历热图.png",
+        "ext": "png",
+        "size_bytes": 186437,
+        "category": "raster",
+        "size_px": [
+          4320,
+          1920
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_18_紧急购电日历热图.pdf",
+      "bytes": 25987,
+      "sha256": "ff40d34bc5da8ad6f27302e5711aa1581e0f9c2de4c906b93cc9279d184efb63",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_18_紧急购电日历热图.pdf",
+        "ext": "pdf",
+        "size_bytes": 25987,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_18_紧急购电日历热图.svg",
+      "bytes": 28869,
+      "sha256": "aae6ddfdaa6809148e42bbd16d0e028348761fd0702e9d59841a633e8128f6be",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_18_紧急购电日历热图.svg",
+        "ext": "svg",
+        "size_bytes": 28869,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_19_储能状态功率相平面密度图.png",
+      "bytes": 1172401,
+      "sha256": "5917f367d13d49cc244b8b73542c75d5c1ab6705cc6974f3f2ac454c57aad8f6",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_19_储能状态功率相平面密度图.png",
+        "ext": "png",
+        "size_bytes": 1172401,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2700
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_19_储能状态功率相平面密度图.pdf",
+      "bytes": 22918,
+      "sha256": "8f296a534f73518941d971d30a7e5e2fb52ddf820b21ca61a4b1c25950cb35e5",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_19_储能状态功率相平面密度图.pdf",
+        "ext": "pdf",
+        "size_bytes": 22918,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_19_储能状态功率相平面密度图.svg",
+      "bytes": 384149,
+      "sha256": "51d4fb27c391b5171e4c3eef9ed054fe2d1aae68b223321fe025ad8ccbfc4a5e",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_19_储能状态功率相平面密度图.svg",
+        "ext": "svg",
+        "size_bytes": 384149,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_20_全年储能SOC时空轨迹图.png",
+      "bytes": 290673,
+      "sha256": "78a87f8061a33cc952529e4e74c8ab90889965ee390d49af07ee8cf25c3ee1a7",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_20_全年储能SOC时空轨迹图.png",
+        "ext": "png",
+        "size_bytes": 290673,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2820
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_20_全年储能SOC时空轨迹图.pdf",
+      "bytes": 65205,
+      "sha256": "e648cca6ab6555dc0a8ba06f9c8f61ba1fcb4dca230b0cc46956ad9608889d06",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_20_全年储能SOC时空轨迹图.pdf",
+        "ext": "pdf",
+        "size_bytes": 65205,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_20_全年储能SOC时空轨迹图.svg",
+      "bytes": 136853,
+      "sha256": "c64f23693f5bd34ea9217cbec83f084ed8f70f081408677532c77fd14ecd45f2",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_20_全年储能SOC时空轨迹图.svg",
+        "ext": "svg",
+        "size_bytes": 136853,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_21_典型日预测调度状态联动图.png",
+      "bytes": 578928,
+      "sha256": "431e0f89723868ea40766b9cdef988d4a04710941e63962a7f28550a26e69574",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_21_典型日预测调度状态联动图.png",
+        "ext": "png",
+        "size_bytes": 578928,
+        "category": "raster",
+        "size_px": [
+          4320,
+          4500
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_21_典型日预测调度状态联动图.pdf",
+      "bytes": 20988,
+      "sha256": "3d3cc9f027413d39240cc35f092ba08579e8c4da7f24a4d05f575ccc905af046",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_21_典型日预测调度状态联动图.pdf",
+        "ext": "pdf",
+        "size_bytes": 20988,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_21_典型日预测调度状态联动图.svg",
+      "bytes": 86718,
+      "sha256": "6341efd5269f8e26c58f7bcb8d70dadd03aca16efa52e9b0c9a6f357eab987e2",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_21_典型日预测调度状态联动图.svg",
+        "ext": "svg",
+        "size_bytes": 86718,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_22_极端高费用日调度复盘图.png",
+      "bytes": 611696,
+      "sha256": "db3784fa4bdf39d9b92bb07eafcc0eb67eb8a0bef049724baac26694f323b6d6",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_22_极端高费用日调度复盘图.png",
+        "ext": "png",
+        "size_bytes": 611696,
+        "category": "raster",
+        "size_px": [
+          4320,
+          4500
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_22_极端高费用日调度复盘图.pdf",
+      "bytes": 20985,
+      "sha256": "d71bdebea0473623863babe15db72b3566977a12f4b2d129aed46df0e002fdf9",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_22_极端高费用日调度复盘图.pdf",
+        "ext": "pdf",
+        "size_bytes": 20985,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_22_极端高费用日调度复盘图.svg",
+      "bytes": 87469,
+      "sha256": "5098af82e2b1d4f20f5834a1ad37ebfe5a729fe62b5d082029f83fc79476b027",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_22_极端高费用日调度复盘图.svg",
+        "ext": "svg",
+        "size_bytes": 87469,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_23_分时电价条件残差雨云图.png",
+      "bytes": 503140,
+      "sha256": "93461d55c64de15af64c2a3d6cdf8c5c4f7bd0adadf8bfcf394b91a27e4b2aff",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_23_分时电价条件残差雨云图.png",
+        "ext": "png",
+        "size_bytes": 503140,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2700
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_23_分时电价条件残差雨云图.pdf",
+      "bytes": 56747,
+      "sha256": "bdc5825adf8eadaabd6c87fe657fb372c86d849a89941babdb9ad8e9fd4d31f3",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_23_分时电价条件残差雨云图.pdf",
+        "ext": "pdf",
+        "size_bytes": 56747,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_23_分时电价条件残差雨云图.svg",
+      "bytes": 102976,
+      "sha256": "130fd6802b8d3fd471fc5b04951b8ab379aa67ddf2195dcc74a4f2cf0deba61a",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_23_分时电价条件残差雨云图.svg",
+        "ext": "svg",
+        "size_bytes": 102976,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_24_训练窗口敏感性配对点图.png",
+      "bytes": 196840,
+      "sha256": "0929536b6ca0b2ff106e6412ce5258347cd4a75b61f19af22352c9d34c55f247",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_24_训练窗口敏感性配对点图.png",
+        "ext": "png",
+        "size_bytes": 196840,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2100
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_24_训练窗口敏感性配对点图.pdf",
+      "bytes": 12391,
+      "sha256": "a1ea30f397a3d1a0d2b4be1e9ca5a84f9cd2f2035d1b9f0d072a6e239d082752",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_24_训练窗口敏感性配对点图.pdf",
+        "ext": "pdf",
+        "size_bytes": 12391,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_24_训练窗口敏感性配对点图.svg",
+      "bytes": 10473,
+      "sha256": "d73a35b02f96dd8db13a605ade239d7c29497e77e4915bd0b21f596be8d5956a",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_24_训练窗口敏感性配对点图.svg",
+        "ext": "svg",
+        "size_bytes": 10473,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_25_预测改善运营改善月份联合图.png",
+      "bytes": 249278,
+      "sha256": "a116d2b6b6f60946d984b13b3bdf0b39e24c512202b2419654060944fc0e27fe",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_25_预测改善运营改善月份联合图.png",
+        "ext": "png",
+        "size_bytes": 249278,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2940
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_25_预测改善运营改善月份联合图.pdf",
+      "bytes": 11787,
+      "sha256": "f60df768f1a675a5353e455e7b3a18e3ee915c9ef17d69c295115ffc02eca3d7",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_25_预测改善运营改善月份联合图.pdf",
+        "ext": "pdf",
+        "size_bytes": 11787,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_25_预测改善运营改善月份联合图.svg",
+      "bytes": 26487,
+      "sha256": "0404f24afbee42c039504b42650a59cfbb164680d6e0019dda23ecf7aebf7785",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_25_预测改善运营改善月份联合图.svg",
+        "ext": "svg",
+        "size_bytes": 26487,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_26_残差跨日多尺度自相关图.png",
+      "bytes": 445335,
+      "sha256": "21f95a69a29ba47258c51e9c46145ff7e33b4511636ab3449ab5ecb5c6bdcb36",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_26_残差跨日多尺度自相关图.png",
+        "ext": "png",
+        "size_bytes": 445335,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2220
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_26_残差跨日多尺度自相关图.pdf",
+      "bytes": 22897,
+      "sha256": "432ccac5dc5a4aa206e081cfa716afaf6d1bab198a2d9d69d3c076be875b758e",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_26_残差跨日多尺度自相关图.pdf",
+        "ext": "pdf",
+        "size_bytes": 22897,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_26_残差跨日多尺度自相关图.svg",
+      "bytes": 40881,
+      "sha256": "47cba261829a4fa150ace3606c2d7b334d6caae0b4a5f1d3a69da13e46a62486",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_26_残差跨日多尺度自相关图.svg",
+        "ext": "svg",
+        "size_bytes": 40881,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "PNG_600dpi/Q2_27_特征标签秩相关矩阵图.png",
+      "bytes": 425467,
+      "sha256": "44cb956ddd119f3f305878af82544425e5d2c9d40e2e322ffc13b71b788f1106",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PNG_600dpi/Q2_27_特征标签秩相关矩阵图.png",
+        "ext": "png",
+        "size_bytes": 425467,
+        "category": "raster",
+        "size_px": [
+          4320,
+          2820
+        ],
+        "dpi": [
+          599.9988,
+          599.9988
+        ]
+      }
+    },
+    {
+      "path": "PDF_vector/Q2_27_特征标签秩相关矩阵图.pdf",
+      "bytes": 21091,
+      "sha256": "5921906fbe7f1786872367b523c59cffb0c51bf624d806f405dfb9b7799a24d8",
+      "issues": [
+        [
+          "WARN",
+          "PDF 中以下字体可能未嵌入: /DABZEG+SimHei. 导致他人电脑打开变成替代字体。"
+        ]
+      ],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/PDF_vector/Q2_27_特征标签秩相关矩阵图.pdf",
+        "ext": "pdf",
+        "size_bytes": 21091,
+        "category": "vector"
+      }
+    },
+    {
+      "path": "SVG_editable/Q2_27_特征标签秩相关矩阵图.svg",
+      "bytes": 30611,
+      "sha256": "0ca9d27ccfc28d863f59aee4dd8bf1529883c998e408988d1600ba4c8d5cb719",
+      "issues": [],
+      "info": {
+        "path": "/workspace/scratch/8a35dd95cdfe/Q2_Chinese_HighRes_27Figures/SVG_editable/Q2_27_特征标签秩相关矩阵图.svg",
+        "ext": "svg",
+        "size_bytes": 30611,
+        "category": "vector"
+      }
+    }
+  ]
+}
