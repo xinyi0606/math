@@ -24,6 +24,7 @@
 | 1 | BLOCKING | decision provenance | `methods/Q3/decisions/reserve-alpha_modeler_decision.md:7-34` | `methods/Q3/q3_decision_log.md` | 选择0.99 | 用户已明确选择，但人工理由仍为哨兵、状态PENDING，不能写入决定日志 | modeler-decision-logger（需用户先写理由） |
 | 2 | BLOCKING | stability verdict | `methods/Q3/decisions/robustness-checker_modeler_decision.md` | `robustness/Q3/q3_robustness_report.md` | Q3稳定性 | 置信度与人工理由均PENDING，G4.5未通过 | robustness-checker / modeler-decision-logger |
 | 3 | WARNING | missing evidence | `robustness/Q3/uploaded_q3_robustness_report.md:53-57` | `robustness/Q3/validation_rerun.json`、嵌套验证CSV | 上传报告称证据可追溯 | 所引用的验证哈希和嵌套CSV未上传；本轮只复现全年固定参数结果 | robustness-checker |
+| 4 | BLOCKING | stale freeze | `workspace/archived/Q3-Q4/uploaded_frozen_numbers_UNVERIFIED.json` | `output/result3.xlsx`、`output/result4-3.xlsx` | 上传文件标记FROZEN | G4.5未通过，且文件记录的两个工作簿哈希均与当前文件不符；已原样归档 | solution-package-builder |
 
 ## Unauditable Items
 
@@ -38,6 +39,6 @@
 - **当前round2机械一致性**：通过，有警示。
 - **G4结果冻结允许**：否；缺少人工参数理由、稳定性置信度和结果判定。
 - **最终论文组装允许**：否。
-- **Blocking divergences**：2。
+- **Blocking divergences**：3。
 - **Warnings**：1。
 - **Recommended next skill**：用户完成两项人工理由后运行 `modeler-decision-logger`。

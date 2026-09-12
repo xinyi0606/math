@@ -17,6 +17,7 @@
 | 已完成 | 整合手动上传的四问方法、源码与首轮结果 | 电脑 A | `dev-pc-a` | `methods/`, `src/`, `results/`, `output/`, `tests/`, `planning/` | 108个项目文件已整合；Q1按用户决定统一为机制—优化混合；本机16项回归测试全部通过 |
 | 已完成 | 整合完整记录分卷包的补充信息 | 电脑 A | `dev-pc-a` | `PACKAGE_README.md`, `data/data_report.md`, `results/Q1-Q4/experiments/round1/logs/`, `planning/progress_dashboard.md` | 保留当前新版规则与看板；补入数据状态修正和4份运行日志；用户明确要求本次不重跑测试 |
 | 已完成 | 核验并整合最新上传的 Q3/Q4-3 结果工作簿 | 电脑 A | `dev-pc-a` | `output/result3.xlsx`, `output/result4-3.xlsx`, `data/data_report.md`, `docs/data-dictionary.md`, `planning/progress_dashboard.md` | 根目录上传件与既有规范副本 SHA-256 完全一致；已审计结构、日期、汇总和数值有效性，并移除根目录重复副本 |
+| 已完成 | 整理最新上传的冻结与敏感性文件 | 电脑 A | `dev-pc-a` | `robustness/`, `workspace/archived/Q3-Q4/` | 敏感性和稳定性报告按规范路径留存；矛盾且哈希失配的冻结文件原样归档为UNVERIFIED，不作为正式数字源 |
 | 已完成 | 完成问题 1 确定性优化与 `result1.xlsx` | 电脑 A | `dev-pc-a` | `src/Q1/`, `results/Q1/`, `output/result1.xlsx` | M2费用35126.95元；互斥审计与DP网格收敛通过 |
 | 待审核 | 完成问题 2 全年日前优化与 `result2.xlsx` | 电脑 A | `dev-pc-a` | `src/Q2/`, `results/Q2/`, `output/result2.xlsx` | M3首轮总费用与紧急购电均优于M1/M2；待稳健性实验 |
 | 待审核 | 完成问题 3 滚动调整与 `result3.xlsx` | 电脑 A | `dev-pc-a` | `src/Q3/`, `results/Q3/`, `robustness/Q3/`, `output/result3.xlsx` | 建模者已选择0.99并完成round2；紧急购电较M1下降17.50%、费用增加3.58%；稳定性理由与置信度仍待人工填写 |
