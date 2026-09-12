@@ -1,0 +1,56 @@
+{
+  "question": "Q2",
+  "selected_method": "Q2-M3",
+  "forecast_cache_hit": true,
+  "common_warmup_soc_2025_02_01_kwh": 1200.0000000000082,
+  "methods": {
+    "m1": {
+      "rmse_kw": 1187.2197461614771,
+      "mae_kw": 744.2247512703758,
+      "underprediction_p95_kw": 2234.52225,
+      "annual_plan_cost_yuan": 12219366.585747775,
+      "annual_emergency_cost_yuan": 10534923.655647924,
+      "annual_total_cost_yuan": 22754290.241395697,
+      "annual_plan_grid_kwh": 20144478.190071113,
+      "annual_emergency_kwh": 2578728.2963080243,
+      "emergency_rate": 0.06968014368476176,
+      "worst_day_cost_yuan": 215672.62062865074,
+      "terminal_soc_kwh": 6000.000000000013,
+      "max_balance_violation_kwh": 1.1368683772161603e-13,
+      "max_soc_violation_kwh": 1.5688783605583012e-11,
+      "simultaneous_charge_discharge_count": 0
+    },
+    "m2": {
+      "rmse_kw": 1006.5250674095903,
+      "mae_kw": 794.968243845345,
+      "underprediction_p95_kw": 1238.2262892857134,
+      "annual_plan_cost_yuan": 11714200.52951324,
+      "annual_emergency_cost_yuan": 13031788.032060513,
+      "annual_total_cost_yuan": 24745988.56157375,
+      "annual_plan_grid_kwh": 19377709.07834697,
+      "annual_emergency_kwh": 3134903.4087333335,
+      "emergency_rate": 0.08470862179281557,
+      "worst_day_cost_yuan": 149679.3230322839,
+      "terminal_soc_kwh": 6000.0,
+      "max_balance_violation_kwh": 1.1368683772161603e-13,
+      "max_soc_violation_kwh": 1.8189894035458565e-11,
+      "simultaneous_charge_discharge_count": 0
+    },
+    "m3": {
+      "rmse_kw": 451.6958295406053,
+      "mae_kw": 312.3060851858313,
+      "underprediction_p95_kw": 636.6892192517726,
+      "annual_plan_cost_yuan": 12046165.170273216,
+      "annual_emergency_cost_yuan": 4818837.667194076,
+      "annual_total_cost_yuan": 16865002.83746729,
+      "annual_plan_grid_kwh": 20042981.748803593,
+      "annual_emergency_kwh": 1163433.1111514424,
+      "emergency_rate": 0.031437273352414655,
+      "worst_day_cost_yuan": 116003.75174713231,
+      "terminal_soc_kwh": 6000.000000000002,
+      "max_balance_violation_kwh": 1.1368683772161603e-13,
+      "max_soc_violation_kwh": 1.432454155292362e-11,
+      "simultaneous_charge_discharge_count": 0
+    }
+  }
+}

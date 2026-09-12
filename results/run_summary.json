@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "seed": 2026,
+  "runtime_seconds": 196.99202659799994,
+  "questions": {
+    "Q1": {
+      "selected_method": "Q1-M2",
+      "runtime_seconds": 1.1197560299988254
+    },
+    "Q2": {
+      "selected_method": "Q2-M3",
+      "runtime_seconds": 20.650023080999745
+    },
+    "Q3": {
+      "selected_method": "Q3-M3",
+      "runtime_seconds": 104.95889141000043
+    },
+    "Q4": {
+      "selected_method": "Q4-M3",
+      "runtime_seconds": 70.26334489999863
+    }
+  },
+  "official_workbooks": [
+    "output/result1.xlsx",
+    "output/result2.xlsx",
+    "output/result3.xlsx",
+    "output/result4-2.xlsx",
+    "output/result4-3.xlsx"
+  ],
+  "interpretation": "Q1/Q2/Q4 pass round1; Q3 method runs but its 0.90 reserve parameter is not frozen."
+}

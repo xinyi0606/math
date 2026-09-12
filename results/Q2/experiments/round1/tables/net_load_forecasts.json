@@ -1,0 +1,8 @@
+{
+  "input_sha256": "655cd51bebea6c21d8aab207f71884a10befe6937bea3ba6d7991b22c13e6a09",
+  "start_day": 31,
+  "training_days": 30,
+  "max_iter": 30,
+  "max_depth": 4,
+  "seed": 2026
+}

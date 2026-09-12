@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "question": "Q3",
+  "round": 2,
+  "method": "Q3-M3 rolling quantile-reserve LP",
+  "reserve_alpha": 0.99,
+  "runtime_seconds": 178.342725100003,
+  "seed": 2026,
+  "information_boundary": "Each release freezes executed slots and uses only historical reserve errors",
+  "outputs": [
+    "C:\\Users\\xinyi\\Documents\\ChatGPT\\math\\results\\Q3\\experiments\\round2\\tables\\result3.xlsx",
+    "C:\\Users\\xinyi\\Documents\\ChatGPT\\math\\output\\result3.xlsx",
+    "C:\\Users\\xinyi\\Documents\\ChatGPT\\math\\results\\Q3\\experiments\\round2\\figures\\q3_method_comparison.png"
+  ],
+  "chosen_metrics": {
+    "pv_rmse_kw": 388.73941843571816,
+    "pv_mae_kw": 235.3180428517272,
+    "safe_pv_coverage": 0.926168496340652,
+    "annual_plan_cost_yuan": 12126860.02918353,
+    "annual_contract_cost_yuan": 13622296.888589863,
+    "annual_down_refund_yuan": 79013.78158095128,
+    "annual_up_purchase_cost_yuan": 1574450.6409872822,
+    "annual_emergency_cost_yuan": 3847154.1857535755,
+    "annual_total_cost_yuan": 17469451.074343435,
+    "annual_emergency_kwh": 959911.0195582306,
+    "worst_day_cost_yuan": 118129.80044474201,
+    "mean_reserve_kw": 232.36233865044917,
+    "terminal_soc_kwh": 6000.0,
+    "max_balance_violation_kwh": 1.1368683772161603e-13,
+    "max_soc_violation_kwh": 1.8189894035458565e-11,
+    "simultaneous_charge_discharge_count": 0
+  }
+}

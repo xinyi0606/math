@@ -1,0 +1,46 @@
+{
+  "question": "Q1",
+  "selected_method": "Q1-M2",
+  "baseline_method": "Q1-M1",
+  "cross_check_method": "Q1-M3",
+  "lp_cost_yuan": 35126.94858928962,
+  "baseline_cost_yuan": 48052.04659084666,
+  "savings_yuan": 12925.098001557039,
+  "savings_pct": 26.898121762870172,
+  "total_grid_kwh": 59482.698998353895,
+  "total_charge_kwh": 20740.666131687245,
+  "total_discharge_kwh": 16799.939566666675,
+  "soc_min_kwh": 1199.9999999999927,
+  "soc_max_kwh": 10800.000000000002,
+  "audit": {
+    "solver_success": 1,
+    "balance_violation_kwh": 1.1368683772161603e-13,
+    "soc_violation_kwh": 7.275957614183426e-12,
+    "initial_error_kwh": 0.0,
+    "terminal_error_kwh": 6.366462912410498e-12,
+    "power_violation_kwh": 0.0,
+    "simultaneous_charge_discharge_count": 0
+  },
+  "dp_grid_convergence": [
+    {
+      "soc_grid_kwh": 400.0,
+      "cost_yuan": 37374.637771773334,
+      "gap_to_lp_pct": 6.39876013360593
+    },
+    {
+      "soc_grid_kwh": 200.0,
+      "cost_yuan": 36182.477988311664,
+      "gap_to_lp_pct": 3.0048992053465224
+    },
+    {
+      "soc_grid_kwh": 100.0,
+      "cost_yuan": 35688.91753149555,
+      "gap_to_lp_pct": 1.5998228277000925
+    },
+    {
+      "soc_grid_kwh": 50.0,
+      "cost_yuan": 35404.665606788876,
+      "gap_to_lp_pct": 0.7906095708635915
+    }
+  ]
+}
