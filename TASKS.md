@@ -19,6 +19,7 @@
 | 已完成 | 核验并整合最新上传的 Q3/Q4-3 结果工作簿 | 电脑 A | `dev-pc-a` | `output/result3.xlsx`, `output/result4-3.xlsx`, `data/data_report.md`, `docs/data-dictionary.md`, `planning/progress_dashboard.md` | 根目录上传件与既有规范副本 SHA-256 完全一致；已审计结构、日期、汇总和数值有效性，并移除根目录重复副本 |
 | 已完成 | 整理最新上传的冻结与敏感性文件 | 电脑 A | `dev-pc-a` | `robustness/`, `workspace/archived/Q3-Q4/` | 敏感性和稳定性报告按规范路径留存；矛盾且哈希失配的冻结文件原样归档为UNVERIFIED，不作为正式数字源 |
 | 已完成 | 识别并登记 Q1/Q2 最终方法说明 | 电脑 A | `dev-pc-a` | `Q1_Q2最终方法说明.docx`, `planning/progress_dashboard.md` | Q1确认M2连续线性规划；Q2确认M3非前视梯度提升预测加日前线性规划；敏感性验证和结果冻结仍待完成 |
+| 已完成 | 禁用项目全部流程门禁 | 电脑 A | `dev-pc-a` | `AGENTS.md`, `planning/session_config.json`, `planning/workflow_override.md`, `planning/progress_dashboard.md` | 用户明确授权；门禁改为非阻塞记录项，未验证状态与审计警示仍须保留 |
 | 已完成 | 完成问题 1 确定性优化与 `result1.xlsx` | 电脑 A | `dev-pc-a` | `src/Q1/`, `results/Q1/`, `output/result1.xlsx` | M2费用35126.95元；互斥审计与DP网格收敛通过 |
 | 待审核 | 完成问题 2 全年日前优化与 `result2.xlsx` | 电脑 A | `dev-pc-a` | `src/Q2/`, `results/Q2/`, `output/result2.xlsx` | M3首轮总费用与紧急购电均优于M1/M2；待稳健性实验 |
 | 待审核 | 完成问题 3 滚动调整与 `result3.xlsx` | 电脑 A | `dev-pc-a` | `src/Q3/`, `results/Q3/`, `robustness/Q3/`, `output/result3.xlsx` | 建模者已选择0.99并完成round2；紧急购电较M1下降17.50%、费用增加3.58%；稳定性理由与置信度仍待人工填写 |

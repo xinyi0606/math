@@ -1,6 +1,6 @@
 # Cross-Media Consistency Audit Report
 
-> **Status**: NOT_RUN（G6）/ INCREMENTAL_CHECK_PASSED_WITH_WARNINGS
+> **Status**: NOT_RUN（G6）/ INCREMENTAL_CHECK_PASSED_WITH_WARNINGS（G6执行已由建模者禁用为非阻塞项）
 > **Date**: 2026-09-12
 > **Scope**: Q3、Q4 round2参数、代码、结果、工作簿、稳健性工件与进度文档
 > **Source-of-truth tier**: `results/Q3/experiments/round2/metrics/metrics.json`、`results/Q4/experiments/round2/metrics/metrics.json`；尚无冻结数字
@@ -38,8 +38,8 @@
 ## Verdict
 
 - **当前round2机械一致性**：通过，有警示。
-- **G4结果冻结允许**：否；缺少人工参数理由、稳定性置信度和结果判定。
-- **最终论文组装允许**：否。
+- **G4结果冻结证据状态**：未满足；缺少人工参数理由、稳定性置信度和结果判定，但该状态不阻塞后续工作。
+- **最终论文组装流程状态**：允许继续推进（门禁已禁用）；本报告的未核验项和警示仍然有效。
 - **Blocking divergences**：3。
 - **Warnings**：1。
 - **Recommended next skill**：用户完成两项人工理由后运行 `modeler-decision-logger`。
