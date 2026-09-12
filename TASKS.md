@@ -24,6 +24,7 @@
 | 已完成 | 审核并整理 Q1/Q2 中文高清论文图 | 电脑 A | `dev-pc-a` | `paper/figures/`, `paper/fonts/`, `planning/progress_dashboard.md` | 筛选18张图；逐图目视复核与600 dpi PNG严格检查通过；Q2 PDF字体嵌入未在本机复验并已如实记录 |
 | 已完成 | 撰写数学建模论文正文初稿 | 电脑 A | `dev-pc-a` | `paper/sections/`, `paper/main.md`, `paper/writing_summary.json`, `paper/audits/`, `planning/progress_dashboard.md` | 已形成中文第一版并整合Q4证据图；纠正鲁棒目标与价格oracle边界；Q3正式图、数字冻结和文献核验列为后续项 |
 | 已完成 | 整合Q4高清图与复现证据完善论文 | 电脑 A | `dev-pc-a` | `paper/figures/Q4/`, `paper/sections/complete_first_draft.md`, `paper/audits/`, `planning/progress_dashboard.md` | 从34图中筛选7张正文图；19个正文图片链接全部存在；Q4 PNG均为600 dpi；完整复验脚本因本机缺少可选依赖pypdf未重跑，沿用包内PASS_WITH_SOURCE_LIMITATION并保留PDF字体警示 |
+| 已完成 | 生成论文正文 Word 版 | 电脑 A | `dev-pc-a` | `paper/光储微电网多时间尺度协调调度论文正文.docx` | 已转换正文、表格和19张配图；以本机 Word 导出并逐页目视检查26页，已去除标题装饰线与原稿“待插图”空白页 |
 | 已完成 | 完成问题 1 确定性优化与 `result1.xlsx` | 电脑 A | `dev-pc-a` | `src/Q1/`, `results/Q1/`, `output/result1.xlsx` | M2费用35126.95元；互斥审计与DP网格收敛通过 |
 | 待审核 | 完成问题 2 全年日前优化与 `result2.xlsx` | 电脑 A | `dev-pc-a` | `src/Q2/`, `results/Q2/`, `output/result2.xlsx` | M3首轮总费用与紧急购电均优于M1/M2；待稳健性实验 |
 | 待审核 | 完成问题 3 滚动调整与 `result3.xlsx` | 电脑 A | `dev-pc-a` | `src/Q3/`, `results/Q3/`, `robustness/Q3/`, `output/result3.xlsx` | 建模者已选择0.99并完成round2；紧急购电较M1下降17.50%、费用增加3.58%；稳定性理由与置信度仍待人工填写 |

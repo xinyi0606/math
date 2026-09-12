@@ -2,9 +2,9 @@
 
 > 最后更新：2026-09-12
 >
-> 当前全局阶段：全部门禁已禁用为非阻塞记录项 / 论文正文第一版已完成 / Q1、Q2 正文图已筛选
+> 当前全局阶段：全部门禁已禁用为非阻塞记录项 / 论文正文第一版及 Word 排版版已完成 / Q1、Q2 正文图已筛选
 > 实现目标：Python；会话模式：speed；门禁执行：disabled
-> 最新整合：已依据四问材料包完成中文论文正文第一版，并嵌入Q1、Q2及7张Q4中文高清图；Q4鲁棒目标和价格oracle边界已按复现证据纠正，Q3正式图、数字冻结和外部参考文献核验仍待补充
+> 最新整合：已依据四问材料包完成中文论文正文第一版及26页 Word 排版版，并嵌入Q1、Q2及7张Q4中文高清图；Q4鲁棒目标和价格oracle边界已按复现证据纠正，Q3正式图、数字冻结和外部参考文献核验仍待补充
 
 ## 环境状态
 
@@ -78,6 +78,7 @@
 | Q1/Q2 论文图 | ✅ 已筛选，数字仍未冻结 | `paper/figures/README.md`、`paper/figures/Q1/`、`paper/figures/Q2/` |
 | Q4 论文图 | ✅ 7张正文图已筛选，数字仍未冻结 | `paper/figures/Q4/README.md`、`paper/figures/Q4/` |
 | 论文正文第一版 | ✅ 已完成，数字仍未冻结 | `paper/sections/complete_first_draft.md`、`paper/main.md` |
+| 论文正文 Word 版 | ✅ 已完成，数字仍未冻结 | `paper/光储微电网多时间尺度协调调度论文正文.docx` |
 | 论文写作摘要 | ✅ | `paper/writing_summary.json` |
 | 跨媒体一致性审计 | ✅ 有警示 | `paper/audits/cross_media_consistency_audit.md` |
 
