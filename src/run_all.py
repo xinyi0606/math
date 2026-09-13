@@ -36,7 +36,10 @@ def run():
             "output/result4-2.xlsx",
             "output/result4-3.xlsx",
         ],
-        "interpretation": "Q1/Q2/Q4 pass round1; Q3 method runs but its 0.90 reserve parameter is not frozen.",
+        "interpretation": (
+            "Q1 uses the final round1 configuration; Q2 uses its final round1 configuration; "
+            "Q3 and Q4 use the final round2 configuration with reserve_alpha=0.99."
+        ),
     }
     RESULTS.mkdir(parents=True, exist_ok=True)
     write_json(RESULTS / "run_summary.json", summary)

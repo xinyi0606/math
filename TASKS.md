@@ -34,6 +34,7 @@
 | 待审核 | 完成问题 3 滚动调整与 `result3.xlsx` | 电脑 A | `dev-pc-a` | `src/Q3/`, `results/Q3/`, `robustness/Q3/`, `output/result3.xlsx` | 建模者已选择0.99并完成round2；紧急购电较M1下降17.50%、费用增加3.58%；稳定性理由与置信度仍待人工填写 |
 | 待审核 | 完成问题 4 波动电价重算 | 电脑 A | `dev-pc-a` | `src/Q4/`, `results/Q4/`, `output/result4-2.xlsx`, `output/result4-3.xlsx` | Q4-3已继承0.99完成round2；M3未来价格泄漏0；待Q3稳定性判定后冻结 |
 | 待认领 | 撰写论文并验证结果、图表和文件大小 | — | — | `docs/`, `tests/`, `output/` | 对照题面逐项验收 |
+| 已完成 | 按2026规范重建可直接提交的支撑材料压缩包 | 电脑 A | `dev-pc-a` | `C:\Users\xinyi\Desktop\支撑材料_可直接提交.zip`, `src/`, `data/`, `output/`, `results/`, `robustness/` | 共123个文件、12.89MB；含程序、数据、五份正式结果、完整调度记录、稳健性材料和AI使用详情；解压后17项测试通过，身份与路径扫描通过 |
 
 状态使用：`待认领`、`进行中`、`待审核`、`已完成`、`阻塞`。
 
