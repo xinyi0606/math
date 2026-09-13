@@ -5,9 +5,8 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / ".deps"))
 
 from docx import Document
-from docx.enum.section import WD_SECTION
-from docx.enum.style import WD_STYLE_TYPE
-from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
+from docx.enum.table import WD_ALIGN_VERTICAL
+from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Cm, Pt, RGBColor
@@ -51,6 +50,125 @@ def add_section_heading(doc, text):
     paragraph.paragraph_format.keep_with_next = True
     set_run_font(paragraph.add_run(text), east_asia="黑体", size=10.5, bold=True)
     return paragraph
+
+
+def set_cell_margins(cell, top="80", start="100", bottom="80", end="100"):
+    tc_pr = cell._tc.get_or_add_tcPr()
+    margins = tc_pr.first_child_found_in("w:tcMar")
+    if margins is None:
+        margins = OxmlElement("w:tcMar")
+        tc_pr.append(margins)
+    for side, value in (("top", top), ("start", start), ("bottom", bottom), ("end", end)):
+        node = margins.find(qn(f"w:{side}"))
+        if node is None:
+            node = OxmlElement(f"w:{side}")
+            margins.append(node)
+        node.set(qn("w:w"), value)
+        node.set(qn("w:type"), "dxa")
+
+
+def set_cell_border(cell, edge, color="D9D9D9", size="6"):
+    tc_pr = cell._tc.get_or_add_tcPr()
+    borders = tc_pr.first_child_found_in("w:tcBorders")
+    if borders is None:
+        borders = OxmlElement("w:tcBorders")
+        tc_pr.append(borders)
+    border = borders.find(qn(f"w:{edge}"))
+    if border is None:
+        border = OxmlElement(f"w:{edge}")
+        borders.append(border)
+    border.set(qn("w:val"), "single")
+    border.set(qn("w:sz"), size)
+    border.set(qn("w:color"), color)
+
+
+def shade_cell(cell, fill):
+    tc_pr = cell._tc.get_or_add_tcPr()
+    shading = tc_pr.find(qn("w:shd"))
+    if shading is None:
+        shading = OxmlElement("w:shd")
+        tc_pr.append(shading)
+    shading.set(qn("w:fill"), fill)
+    shading.set(qn("w:val"), "clear")
+
+
+def set_cell_text(cell, text, header=False, align=WD_ALIGN_PARAGRAPH.LEFT):
+    cell.text = ""
+    cell.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
+    set_cell_margins(cell)
+    for edge in ("top", "left", "bottom", "right"):
+        set_cell_border(cell, edge)
+    paragraph = cell.paragraphs[0]
+    paragraph.alignment = align
+    paragraph.paragraph_format.space_before = Pt(0)
+    paragraph.paragraph_format.space_after = Pt(0)
+    paragraph.paragraph_format.line_spacing = 1.08
+    run = paragraph.add_run(text)
+    set_run_font(
+        run,
+        east_asia="黑体" if header else "宋体",
+        size=9.5,
+        bold=header,
+    )
+    if header:
+        run.font.color.rgb = RGBColor(255, 255, 255)
+
+
+def add_interaction_table(doc):
+    columns = ["编号", "交互主题", "典型交互摘要", "采纳与核验"]
+    records = [
+        (
+            "1",
+            "题面解析与问题依赖",
+            "依据题面和附件，要求梳理四问目标、决策变量、约束及相互依赖，比较问题类型。",
+            "形成Q1机制-优化、Q2/Q3预测-优化、Q4情景分析-优化的表述；再对照题面与问题依赖图确认。",
+        ),
+        (
+            "2",
+            "数据口径与统一模型",
+            "根据负荷、光伏、电价文件，要求检查时间粒度、单位、能量换算和储能边界。",
+            "完善统一符号表与模型假设；通过数据报告、原始附件和程序读取结果核对口径。",
+        ),
+        (
+            "3",
+            "优化模型与程序辅助",
+            "要求给出能量平衡、储能状态转移、购电费用目标及线性规划求解框架，并辅助调试。",
+            "以程序运行结果为准；复核终端SOC、功率边界、能量平衡和网格收敛，不采纳未经运行验证的结果。",
+        ),
+        (
+            "4",
+            "预测与滚动调整",
+            "要求比较非前视预测方案，分析光伏更新后的滚动调整，并讨论安全裕度参数的费用-供能缺口取舍。",
+            "核查训练和决策时点，使用结果工作簿及稳健性报告验证；将0.99的选择限定为既定风险偏好下的结论。",
+        ),
+        (
+            "5",
+            "价格情景与论文表达",
+            "要求区分历史价格情景鲁棒优化和真实未来价格参照，并据冻结数字生成图表、表格和文字初稿。",
+            "检查未来价格泄漏、图表数字与正文一致性；保留历史情景覆盖有限和外推受限的说明。",
+        ),
+    ]
+    table = doc.add_table(rows=1, cols=len(columns))
+    table.autofit = False
+    table.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    widths = [Cm(1.0), Cm(2.7), Cm(6.0), Cm(6.3)]
+    for index, width in enumerate(widths):
+        table.columns[index].width = width
+        for cell in table.columns[index].cells:
+            cell.width = width
+    for index, label in enumerate(columns):
+        shade_cell(table.rows[0].cells[index], "1F4E78")
+        set_cell_text(table.rows[0].cells[index], label, header=True, align=WD_ALIGN_PARAGRAPH.CENTER)
+    for row_index, record in enumerate(records):
+        row = table.add_row()
+        for column_index, value in enumerate(record):
+            cell = row.cells[column_index]
+            if row_index % 2 == 1:
+                shade_cell(cell, "EAF2F8")
+            alignment = WD_ALIGN_PARAGRAPH.CENTER if column_index == 0 else WD_ALIGN_PARAGRAPH.LEFT
+            set_cell_text(cell, value, align=alignment)
+    table.rows[0]._tr.get_or_add_trPr().append(OxmlElement("w:tblHeader"))
+    return table
 
 
 def add_page_number(paragraph):
@@ -132,10 +250,18 @@ def build():
         "使用过程中，参赛队按任务逐步提供题面、附件数据、已确定的建模口径和阶段性结果，并通过限定输入、输出和验证条件约束AI。典型提示包括：解读题面并梳理各问的目标与约束；比较候选模型的适用性、可解释性和竞赛实现成本；根据给定数据生成可复现的程序框架；检查未来信息是否进入当前决策；依据已经冻结的实验数字撰写结果分析；核对图表、正文与结果文件之间的一致性。对于影响建模结论的内容，采用“提出候选方案—运行程序—核对结果—修改表述”的方式迭代处理。",
     )
 
-    add_section_heading(doc, "四  采纳 修改与核验情况")
+    doc.add_page_break()
+    add_section_heading(doc, "四  典型AI使用交互记录")
     add_body(
         doc,
-        "AI输出主要作为分析建议、代码草稿和文字初稿使用。参赛队对纳入论文的内容进行了必要修改和核验：依据题目附件修正变量定义、时间尺度和结算规则；通过程序运行、单元测试和结果工作簿核对目标函数值、储能边界、能量平衡与关键统计量；对问题2至问题4检查非前视信息边界，对问题3的安全裕度参数进行费用与供能缺口权衡，对问题4区分可实施历史价格情景与仅供事后比较的真实价格参照；对论文中的数字、图表、符号和结论进行交叉核对，并保留适用范围、数据年份和外推限制。语言润色类建议在不改变技术含义的前提下采用，无法由数据或计算结果支持的表述未作为结论使用。",
+        "下表为实际使用环节的摘要性记录，不替代完整会话日志；其中“典型交互摘要”概括任务输入，“采纳与核验”说明输出进入作品前的处理方式。",
+    )
+    add_interaction_table(doc)
+
+    add_section_heading(doc, "五  采纳 修改与核验情况")
+    add_body(
+        doc,
+        "AI输出主要作为分析建议、代码草稿和文字初稿使用。参赛队依据题目附件修正变量定义、时间尺度和结算规则，并通过程序运行、单元测试和结果工作簿核对目标函数值、储能边界、能量平衡和关键统计量；同时检查非前视信息边界、图表正文一致性及适用范围。语言润色类建议仅在不改变技术含义的前提下采用，无法由数据或计算结果支持的表述未作为结论使用。",
     )
 
     add_body(

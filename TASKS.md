@@ -28,7 +28,7 @@
 | 已完成 | 展开方案名称并补齐 Q3 正式图 | 电脑 A | `dev-pc-a` | `paper/sections/complete_first_draft.md`, `paper/figures/Q1-Q4/`, `paper/光储微电网多时间尺度协调调度论文正文.docx` | 正文、表格及正文采用图不再使用M1/M2/M3代号；新增7张Q3中文600 dpi图；Word扩展为30页并完成逐页视觉检查 |
 | 已完成 | 按竞赛评审意见完善论文（公式排版除外） | 电脑 A | `dev-pc-a` | `paper/`, `robustness/`, `planning/`, `src/analysis/`, `tests/` | 已分离PoC与正式结果、补充7条引用和配对时间稳定性证据、冻结数字、重建25页Word；22项测试通过 |
 | 已完成 | 统一论文三线表与标题颜色 | 电脑 A | `dev-pc-a` | `src/paper/build_paper_docx.py`, `paper/光储微电网多时间尺度协调调度论文正文_三线表版.docx` | 全文4张表已改为黑色三线表，标题已统一纯黑；完成26页渲染检查 |
-| 已完成 | 编制论文 AI 工具使用说明 | 电脑 A | `dev-pc-a` | `paper/AI工具使用说明.docx`, `src/paper/build_ai_statement_docx.py` | 依据2026年试行规定，列明工具、用途、使用过程及人工修改核验情况；已完成一页式渲染检查 |
+| 已完成 | 编制论文 AI 工具使用说明 | 电脑 A | `dev-pc-a` | `paper/AI工具使用说明.docx`, `src/paper/build_ai_statement_docx.py` | 依据2026年试行规定，列明工具、用途、使用过程、5类典型交互记录及人工修改核验情况；已完成两页渲染检查 |
 | 已完成 | 完成问题 1 确定性优化与 `result1.xlsx` | 电脑 A | `dev-pc-a` | `src/Q1/`, `results/Q1/`, `output/result1.xlsx` | M2费用35126.95元；互斥审计与DP网格收敛通过 |
 | 待审核 | 完成问题 2 全年日前优化与 `result2.xlsx` | 电脑 A | `dev-pc-a` | `src/Q2/`, `results/Q2/`, `output/result2.xlsx` | M3首轮总费用与紧急购电均优于M1/M2；待稳健性实验 |
 | 待审核 | 完成问题 3 滚动调整与 `result3.xlsx` | 电脑 A | `dev-pc-a` | `src/Q3/`, `results/Q3/`, `robustness/Q3/`, `output/result3.xlsx` | 建模者已选择0.99并完成round2；紧急购电较M1下降17.50%、费用增加3.58%；稳定性理由与置信度仍待人工填写 |
